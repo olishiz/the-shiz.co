@@ -21,9 +21,13 @@ images/the-shiz-cropped-removebg-preview.png # Main logo
 ```
 
 ## Design tokens
-Palette sampled from Oliver's name card, defined once in `:root` in `css/main.css`:
-`--bg #EAE4CD`, `--surface #F2EDDB`, `--text #1A1612`, `--muted #6B6355`, `--border #CFC7AE`, `--accent #64483A`.
-`--border` is decorative only (1.3:1); form controls use `--muted` for their outline. The hero uses 2px `--text` rules as a signature divider (echoing the card).
+Palette matched to cursor.com/home, defined once in `:root` in `css/main.css`:
+`--bg #F7F7F4`, `--surface #E6E5E0`, `--text #26251F`, `--muted #6B6B66`, `--muted-soft #84847F`, `--border #CDCDC9`.
+- No separate accent: links/buttons use `--text`; hover is an underline, `--surface`, or a slight opacity change.
+- `--muted-soft` (3.5:1) is for large/decorative text only; keep small `--muted` text off `--surface` (4.25:1).
+- `--border` is decorative (1.5:1); form controls use `--muted` for their outline.
+- Buttons are pills: `.button` (dark primary), `.button-secondary` (grey `--surface`), `.button-outline` (thin border, used in the nav).
+- Dividers are 1px `--border`, including the rules around the hero title.
 
 ## Sections (in order)
 1. **Header** — sticky, logo + nav + "Free quote"; hamburger menu below 48rem
