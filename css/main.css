@@ -255,7 +255,7 @@ a {
   transition: transform 0.2s var(--ease);
 }
 
-.nav-toggle[aria-expanded="true"] .nav-toggle-bar:first-of-type {
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(2) {
   transform: translateY(3.75px) rotate(45deg);
 }
 
