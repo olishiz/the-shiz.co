@@ -2,17 +2,19 @@
    The Shiz — main stylesheet
    ========================================================================== */
 
-/* Design tokens. Palette sampled from Oliver's name card.
-   Contrast on --bg: text 14.1:1, muted 4.65:1, accent 6.5:1 (all WCAG AA).
-   --border is decorative only (1.3:1); use --muted for control outlines. */
+/* Design tokens. Palette matched to cursor.com/home.
+   Contrast on --bg: text 14.3:1, muted 5.0:1 (WCAG AA). --muted-soft is 3.5:1,
+   so use it only for large or decorative text. --muted on --surface is 4.25:1,
+   so keep small muted text off --surface. --border is decorative (1.5:1);
+   use --muted for form-control outlines. The near-black --text doubles as the
+   accent: links and buttons use it, hover is an underline or --surface. */
 :root {
-  --bg: #eae4cd;
-  --surface: #f2eddb;
-  --text: #1a1612;
-  --muted: #6b6355;
-  --border: #cfc7ae;
-  --accent: #64483a;
-  --accent-contrast: #f2eddb;
+  --bg: #f7f7f4;
+  --surface: #e6e5e0;
+  --text: #26251f;
+  --muted: #6b6b66;
+  --muted-soft: #84847f;
+  --border: #cdcdc9;
 
   --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-display: "League Spartan", var(--font-sans);
@@ -30,7 +32,7 @@
   --container: 72rem;
   --gutter: clamp(1.25rem, 0.75rem + 2vw, 2.5rem);
   --header-height: 4rem;
-  --radius: 6px;
+  --radius: 10px;
   --ease: cubic-bezier(0.2, 0.6, 0.2, 1);
 }
 
@@ -111,7 +113,7 @@ a {
 }
 
 :focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--text);
   outline-offset: 3px;
   border-radius: 2px;
 }
@@ -169,7 +171,7 @@ a {
   gap: 0.5em;
   padding: 0.75rem 1.25rem;
   border: 1px solid var(--text);
-  border-radius: var(--radius);
+  border-radius: 999px;
   background: var(--text);
   color: var(--bg);
   font: inherit;
@@ -178,29 +180,43 @@ a {
   line-height: 1.2;
   text-decoration: none;
   cursor: pointer;
-  transition: background-color 0.2s var(--ease), border-color 0.2s var(--ease);
+  transition: background-color 0.2s var(--ease), border-color 0.2s var(--ease), opacity 0.2s var(--ease);
 }
 
 .button:hover {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: var(--accent-contrast);
+  opacity: 0.86;
+}
+
+.button-secondary {
+  background: var(--surface);
+  border-color: var(--surface);
+  color: var(--text);
+}
+
+.button-secondary:hover {
+  opacity: 1;
+  border-color: var(--border);
+}
+
+.button-outline {
+  background: transparent;
+  border-color: var(--border);
+  color: var(--text);
+}
+
+.button-outline:hover {
+  opacity: 1;
+  background: var(--surface);
+  border-color: var(--surface);
 }
 
 .button-small {
-  padding: 0.5rem 0.875rem;
+  padding: 0.4375rem 0.875rem;
 }
 
-.text-link {
-  font-size: var(--text-sm);
-  font-weight: 500;
-  text-decoration: underline;
-  text-decoration-color: var(--border);
-  transition: text-decoration-color 0.2s var(--ease);
-}
-
-.text-link:hover {
-  text-decoration-color: currentColor;
+.nav-actions {
+  display: flex;
+  gap: 0.5rem;
 }
 
 /* Header
@@ -293,11 +309,16 @@ a {
   border-top: 1px solid var(--border);
 }
 
-.site-header.is-open .site-nav .button {
+.site-header.is-open .nav-actions {
+  flex-direction: column-reverse;
+  gap: 0.75rem;
   margin-top: 1.5rem;
-  width: 100%;
+}
+
+.site-header.is-open .site-nav .button {
   justify-content: center;
   padding-block: 0.875rem;
+  font-size: var(--text-base);
 }
 
 /* No-JS fallback: show nav inline, hide the toggle. */
@@ -369,7 +390,7 @@ html:not(.js) .header-inner {
 
 .hero-title {
   padding-block: clamp(1.5rem, 1rem + 2vw, 2.5rem) clamp(1.25rem, 0.75rem + 1.75vw, 2.25rem);
-  border-block: 2px solid var(--text);
+  border-block: 1px solid var(--border);
   font-family: var(--font-display);
   font-size: var(--text-hero);
   font-weight: 700;
@@ -391,7 +412,7 @@ html:not(.js) .header-inner {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 1rem 1.75rem;
+  gap: 0.75rem;
   margin-top: 2.5rem;
 }
 
@@ -415,7 +436,7 @@ html:not(.js) .header-inner {
 
 .section-label .mono {
   font-size: inherit;
-  color: var(--accent);
+  color: var(--text);
 }
 
 .section h2 {
@@ -461,7 +482,7 @@ html:not(.js) .header-inner {
 }
 
 .grid > * {
-  background: var(--surface);
+  background: var(--bg);
   padding: clamp(1.5rem, 1rem + 1.5vw, 2rem);
 }
 
@@ -523,7 +544,7 @@ html:not(.js) .header-inner {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: var(--accent);
+  background: var(--text);
 }
 
 @media (min-width: 40rem) {
@@ -563,12 +584,12 @@ html:not(.js) .header-inner {
   grid-column: 2;
   grid-row: 1 / span 2;
   align-self: center;
-  color: var(--muted);
+  color: var(--muted-soft);
   transition: transform 0.2s var(--ease), color 0.2s var(--ease);
 }
 
 .client-list a:hover .client-arrow {
-  color: var(--accent);
+  color: var(--text);
   transform: translate(2px, -2px);
 }
 
@@ -696,7 +717,7 @@ html:not(.js) .header-inner {
   padding: 0.75rem 0.875rem;
   border: 1px solid var(--muted);
   border-radius: var(--radius);
-  background: var(--surface);
+  background: var(--bg);
   color: var(--text);
   font: inherit;
   transition: border-color 0.2s var(--ease);
@@ -714,9 +735,9 @@ html:not(.js) .header-inner {
 
 .field input:focus-visible,
 .field textarea:focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--text);
   outline-offset: 0;
-  border-color: var(--accent);
+  border-color: var(--text);
 }
 
 .contact-form .button {
@@ -772,7 +793,7 @@ html:not(.js) .header-inner {
 }
 
 .site-footer a:hover {
-  color: var(--accent);
+  text-decoration: underline;
 }
 
 .footer-bottom {
@@ -815,11 +836,11 @@ html:not(.js) .header-inner {
   background: var(--text);
   color: var(--bg);
   box-shadow: 0 1px 2px rgb(0 0 0 / 0.08), 0 4px 12px rgb(0 0 0 / 0.08);
-  transition: background-color 0.2s var(--ease);
+  transition: opacity 0.2s var(--ease);
 }
 
 .whatsapp-float:hover {
-  background: var(--accent);
+  opacity: 0.86;
 }
 
 /* Motion
