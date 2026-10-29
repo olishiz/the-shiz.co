@@ -16,9 +16,18 @@ index.html # Single-page site — all sections here
 css/main.css # All styles; design tokens in :root at the top
 scripts/main.js # Mobile menu, sticky-header border, reveal-on-scroll, active nav link, copyright year
 fonts/ # Self-hosted woff2 + OFL licences
-images/og-image.png # 1200x630 social preview
-images/the-shiz-cropped-removebg-preview.png # Main logo
+media/hero.mp4, hero.webm # Hero loop (1080p, no audio, colour-graded to blend with --bg)
+media/hero-poster.webp # Hero poster frame (also the reduced-motion fallback)
+images/og-image.png # 1200x630 social preview rendered from the wordmark
+images/logo.png # Transparent wordmark PNG (JSON-LD logo)
+images/clients/*.webp # Client homepage previews
+favicon.ico, favicon.svg # "=>" mark; the SVG flips to off-white in dark mode
 ```
+
+## Brand
+- Wordmark = inline SVG "=>" mark (`.brand-mark`) + "The Shiz" in League Spartan 700 (`.brand-name`), used in nav and footer.
+- `images/the-shiz-cropped-removebg-preview.png` and other globe logos are retired (unused).
+- To regenerate `og-image.png`/`logo.png`, render the same markup in headless Chrome with the self-hosted font.
 
 ## Design tokens
 Palette matched to cursor.com/home, defined once in `:root` in `css/main.css`:
@@ -32,9 +41,9 @@ Palette matched to cursor.com/home, defined once in `:root` in `css/main.css`:
 
 ## Sections (in order)
 1. **Header** — sticky, logo + nav + "Free quote"; hamburger menu below 48rem
-2. **Hero** — serif eyebrow, uppercase display title between 2px rules, lead, CTAs
+2. **Hero** — serif eyebrow, uppercase display title between 1px rules, lead, CTAs, then a rounded media panel with the looping hero video (poster only under prefers-reduced-motion; paused when off-screen)
 3. **01 About** — "We build websites for Malaysian brands" + 4-item checklist
-4. **02 Services** — Web Design, Web Applications, E-Commerce, SEO
+4. **02 Services** — 4 columns (2 on tablet, 1 on mobile), each with a hand-built inline SVG line illustration, serif heading and bullet list: Web Design & Development, Applied AI, Product & Design, Engineering & Cloud
 5. **03 Approach** — Commitment, Transparency, Professionalism
 6. **04 Clients** — card grid (4 cols ≥72rem, 2 cols ≥40rem, 1 col mobile); each card has a framed browser preview of the client's homepage (`images/clients/*.webp`, 800x500), stats below the grid
 7. **05 Testimonials** — three client quotes (text only)
