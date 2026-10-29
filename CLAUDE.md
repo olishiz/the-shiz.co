@@ -6,71 +6,60 @@ Live site: https://the-shiz.co
 Repo: https://github.com/olishiz/the-shiz.co
 
 ## Tech Stack
-- Plain HTML5, CSS3, vanilla JS (no build step)
-- Bootstrap 5 (local, `./css/bootstrap.min.css`)
-- Bootstrap Icons + Font Awesome (local)
-- AOS (Animate on Scroll) — local
-- PureCounter — local
-- Fonts: Nunito Sans via Google Fonts
+- Plain HTML5, CSS3, vanilla JS (no build step, no frameworks)
+- Self-hosted fonts in `fonts/` (all SIL OFL): Inter (main sans), League Spartan (hero display, uppercase), Literata (serif for small detail/contact lines). Mono accents use the system mono stack.
+- Bootstrap, AOS, Font Awesome, PureCounter etc. remain in `css/` and `scripts/` but are no longer loaded by `index.html`.
 
 ## File Structure
 ```
-index.html          # Single-page site — all sections here
-css/
-  main.css          # Primary custom styles
-  bootstrap.min.css
-  aos.css
-  font-awesome/
-  bootstrap-icons/
-scripts/
-  main.js           # Custom JS (AOS init, scrolltop visibility)
-  bootstrap.bundle.min.js
-  aos.min.js
-  purecounter.min.js
-  imagesloaded.pkgd.min.js
-  masonry.pkgd.min.js
-images/
-  logo/             # Client logos
-  illustrations/    # SVG illustrations
-  testimonials/     # Testimonial profile photos
-  the-shiz-cropped-removebg-preview.png  # Main logo
+index.html # Single-page site — all sections here
+css/main.css # All styles; design tokens in :root at the top
+scripts/main.js # Mobile menu, sticky-header border, reveal-on-scroll, active nav link, copyright year
+fonts/ # Self-hosted woff2 + OFL licences
+images/og-image.png # 1200x630 social preview
+images/the-shiz-cropped-removebg-preview.png # Main logo
 ```
 
+## Design tokens
+Palette sampled from Oliver's name card, defined once in `:root` in `css/main.css`:
+`--bg #EAE4CD`, `--surface #F2EDDB`, `--text #1A1612`, `--muted #6B6355`, `--border #CFC7AE`, `--accent #64483A`.
+`--border` is decorative only (1.3:1); form controls use `--muted` for their outline. The hero uses 2px `--text` rules as a signature divider (echoing the card).
+
 ## Sections (in order)
-1. **Header / Nav** — fixed navbar, collapses on mobile
-2. **Hero** — tagline, Free Quote CTA
-3. **About** — two subsections: "Malaysian brands" + "Long Term Partnership" tabs
-4. **Services** — Web Design, Web App, E-Commerce, SEO
-5. **Our Clients** — 4 client cards (RS Property, MQBC, Frankitas, Carbnb)
-6. **Stats** — PureCounter animated numbers
-7. **Testimonials** — client quotes
-8. **Contact** — Formspree form + WhatsApp CTA
-9. **Footer** — 4-column layout with sitemap, services, contact + JSON-LD SEO
+1. **Header** — sticky, logo + nav + "Free quote"; hamburger menu below 48rem
+2. **Hero** — serif eyebrow, uppercase display title between 2px rules, lead, CTAs
+3. **01 About** — "We build websites for Malaysian brands" + 4-item checklist
+4. **02 Services** — Web Design, Web Applications, E-Commerce, SEO
+5. **03 Approach** — Commitment, Transparency, Professionalism
+6. **04 Clients** — client list (RS Property, MQBC, Frankitas, Carbnb) + stats
+7. **05 Testimonials** — three client quotes (text only)
+8. **06 Contact** — contact details + Formspree form
+9. **Footer** — brand, sitemap, services, contact, bottom bar + JSON-LD
 
 ## Key Details
-- WhatsApp number: `+60168694900`
+- Contact person: Oliver Sim, software engineer
+- Phone / WhatsApp: `+60 16 869 4900` (`+60168694900`)
 - WhatsApp link: `https://api.whatsapp.com/send/?phone=%2B60168694900&text=Hi%2C%20I%20would%20like%20to%20inquire%20about%20your%20web%20design%20services.&type=phone_number&app_absent=0`
 - Contact email: hello@the-shiz.co
 - Formspree endpoint: `https://formspree.io/f/xdobblql`
-- Google Analytics: `G-Y96LVQYJJ6`
+- Google Analytics: `G-Y96LVQYJJ6`; Vercel Web Analytics script also loaded
 
 ## Conventions
-- All sections use class `.section` which provides `scroll-margin-top: 5rem` to clear the fixed navbar
-- Mobile navbar auto-closes on link tap, then smooth-scrolls to target (script at bottom of index.html)
-- Copyright year is dynamic via JS `new Date().getFullYear()`
+- Sticky header; `html { scroll-padding-top }` clears it for anchor links
+- `.reveal` elements fade in on scroll only when JS runs and `prefers-reduced-motion` is not set
+- Copyright year is set by `scripts/main.js`
 - Floating WhatsApp button: fixed bottom-right (`#whatsapp-float`)
-- Scroll-to-top button: fixed bottom-left (`#scrolltop`)
-- Client logos fetched via `https://logo.clearbit.com/<domain>` for external clients (e.g. carbnb.my)
+- Never invent clients, numbers, testimonials or services; mark gaps with `TODO(content)` comments
 
 ## Clients
-| Client | URL | Logo file |
-|---|---|---|
-| RS Property Services | https://rspropservices.com | images/logo/rs-logo-modified.jpg |
-| MQBC | https://mqbc.com.my | images/logo/my-qt-flag-modified.jpg |
-| Frankitas | https://www.frankitas.co | images/logo/frankitas.png |
-| Carbnb | https://www.carbnb.my | clearbit API |
+| Client | URL |
+|---|---|
+| RS Property Services | https://rspropservices.com |
+| MQBC | https://mqbc.com.my |
+| Frankitas | https://www.frankitas.co |
+| Carbnb | https://www.carbnb.my |
 
 ## SEO
+- Meta description/keywords, canonical, Open Graph + Twitter card tags in `<head>`
 - JSON-LD structured data (`schema.org/ProfessionalService`) in footer
-- Meta tags in `<head>` — update description/keywords if needed
 - Footer bottom bar includes keyword anchor: "Web Design & Development in Malaysia"
