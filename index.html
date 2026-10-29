@@ -30,7 +30,7 @@
 
     <link rel="preload" href="./fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="./fonts/league-spartan-latin-var.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="./css/main.css?ver=2.1.0">
+    <link rel="stylesheet" href="./css/main.css?ver=2.3.0">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y96LVQYJJ6"></script>
@@ -204,36 +204,90 @@
             <div class="section-head">
                 <p class="section-label"><span class="mono">04</span> Clients</p>
                 <h2 id="clients-title">Trusted by businesses across Malaysia.</h2>
+                <p class="section-intro">
+                    We’re proud to have partnered with these brands to build their digital presence.
+                </p>
             </div>
 
-            <ul class="client-list reveal">
-                <!-- TODO(content): rspropservices.com no longer resolves (NXDOMAIN); restore the link once the client's site is back. -->
+            <ul class="client-grid reveal">
                 <li>
-                    <div class="client-row">
-                        <span class="client-name">RS Property Services</span>
-                        <span class="client-url mono">rspropservices.com</span>
+                    <a class="client-card" href="https://mqbc.com.my/" target="_blank" rel="noopener">
+                        <div class="client-card-text">
+                            <h3 class="client-card-title">MQBC</h3>
+                            <p class="client-card-desc">“A website that truly represents our brand.”</p>
+                        </div>
+                        <div class="client-preview">
+                            <div class="browser">
+                                <div class="browser-bar">
+                                    <span class="browser-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                                    <span class="browser-url mono">mqbc.com.my</span>
+                                </div>
+                                <img src="images/clients/mqbc.webp" width="800" height="500" loading="lazy"
+                                     decoding="async" alt="Homepage of mqbc.com.my, the Malaysia-Qatar Joint Business Council website">
+                            </div>
+                        </div>
+                        <span class="visually-hidden">(opens in a new tab)</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="client-card" href="https://www.frankitas.co/" target="_blank" rel="noopener">
+                        <div class="client-card-text">
+                            <h3 class="client-card-title">Frankitas</h3>
+                            <p class="client-card-desc">“Clean, modern, and exactly what I had in mind.”</p>
+                        </div>
+                        <div class="client-preview">
+                            <div class="browser">
+                                <div class="browser-bar">
+                                    <span class="browser-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                                    <span class="browser-url mono">frankitas.co</span>
+                                </div>
+                                <img src="images/clients/frankitas.webp" width="800" height="500" loading="lazy"
+                                     decoding="async" alt="Homepage of frankitas.co, an online store for handwoven bags">
+                            </div>
+                        </div>
+                        <span class="visually-hidden">(opens in a new tab)</span>
+                    </a>
+                </li>
+                <!-- TODO(content): Carbnb has no testimonial or description on the current site; replace this line with an approved one-liner. -->
+                <li>
+                    <a class="client-card" href="https://www.carbnb.my/" target="_blank" rel="noopener">
+                        <div class="client-card-text">
+                            <h3 class="client-card-title">Carbnb</h3>
+                            <p class="client-card-desc">Partnered to build their digital presence.</p>
+                        </div>
+                        <div class="client-preview">
+                            <div class="browser">
+                                <div class="browser-bar">
+                                    <span class="browser-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                                    <span class="browser-url mono">carbnb.my</span>
+                                </div>
+                                <img src="images/clients/carbnb.webp" width="800" height="500" loading="lazy"
+                                     decoding="async" alt="Homepage of carbnb.my, a car rental and subscription service in Malaysia">
+                            </div>
+                        </div>
+                        <span class="visually-hidden">(opens in a new tab)</span>
+                    </a>
+                </li>
+                <!-- TODO(content): rspropservices.com no longer resolves (NXDOMAIN); swap in a screenshot and link once the client's site is back. -->
+                <li>
+                    <div class="client-card client-card-static">
+                        <div class="client-card-text">
+                            <h3 class="client-card-title">RS Property Services</h3>
+                            <p class="client-card-desc">“Efficient, responsive and produced results in a short period of time.”</p>
+                        </div>
+                        <div class="client-preview">
+                            <div class="browser">
+                                <div class="browser-bar">
+                                    <span class="browser-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                                    <span class="browser-url mono">RS Property Services</span>
+                                </div>
+                                <div class="browser-placeholder">
+                                    <span class="placeholder-name">RS Property Services</span>
+                                    <span class="placeholder-note mono">Preview unavailable</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </li>
-                <li>
-                    <a href="https://mqbc.com.my/" target="_blank" rel="noopener">
-                        <span class="client-name">MQBC</span>
-                        <span class="client-url mono">mqbc.com.my</span>
-                        <span class="client-arrow" aria-hidden="true">↗</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.frankitas.co/" target="_blank" rel="noopener">
-                        <span class="client-name">Frankitas</span>
-                        <span class="client-url mono">frankitas.co</span>
-                        <span class="client-arrow" aria-hidden="true">↗</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.carbnb.my/" target="_blank" rel="noopener">
-                        <span class="client-name">Carbnb</span>
-                        <span class="client-url mono">carbnb.my</span>
-                        <span class="client-arrow" aria-hidden="true">↗</span>
-                    </a>
                 </li>
             </ul>
 
