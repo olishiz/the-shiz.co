@@ -538,7 +538,8 @@ html:not(.js) .header-inner {
   border-top: 1px solid var(--text);
 }
 
-.client-list a {
+.client-list a,
+.client-row {
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: baseline;
@@ -572,7 +573,8 @@ html:not(.js) .header-inner {
 }
 
 @media (min-width: 48rem) {
-  .client-list a {
+  .client-list a,
+  .client-row {
     grid-template-columns: 1fr 1fr auto;
   }
 
