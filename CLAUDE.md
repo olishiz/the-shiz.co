@@ -6,71 +6,76 @@ Live site: https://the-shiz.co
 Repo: https://github.com/olishiz/the-shiz.co
 
 ## Tech Stack
-- Plain HTML5, CSS3, vanilla JS (no build step)
-- Bootstrap 5 (local, `./css/bootstrap.min.css`)
-- Bootstrap Icons + Font Awesome (local)
-- AOS (Animate on Scroll) — local
-- PureCounter — local
-- Fonts: Nunito Sans via Google Fonts
+- Plain HTML5, CSS3, vanilla JS (no build step, no frameworks)
+- Self-hosted fonts in `fonts/` (all SIL OFL): Inter (main sans), League Spartan (hero display, uppercase), Literata (serif for small detail/contact lines). Mono accents use the system mono stack.
+- Bootstrap, AOS, Font Awesome, PureCounter etc. remain in `css/` and `scripts/` but are no longer loaded by `index.html`.
 
 ## File Structure
 ```
-index.html          # Single-page site — all sections here
-css/
-  main.css          # Primary custom styles
-  bootstrap.min.css
-  aos.css
-  font-awesome/
-  bootstrap-icons/
-scripts/
-  main.js           # Custom JS (AOS init, scrolltop visibility)
-  bootstrap.bundle.min.js
-  aos.min.js
-  purecounter.min.js
-  imagesloaded.pkgd.min.js
-  masonry.pkgd.min.js
-images/
-  logo/             # Client logos
-  illustrations/    # SVG illustrations
-  testimonials/     # Testimonial profile photos
-  the-shiz-cropped-removebg-preview.png  # Main logo
+index.html # Single-page site — all sections here
+css/main.css # All styles; design tokens in :root at the top
+scripts/main.js # Mobile menu, sticky-header border, reveal-on-scroll, active nav link, copyright year
+fonts/ # Self-hosted woff2 + OFL licences
+media/hero.mp4, hero.webm # Hero loop (1080p, no audio, colour-graded to blend with --bg)
+media/hero-poster.webp # Hero poster frame (also the reduced-motion fallback)
+images/og-image.png # 1200x630 social preview rendered from the wordmark
+images/logo.png # Transparent wordmark PNG (JSON-LD logo)
+images/clients/*.webp # Client homepage previews
+favicon.ico, favicon.svg # "=>" mark; the SVG flips to off-white in dark mode
 ```
 
+## Brand
+- Wordmark = inline SVG "=>" mark (`.brand-mark`) + "The Shiz" in League Spartan 700 (`.brand-name`), used in nav and footer.
+- `images/the-shiz-cropped-removebg-preview.png` and other globe logos are retired (unused).
+- To regenerate `og-image.png`/`logo.png`, render the same markup in headless Chrome with the self-hosted font.
+
+## Design tokens
+Palette matched to cursor.com/home, defined once in `:root` in `css/main.css`:
+`--bg #F7F7F4`, `--surface #E6E5E0`, `--text #26251F`, `--muted #6B6B66`, `--muted-soft #84847F`, `--border #CDCDC9`.
+- No separate accent: links/buttons use `--text`; hover is an underline, `--surface`, or a slight opacity change.
+- `--muted-soft` (3.5:1) is for large/decorative text only; keep small `--muted` text off `--surface` (4.25:1).
+- `--border` is decorative (1.5:1); form controls use `--muted` for their outline.
+- Client cards use `--panel #F2F1ED` (muted text 4.7:1) with a `--panel-well #EBEAE5` image backdrop (no small muted text on the well).
+- Buttons are pills: `.button` (dark primary), `.button-secondary` (grey `--surface`), `.button-outline` (thin border, used in the nav).
+- Dividers are 1px `--border`, including the rules around the hero title.
+
 ## Sections (in order)
-1. **Header / Nav** — fixed navbar, collapses on mobile
-2. **Hero** — tagline, Free Quote CTA
-3. **About** — two subsections: "Malaysian brands" + "Long Term Partnership" tabs
-4. **Services** — Web Design, Web App, E-Commerce, SEO
-5. **Our Clients** — 4 client cards (RS Property, MQBC, Frankitas, Carbnb)
-6. **Stats** — PureCounter animated numbers
-7. **Testimonials** — client quotes
-8. **Contact** — Formspree form + WhatsApp CTA
-9. **Footer** — 4-column layout with sitemap, services, contact + JSON-LD SEO
+1. **Header** — sticky, logo + nav + "Free quote"; hamburger menu below 48rem
+2. **Hero** — serif eyebrow, uppercase display title between 1px rules, lead, CTAs, then a rounded media panel with the looping hero video (poster only under prefers-reduced-motion; paused when off-screen)
+3. **01 About** — "We build websites for Malaysian brands" + 4-item checklist
+4. **02 Services** — 4 columns (2 on tablet, 1 on mobile), each with a hand-built inline SVG line illustration, serif heading and bullet list: Web Design & Development, Applied AI, Product & Design, Engineering & Cloud
+5. **03 Approach** — Commitment, Transparency, Professionalism
+6. **04 Clients** — card grid (4 cols ≥72rem, 2 cols ≥40rem, 1 col mobile); each card has a framed browser preview of the client's homepage (`images/clients/*.webp`, 800x500), stats below the grid
+7. **05 Testimonials** — three client quotes (text only)
+8. **06 Contact** — contact details + Formspree form
+9. **Footer** — brand, sitemap, services, contact, bottom bar + JSON-LD
 
 ## Key Details
-- WhatsApp number: `+60168694900`
+- Contact person: Oliver Sim, software engineer
+- Phone / WhatsApp: `+60 16 869 4900` (`+60168694900`)
 - WhatsApp link: `https://api.whatsapp.com/send/?phone=%2B60168694900&text=Hi%2C%20I%20would%20like%20to%20inquire%20about%20your%20web%20design%20services.&type=phone_number&app_absent=0`
 - Contact email: hello@the-shiz.co
 - Formspree endpoint: `https://formspree.io/f/xdobblql`
-- Google Analytics: `G-Y96LVQYJJ6`
+- Google Analytics: `G-Y96LVQYJJ6`; Vercel Web Analytics script also loaded
 
 ## Conventions
-- All sections use class `.section` which provides `scroll-margin-top: 5rem` to clear the fixed navbar
-- Mobile navbar auto-closes on link tap, then smooth-scrolls to target (script at bottom of index.html)
-- Copyright year is dynamic via JS `new Date().getFullYear()`
+- Sticky header; `html { scroll-padding-top }` clears it for anchor links
+- `.reveal` elements fade in on scroll only when JS runs and `prefers-reduced-motion` is not set
+- Copyright year is set by `scripts/main.js`
 - Floating WhatsApp button: fixed bottom-right (`#whatsapp-float`)
-- Scroll-to-top button: fixed bottom-left (`#scrolltop`)
-- Client logos fetched via `https://logo.clearbit.com/<domain>` for external clients (e.g. carbnb.my)
+- Never invent clients, numbers, testimonials or services; mark gaps with `TODO(content)` comments
 
 ## Clients
-| Client | URL | Logo file |
+| Client | URL | Preview |
 |---|---|---|
-| RS Property Services | https://rspropservices.com | images/logo/rs-logo-modified.jpg |
-| MQBC | https://mqbc.com.my | images/logo/my-qt-flag-modified.jpg |
-| Frankitas | https://www.frankitas.co | images/logo/frankitas.png |
-| Carbnb | https://www.carbnb.my | clearbit API |
+| MQBC | https://mqbc.com.my | images/clients/mqbc.webp |
+| Frankitas | https://www.frankitas.co | images/clients/frankitas.webp |
+| Carbnb | https://www.carbnb.my | images/clients/carbnb.webp |
+| RS Property Services | rspropservices.com (NXDOMAIN — unlinked placeholder card) | none |
+
+Previews are 1280x800 captures of each live homepage, resized to 800x500 WebP. Re-capture when a client's site changes. Card descriptions come from existing testimonials only.
 
 ## SEO
+- Meta description/keywords, canonical, Open Graph + Twitter card tags in `<head>`
 - JSON-LD structured data (`schema.org/ProfessionalService`) in footer
-- Meta tags in `<head>` — update description/keywords if needed
 - Footer bottom bar includes keyword anchor: "Web Design & Development in Malaysia"
