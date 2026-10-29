@@ -247,9 +247,29 @@ a {
   min-height: var(--header-height);
 }
 
-.brand img {
-  width: auto;
-  height: 32px;
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.brand-mark {
+  flex: none;
+  width: 1.375rem;
+  height: auto;
+  fill: currentColor;
+}
+
+.brand-name {
+  font-family: var(--font-display);
+  font-size: 1.3125rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  /* League Spartan sits high in its em box; nudge to optical centre. */
+  padding-top: 0.15em;
 }
 
 .nav-toggle {
@@ -374,7 +394,7 @@ html:not(.js) .header-inner {
 /* Hero
    ========================================================================== */
 .hero {
-  padding-block: clamp(4.5rem, 3rem + 8vw, 10rem) var(--space-section);
+  padding-block: clamp(3.5rem, 2.5rem + 5vw, 7rem) var(--space-section);
 }
 
 .section-label {
@@ -401,6 +421,37 @@ html:not(.js) .header-inner {
   line-height: 0.95;
   letter-spacing: 0.01em;
   text-transform: uppercase;
+}
+
+.hero-media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  margin-top: clamp(3rem, 2rem + 4vw, 5rem);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--bg);
+}
+
+.hero-media video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 62% 50%;
+  /* Feather the frame edges into --bg so the clip's vignette disappears. */
+  -webkit-mask-image: radial-gradient(ellipse 85% 85% at 50% 50%, #000 62%, transparent 100%);
+  mask-image: radial-gradient(ellipse 85% 85% at 50% 50%, #000 62%, transparent 100%);
+}
+
+@media (min-width: 48rem) {
+  .hero-media {
+    aspect-ratio: 16 / 9;
+  }
+
+  .hero-media video {
+    object-position: 50% 50%;
+  }
 }
 
 .lead {
@@ -490,40 +541,94 @@ html:not(.js) .header-inner {
   padding: clamp(1.5rem, 1rem + 1.5vw, 2rem);
 }
 
-@media (min-width: 40rem) {
-  .grid-4 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 @media (min-width: 60rem) {
-  .grid-4 {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
   .grid-3 {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-.card-index {
-  display: block;
-  margin-bottom: 2.5rem;
-  color: var(--muted);
-}
-
-.card h3,
 .principle h3 {
   font-size: var(--text-base);
   font-weight: 600;
   letter-spacing: -0.01em;
 }
 
-.card p,
 .principle p {
   margin-top: 0.625rem;
   font-size: var(--text-sm);
   color: var(--muted);
+}
+
+/* Services */
+.services-grid {
+  display: grid;
+  gap: 3.5rem 2.5rem;
+}
+
+@media (min-width: 40rem) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 72rem) {
+  .services-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+
+  .service-title {
+    min-height: 2.3em;
+  }
+}
+
+.service-art {
+  display: block;
+  width: 9rem;
+  height: auto;
+  margin-bottom: 1.75rem;
+  fill: none;
+  stroke: var(--text);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.service-art .fill {
+  fill: var(--text);
+  stroke: none;
+}
+
+.service-art .paper {
+  fill: var(--bg);
+}
+
+.service-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.5rem, 1.25rem + 0.6vw, 1.75rem);
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+}
+
+.service-list {
+  margin-top: 1.25rem;
+  font-size: var(--text-sm);
+}
+
+.service-list li {
+  display: flex;
+  gap: 0.625rem;
+  padding: 0.3rem 0;
+}
+
+.service-list li::before {
+  content: "";
+  flex: none;
+  width: 5px;
+  height: 5px;
+  margin-top: 0.55em;
+  background: var(--text);
 }
 
 /* About checklist */
@@ -853,9 +958,8 @@ a.client-card:hover .browser {
   grid-column: 1 / -1;
 }
 
-.footer-brand img {
-  width: auto;
-  height: 32px;
+.footer-brand .brand:hover {
+  text-decoration: none;
 }
 
 .footer-brand p {

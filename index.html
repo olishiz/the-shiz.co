@@ -5,23 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>The Shiz — Web Design &amp; Development in Malaysia</title>
     <meta name="description"
-          content="The Shiz is a Malaysian web design and development studio. Custom websites, web applications, e-commerce and SEO for Malaysian businesses.">
+          content="The Shiz is a Malaysian web and AI engineering studio. Custom websites, web applications, e-commerce, SEO and applied AI for Malaysian businesses.">
     <meta name="keywords"
-          content="web design Malaysia, web development Malaysia, website design Kuala Lumpur, e-commerce website Malaysia, SEO Malaysia, web application development">
+          content="web design Malaysia, web development Malaysia, website design Kuala Lumpur, e-commerce website Malaysia, SEO Malaysia, web application development, AI development Malaysia, AI chatbot Malaysia">
     <meta name="theme-color" content="#f7f7f4">
     <link rel="canonical" href="https://the-shiz.co/">
     <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="The Shiz">
     <meta property="og:title" content="The Shiz — Web Design &amp; Development in Malaysia">
     <meta property="og:description"
-          content="Simple, functional, well-built websites for Malaysian businesses. Web design, web apps, e-commerce and SEO.">
+          content="Web design, development and applied AI for Malaysian businesses — simple, functional and well built.">
     <meta property="og:url" content="https://the-shiz.co/">
     <meta property="og:image" content="https://the-shiz.co/images/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="The Shiz logo">
+    <meta property="og:image:alt" content="The Shiz wordmark">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="The Shiz — Web Design &amp; Development in Malaysia">
     <meta name="twitter:description"
@@ -30,7 +31,7 @@
 
     <link rel="preload" href="./fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="./fonts/league-spartan-latin-var.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="./css/main.css?ver=2.3.0">
+    <link rel="stylesheet" href="./css/main.css?ver=2.4.0">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y96LVQYJJ6"></script>
@@ -54,8 +55,8 @@
 
 <header class="site-header" id="site-header">
     <div class="container header-inner">
-        <a class="brand" href="#top" aria-label="The Shiz — back to top">
-            <img src="images/the-shiz-cropped-removebg-preview.png" alt="The Shiz" width="115" height="40">
+        <a class="brand" href="#top">
+            <svg class="brand-mark" viewBox="0 0 38 24" aria-hidden="true" focusable="false"><rect x="0" y="5" width="20" height="4.5"/><rect x="0" y="14.5" width="20" height="4.5"/><path d="M24.5 2.5 34 12l-9.5 9.5" fill="none" stroke="currentColor" stroke-width="4.75"/></svg><span class="brand-name">The Shiz</span>
         </a>
 
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
@@ -99,6 +100,22 @@
                     Chat on WhatsApp
                 </a>
             </div>
+
+            <div class="hero-media">
+                <video id="hero-video" autoplay muted loop playsinline preload="metadata"
+                       poster="media/hero-poster.webp" width="1920" height="1080" aria-hidden="true"
+                       disablepictureinpicture disableremoteplayback>
+                    <source src="media/hero.webm" type="video/webm">
+                    <source src="media/hero.mp4" type="video/mp4">
+                </video>
+                <script>
+                  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                    var heroVideo = document.getElementById('hero-video');
+                    heroVideo.removeAttribute('autoplay');
+                    heroVideo.preload = 'none';
+                  }
+                </script>
+            </div>
         </div>
     </section>
 
@@ -130,39 +147,99 @@
         <div class="container">
             <div class="section-head">
                 <p class="section-label"><span class="mono">02</span> Services</p>
-                <h2 id="services-title">What we do.</h2>
+                <h2 id="services-title">Full-stack web and AI engineering.</h2>
                 <p class="section-intro">
-                    Industry experience combined with a clear understanding of your business goals — digital
-                    work that drives growth, lifts your brand and gives your audience a better experience.
+                    One studio from first sketch to launch and beyond — design, engineering and applied AI,
+                    shaped around your business goals.
                 </p>
             </div>
 
-            <ol class="grid grid-4 services reveal">
-                <li class="card">
-                    <span class="mono card-index" aria-hidden="true">/01</span>
-                    <h3>Web Design</h3>
-                    <p>From bespoke HTML/CSS builds to Shopify and WordPress themes — designs that reflect your
-                        brand and engage your audience.</p>
+            <ul class="services-grid reveal">
+                <li class="service">
+                    <svg class="service-art" viewBox="0 0 160 120" aria-hidden="true" focusable="false">
+                        <rect x="16" y="18" width="116" height="84" rx="4"/>
+                        <path d="M16 31h116"/>
+                        <circle class="fill" cx="25" cy="24.5" r="1.8"/><circle class="fill" cx="32" cy="24.5" r="1.8"/><circle class="fill" cx="39" cy="24.5" r="1.8"/>
+                        <rect class="fill" x="26" y="41" width="42" height="26"/>
+                        <path d="M78 44h42M78 53h34M78 62h40"/>
+                        <rect x="26" y="76" width="27" height="16"/><rect x="60" y="76" width="27" height="16"/><rect x="94" y="76" width="27" height="16"/>
+                        <path class="paper" d="M124 80v22l6-6 5 10 4-2-5-10h8z"/>
+                    </svg>
+                    <h3 class="service-title">Web Design &amp; Development</h3>
+                    <ul class="service-list">
+                        <li>Website design</li>
+                        <li>Landing pages</li>
+                        <li>Web applications</li>
+                        <li>E-commerce</li>
+                        <li>CMS &amp; content sites</li>
+                        <li>Performance &amp; SEO</li>
+                    </ul>
                 </li>
-                <li class="card">
-                    <span class="mono card-index" aria-hidden="true">/02</span>
-                    <h3>Web Applications</h3>
-                    <p>Scalable, high-performance web applications built to streamline your operations and solve
-                        real business problems.</p>
+                <li class="service">
+                    <svg class="service-art" viewBox="0 0 160 120" aria-hidden="true" focusable="false">
+                        <path d="M64 50 38 28M96 50l26-24M64 74l-28 22M96 74l28 20M80 44V16M80 76v28M38 28l-14 30 12 38M122 26l16 32-14 36"/>
+                        <path d="M70 44v-6M80 44v-6M90 44v-6M70 82v-6M80 82v-6M90 82v-6M58 54h6M58 62h6M58 70h6M96 54h6M96 62h6M96 70h6"/>
+                        <rect class="fill" x="64" y="44" width="32" height="32" rx="3"/>
+                        <circle class="paper" cx="38" cy="28" r="5"/><circle class="paper" cx="122" cy="26" r="5"/>
+                        <circle class="paper" cx="36" cy="96" r="5"/><circle class="paper" cx="124" cy="94" r="5"/>
+                        <circle class="paper" cx="80" cy="14" r="4"/><circle class="paper" cx="80" cy="106" r="4"/>
+                        <circle class="fill" cx="24" cy="58" r="2.5"/><circle class="fill" cx="138" cy="58" r="2.5"/>
+                        <path d="M146 18v10M141 23h10"/>
+                    </svg>
+                    <h3 class="service-title">Applied AI</h3>
+                    <ul class="service-list">
+                        <li>AI strategy &amp; readiness</li>
+                        <li>LLM apps &amp; AI agents</li>
+                        <li>AI chatbots &amp; assistants</li>
+                        <li>RAG &amp; knowledge systems</li>
+                        <li>Workflow &amp; process automation</li>
+                        <li>AI integration into existing products</li>
+                    </ul>
                 </li>
-                <li class="card">
-                    <span class="mono card-index" aria-hidden="true">/03</span>
-                    <h3>E-Commerce</h3>
-                    <p>Launch and grow your online store with confidence, and manage it yourself without relying
-                        on a developer.</p>
+                <li class="service">
+                    <svg class="service-art" viewBox="0 0 160 120" aria-hidden="true" focusable="false">
+                        <rect x="14" y="14" width="132" height="92" rx="2" stroke-dasharray="3 5"/>
+                        <path d="M30 88C46 20 104 108 128 34"/>
+                        <path d="M30 88 50 40M128 34l-14 42"/>
+                        <circle class="paper" cx="50" cy="40" r="3.5"/><circle class="paper" cx="114" cy="76" r="3.5"/>
+                        <rect class="paper" x="26" y="84" width="8" height="8"/>
+                        <rect class="paper" x="124" y="30" width="8" height="8"/>
+                        <rect class="fill" x="74" y="56" width="9" height="9"/>
+                        <path d="M98 96l20-20 6 6-20 20-8 2z"/>
+                        <path d="M114 80l6 6"/>
+                    </svg>
+                    <h3 class="service-title">Product &amp; Design</h3>
+                    <ul class="service-list">
+                        <li>UX/UI design</li>
+                        <li>Design systems</li>
+                        <li>Brand &amp; digital identity</li>
+                        <li>Prototyping</li>
+                        <li>UX audits</li>
+                    </ul>
                 </li>
-                <li class="card">
-                    <span class="mono card-index" aria-hidden="true">/04</span>
-                    <h3>SEO</h3>
-                    <p>Data-driven SEO that improves your search rankings, brings in qualified traffic and connects
-                        you with the right customers.</p>
+                <li class="service">
+                    <svg class="service-art" viewBox="0 0 160 120" aria-hidden="true" focusable="false">
+                        <path d="M48 64h66a14 14 0 0 0 1-28 20 20 0 0 0-38-6 15 15 0 0 0-26 9 13 13 0 0 0-3 25z"/>
+                        <path d="M70 42l-6 6 6 6M92 42l6 6-6 6M84 40l-6 16"/>
+                        <path d="M80 64v10" stroke-dasharray="2 3"/>
+                        <rect x="40" y="76" width="80" height="13" rx="2"/>
+                        <rect x="40" y="93" width="80" height="13" rx="2"/>
+                        <path d="M50 82.5h22M50 99.5h22"/>
+                        <circle class="fill" cx="110" cy="82.5" r="2.2"/><circle cx="102" cy="82.5" r="2.2"/>
+                        <circle cx="110" cy="99.5" r="2.2"/><circle cx="102" cy="99.5" r="2.2"/>
+                        <path d="M128 28h12M134 22v12" />
+                    </svg>
+                    <h3 class="service-title">Engineering &amp; Cloud</h3>
+                    <ul class="service-list">
+                        <li>Full-stack development</li>
+                        <li>API &amp; integrations</li>
+                        <li>Mobile-friendly &amp; PWA</li>
+                        <li>Cloud hosting &amp; DevOps</li>
+                        <li>Maintenance &amp; support</li>
+                        <li>Technical consulting</li>
+                    </ul>
                 </li>
-            </ol>
+            </ul>
         </div>
     </section>
 
@@ -422,8 +499,9 @@
     <div class="container">
         <div class="footer-grid">
             <div class="footer-brand">
-                <img src="images/the-shiz-cropped-removebg-preview.png" alt="The Shiz — Web Design Malaysia"
-                     width="115" height="40" loading="lazy">
+                <a class="brand" href="#top">
+                    <svg class="brand-mark" viewBox="0 0 38 24" aria-hidden="true" focusable="false"><rect x="0" y="5" width="20" height="4.5"/><rect x="0" y="14.5" width="20" height="4.5"/><path d="M24.5 2.5 34 12l-9.5 9.5" fill="none" stroke="currentColor" stroke-width="4.75"/></svg><span class="brand-name">The Shiz</span>
+                </a>
                 <p>Fast, well-built websites for Malaysian businesses. From design to deployment, we handle it
                     all.</p>
             </div>
@@ -443,11 +521,10 @@
             <div>
                 <h2 class="footer-heading mono">Services</h2>
                 <ul>
-                    <li><a href="#services">Web Design</a></li>
-                    <li><a href="#services">Web Applications</a></li>
-                    <li><a href="#services">E-Commerce</a></li>
-                    <li><a href="#services">SEO</a></li>
-                    <li><a href="#about">Website Maintenance</a></li>
+                    <li><a href="#services">Web Design &amp; Development</a></li>
+                    <li><a href="#services">Applied AI</a></li>
+                    <li><a href="#services">Product &amp; Design</a></li>
+                    <li><a href="#services">Engineering &amp; Cloud</a></li>
                 </ul>
             </div>
 
@@ -476,9 +553,9 @@
             "@type": "ProfessionalService",
             "name": "The Shiz",
             "url": "https://the-shiz.co",
-            "logo": "https://the-shiz.co/images/the-shiz-cropped-removebg-preview.png",
+            "logo": "https://the-shiz.co/images/logo.png",
             "image": "https://the-shiz.co/images/og-image.png",
-            "description": "The Shiz is a Malaysian web design and development agency offering custom websites, web applications, e-commerce, and SEO services.",
+            "description": "The Shiz is a Malaysian web and AI engineering studio offering web design and development, applied AI, product and design, and engineering and cloud services.",
             "email": "hello@the-shiz.co",
             "telephone": "+60168694900",
             "founder": {
@@ -507,6 +584,10 @@
                 "Web Development",
                 "E-Commerce",
                 "SEO",
+                "Applied AI",
+                "AI Chatbots",
+                "UX/UI Design",
+                "Cloud Hosting & DevOps",
                 "Website Maintenance"
             ]
         }

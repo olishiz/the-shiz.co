@@ -55,6 +55,26 @@
     revealEls.forEach(function (el) { revealObserver.observe(el); });
   }
 
+  var heroVideo = document.getElementById('hero-video');
+  if (heroVideo) {
+    var motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    var heroInView = true;
+    var syncHeroVideo = function () {
+      if (motionQuery.matches || !heroInView) {
+        heroVideo.pause();
+      } else {
+        heroVideo.play().catch(function () {});
+      }
+    };
+    motionQuery.addEventListener('change', syncHeroVideo);
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (entries) {
+        heroInView = entries[0].isIntersecting;
+        syncHeroVideo();
+      }).observe(heroVideo);
+    }
+  }
+
   if ('IntersectionObserver' in window) {
     var navLinks = nav.querySelectorAll('ul a[href^="#"]');
     var sectionObserver = new IntersectionObserver(function (entries) {
