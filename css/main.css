@@ -18,6 +18,7 @@
   --border: #cdcdc9;
   --panel: #f2f1ed;
   --panel-well: #ebeae5;
+  --card: #ffffff;
 
   --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-display: "League Spartan", var(--font-sans);
@@ -405,16 +406,9 @@ html:not(.js) .header-inner {
   color: var(--muted);
 }
 
-.eyebrow {
-  padding-bottom: 0.875rem;
-  font-family: var(--font-serif);
-  font-size: var(--text-lg);
-  color: var(--text);
-}
-
 .hero-title {
-  padding-block: clamp(1.5rem, 1rem + 2vw, 2.5rem) clamp(1.25rem, 0.75rem + 1.75vw, 2.25rem);
-  border-block: 1px solid var(--border);
+  padding-bottom: clamp(1.25rem, 0.75rem + 1.75vw, 2.25rem);
+  border-bottom: 1px solid var(--border);
   font-family: var(--font-display);
   font-size: var(--text-hero);
   font-weight: 700;
@@ -547,15 +541,311 @@ html:not(.js) .header-inner {
   }
 }
 
-.principle h3 {
+/* Approach (process + partnership) */
+.approach-panel {
+  padding: clamp(1.75rem, 1.25rem + 2.75vw, 3.75rem);
+  border: 1px solid color-mix(in srgb, var(--border) 75%, transparent);
+  border-radius: 24px;
+  background: var(--panel);
+}
+
+.approach-head {
+  max-width: 38rem;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.approach-head .section-label {
+  justify-content: center;
+}
+
+.approach-head .section-intro {
+  margin-top: 0.875rem;
+}
+
+.process-diagram {
+  margin-block: clamp(2rem, 1.5rem + 2vw, 3rem) clamp(1.75rem, 1.25rem + 1.75vw, 2.5rem);
+}
+
+.process-svg {
+  display: none;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.process-svg-mobile {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+@media (min-width: 48rem) {
+  .process-svg {
+    display: block;
+  }
+
+  .process-svg-mobile {
+    display: none;
+  }
+}
+
+.proc-phase-title {
+  font-family: var(--font-sans);
+  font-size: 13px;
+}
+
+.proc-strong {
+  font-weight: 600;
+  fill: var(--text);
+}
+
+.proc-muted {
+  fill: var(--muted);
+}
+
+.proc-bracket {
+  fill: none;
+  stroke: var(--muted-soft);
+  stroke-width: 1.25;
+  stroke-dasharray: 3 3;
+}
+
+.proc-connector {
+  fill: none;
+  stroke: var(--muted-soft);
+  stroke-width: 1.25;
+  stroke-dasharray: 3 4;
+}
+
+.iso-side {
+  fill: var(--panel-well);
+  stroke: var(--border);
+  stroke-width: 1.25;
+  stroke-linejoin: round;
+}
+
+.iso-top {
+  fill: var(--card);
+  stroke: var(--border);
+  stroke-width: 1.25;
+  stroke-linejoin: round;
+}
+
+.iso-top-ongoing {
+  stroke: var(--muted-soft);
+  stroke-dasharray: 3 2.5;
+}
+
+.iso-side-dash {
+  fill: none;
+  stroke: var(--border);
+  stroke-width: 1.25;
+  stroke-dasharray: 2.5 2.5;
+  stroke-linejoin: round;
+}
+
+.iso-layer {
+  fill: var(--panel);
+  stroke: var(--text);
+  stroke-width: 1.2;
+  stroke-linejoin: round;
+}
+
+.iso-check {
+  fill: none;
+  stroke: var(--text);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.iso-shadow {
+  fill: var(--surface);
+}
+
+.iso-pin {
+  fill: var(--text);
+}
+
+.iso-pin-hi {
+  fill: var(--card);
+  opacity: 0.75;
+}
+
+.proc-step-label {
+  font-family: var(--font-sans);
+  font-size: 12.5px;
+  font-weight: 500;
+  fill: var(--muted);
+}
+
+.proc-loop,
+.proc-loop-head {
+  fill: none;
+  stroke: var(--text);
+  stroke-width: 1.25;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.proc-loop {
+  stroke-dasharray: 3.5 3.5;
+}
+
+.proc-loop-bg {
+  fill: var(--panel);
+}
+
+.proc-loop-text {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  fill: var(--text);
+}
+
+/* Elevated two-column numbered cards */
+.approach-cards {
+  display: grid;
+  gap: 1.25rem;
+}
+
+@media (min-width: 52rem) {
+  .approach-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+.step-card {
+  padding: clamp(1.25rem, 1rem + 1vw, 2rem) clamp(1.25rem, 1rem + 1.25vw, 2.25rem);
+  border: 1px solid color-mix(in srgb, var(--border) 65%, transparent);
+  border-radius: 16px;
+  background: var(--card);
+  box-shadow: 0 1px 2px rgb(38 37 31 / 0.03), 0 8px 24px rgb(38 37 31 / 0.025);
+}
+
+.step-card li {
+  display: grid;
+  grid-template-columns: 1.75rem 1fr;
+  gap: 0.75rem;
+  padding-block: 1.125rem;
+}
+
+.step-card li:first-child {
+  padding-top: 0;
+}
+
+.step-card li:last-child {
+  padding-bottom: 0;
+}
+
+.step-card li + li {
+  border-top: 1px solid color-mix(in srgb, var(--border) 55%, transparent);
+}
+
+.step-num {
+  padding-top: 0.25rem;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.step-card h3 {
+  font-size: var(--text-base);
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+}
+
+.step-card p {
+  margin-top: 0.375rem;
+  font-size: var(--text-sm);
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+/* Core principles strip below panel */
+.principles-row {
+  display: grid;
+  gap: 2rem;
+  margin-top: clamp(2.5rem, 2rem + 2vw, 3.75rem);
+}
+
+@media (min-width: 48rem) {
+  .principles-row {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+.principle-icon {
+  display: block;
+  width: 3.5rem;
+  height: auto;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+.principle-icon .iso-base {
+  fill: var(--panel);
+  stroke: var(--border);
+  stroke-width: 1.25;
+  stroke-linejoin: round;
+}
+
+.principle-icon .iso-plane {
+  fill: var(--card);
+  stroke: var(--text);
+  stroke-width: 1.25;
+  stroke-linejoin: round;
+}
+
+.principle-icon .iso-plane-dash {
+  fill: none;
+  stroke: var(--muted);
+  stroke-width: 1.25;
+  stroke-dasharray: 2.5 2.5;
+  stroke-linejoin: round;
+}
+
+.principle-icon .iso-cube-top {
+  fill: var(--card);
+  stroke: var(--text);
+  stroke-width: 1.25;
+  stroke-linejoin: round;
+}
+
+.principle-icon .iso-cube-left {
+  fill: var(--panel);
+  stroke: var(--text);
+  stroke-width: 1.25;
+  stroke-linejoin: round;
+}
+
+.principle-icon .iso-cube-right {
+  fill: var(--text);
+  stroke: var(--text);
+  stroke-width: 1.25;
+  stroke-linejoin: round;
+}
+
+.principle-icon .iso-node {
+  fill: var(--text);
+}
+
+.principle-item h3 {
   font-size: var(--text-base);
   font-weight: 600;
   letter-spacing: -0.01em;
 }
 
-.principle p {
-  margin-top: 0.625rem;
+.principle-item p {
+  margin-top: 0.5rem;
   font-size: var(--text-sm);
+  line-height: 1.6;
   color: var(--muted);
 }
 

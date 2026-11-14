@@ -31,7 +31,7 @@
 
     <link rel="preload" href="./fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="./fonts/league-spartan-latin-var.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="./css/main.css?ver=2.4.0">
+    <link rel="stylesheet" href="./css/main.css?ver=2.5.0">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y96LVQYJJ6"></script>
@@ -86,7 +86,6 @@
     <!-- Hero -->
     <section class="hero" aria-labelledby="hero-title">
         <div class="container">
-            <p class="eyebrow">web design &amp; development, Malaysia</p>
             <h1 class="hero-title" id="hero-title">Your success is our mission.</h1>
             <p class="lead">
                 Websites have evolved, and the way you build them should too. No one-size-fits-all
@@ -246,30 +245,234 @@
     <!-- Approach -->
     <section class="section" id="approach" aria-labelledby="approach-title">
         <div class="container">
-            <div class="section-head">
-                <p class="section-label"><span class="mono">03</span> Approach</p>
-                <h2 id="approach-title">We believe in long-term partnership.</h2>
-                <p class="section-intro">
-                    Commitment, transparency and professionalism. We look for partners who share these
-                    principles, so we can build relationships that last.
-                </p>
+            <div class="approach-panel reveal">
+                <div class="approach-head">
+                    <p class="section-label"><span class="mono">03</span> Approach</p>
+                    <h2 id="approach-title">How we build and partner long-term.</h2>
+                    <p class="section-intro">
+                        First we make your website, app or AI workflow clear, fast and ready to convert.
+                        Then we stay on to host, grow search visibility and keep improving it with you.
+                    </p>
+                </div>
+
+                <!-- Desktop / tablet isometric process diagram -->
+                <div class="process-diagram" aria-hidden="true">
+                    <svg class="process-svg" viewBox="0 0 960 218" focusable="false">
+                        <!-- Phase brackets -->
+                        <text class="proc-phase-title" x="240" y="20" text-anchor="middle">
+                            <tspan class="proc-strong">Build &amp; launch</tspan>
+                            <tspan class="proc-muted"> · Web, app &amp; AI</tspan>
+                        </text>
+                        <path class="proc-bracket" d="M100 46V35a4 4 0 0 1 4-4h272a4 4 0 0 1 4 4v11"/>
+
+                        <text class="proc-phase-title" x="720" y="20" text-anchor="middle">
+                            <tspan class="proc-strong">Long-term partnership</tspan>
+                            <tspan class="proc-muted"> · Ongoing</tspan>
+                        </text>
+                        <path class="proc-bracket proc-bracket-ongoing" d="M580 46V35a4 4 0 0 1 4-4h272a4 4 0 0 1 4 4v11"/>
+
+                        <!-- Connector line across all 6 tiles -->
+                        <path class="proc-connector" d="M100 102H860"/>
+
+                        <!-- Step 1: Scope & UX (with focal sphere) -->
+                        <g transform="translate(100 102)">
+                            <path class="iso-side" d="M-40 0v6l40 20 40-20V0L0 20Z"/>
+                            <path class="iso-top" d="M0-20 40 0 0 20-40 0Z"/>
+                            <ellipse class="iso-shadow" cx="0" cy="-1" rx="10" ry="5"/>
+                            <circle class="iso-pin" cx="0" cy="-15" r="8.5"/>
+                            <circle class="iso-pin-hi" cx="-2.8" cy="-18" r="2.2"/>
+                            <text class="proc-step-label" x="0" y="50" text-anchor="middle">Scope &amp; UX</text>
+                        </g>
+
+                        <!-- Step 2: Design & build -->
+                        <g transform="translate(240 102)">
+                            <path class="iso-side" d="M-40 0v6l40 20 40-20V0L0 20Z"/>
+                            <path class="iso-top" d="M0-20 40 0 0 20-40 0Z"/>
+                            <path class="iso-layer" d="M0-25 26-12 0 1-26-12Z"/>
+                            <text class="proc-step-label" x="0" y="50" text-anchor="middle">Design &amp; build</text>
+                        </g>
+
+                        <!-- Step 3: Launch -->
+                        <g transform="translate(380 102)">
+                            <path class="iso-side" d="M-40 0v6l40 20 40-20V0L0 20Z"/>
+                            <path class="iso-top" d="M0-20 40 0 0 20-40 0Z"/>
+                            <path class="iso-check" d="M-7 -1l5 4.5 10-9"/>
+                            <text class="proc-step-label" x="0" y="50" text-anchor="middle">Launch</text>
+                        </g>
+
+                        <!-- Step 4: Host & maintain -->
+                        <g transform="translate(580 102)">
+                            <path class="iso-side-dash" d="M-40 5 0 25 40 5"/>
+                            <path class="iso-top iso-top-ongoing" d="M0-20 40 0 0 20-40 0Z"/>
+                            <text class="proc-step-label" x="0" y="50" text-anchor="middle">Host &amp; support</text>
+                        </g>
+
+                        <!-- Step 5: SEO & AI search -->
+                        <g transform="translate(720 102)">
+                            <path class="iso-side-dash" d="M-40 5 0 25 40 5"/>
+                            <path class="iso-top iso-top-ongoing" d="M0-20 40 0 0 20-40 0Z"/>
+                            <text class="proc-step-label" x="0" y="50" text-anchor="middle">SEO &amp; AI search</text>
+                        </g>
+
+                        <!-- Step 6: Iterate & automate -->
+                        <g transform="translate(860 102)">
+                            <path class="iso-side-dash" d="M-40 5 0 25 40 5"/>
+                            <path class="iso-top iso-top-ongoing" d="M0-20 40 0 0 20-40 0Z"/>
+                            <text class="proc-step-label" x="0" y="50" text-anchor="middle">Improve &amp; scale</text>
+                        </g>
+
+                        <!-- Continuous partnership loop arrow -->
+                        <path class="proc-loop" d="M860 164C820 198 620 198 582 166"/>
+                        <path class="proc-loop-head" d="M580 174l1-9 9 2"/>
+                        <rect class="proc-loop-bg" x="684" y="180" width="72" height="20" rx="10"/>
+                        <text class="proc-loop-text" x="720" y="194" text-anchor="middle">Repeats</text>
+                    </svg>
+
+                    <!-- Compact 2-row isometric diagram on mobile (< 48rem) -->
+                    <svg class="process-svg-mobile" viewBox="0 0 420 288" focusable="false">
+                        <!-- Row 1: Build & launch -->
+                        <text class="proc-phase-title" x="210" y="18" text-anchor="middle">
+                            <tspan class="proc-strong">Build &amp; launch</tspan>
+                            <tspan class="proc-muted"> · Web, app &amp; AI</tspan>
+                        </text>
+                        <path class="proc-bracket" d="M66 40V31a4 4 0 0 1 4-4h280a4 4 0 0 1 4 4v9"/>
+                        <path class="proc-connector" d="M66 84H354"/>
+
+                        <g transform="translate(66 84)">
+                            <path class="iso-side" d="M-34 0v5l34 17 34-17V0L0 17Z"/>
+                            <path class="iso-top" d="M0-17 34 0 0 17-34 0Z"/>
+                            <ellipse class="iso-shadow" cx="0" cy="-1" rx="8.5" ry="4.2"/>
+                            <circle class="iso-pin" cx="0" cy="-13" r="7.5"/>
+                            <circle class="iso-pin-hi" cx="-2.4" cy="-15.5" r="1.9"/>
+                            <text class="proc-step-label" x="0" y="42" text-anchor="middle">Scope &amp; UX</text>
+                        </g>
+                        <g transform="translate(210 84)">
+                            <path class="iso-side" d="M-34 0v5l34 17 34-17V0L0 17Z"/>
+                            <path class="iso-top" d="M0-17 34 0 0 17-34 0Z"/>
+                            <path class="iso-layer" d="M0-21 22-10 0 1-22-10Z"/>
+                            <text class="proc-step-label" x="0" y="42" text-anchor="middle">Design &amp; build</text>
+                        </g>
+                        <g transform="translate(354 84)">
+                            <path class="iso-side" d="M-34 0v5l34 17 34-17V0L0 17Z"/>
+                            <path class="iso-top" d="M0-17 34 0 0 17-34 0Z"/>
+                            <path class="iso-check" d="M-6-1l4.5 4 8.5-8"/>
+                            <text class="proc-step-label" x="0" y="42" text-anchor="middle">Launch</text>
+                        </g>
+
+                        <!-- Row 2: Ongoing partnership -->
+                        <text class="proc-phase-title" x="210" y="162" text-anchor="middle">
+                            <tspan class="proc-strong">Long-term partnership</tspan>
+                            <tspan class="proc-muted"> · Ongoing</tspan>
+                        </text>
+                        <path class="proc-bracket" d="M66 184v-9a4 4 0 0 1 4-4h280a4 4 0 0 1 4 4v9"/>
+                        <path class="proc-connector" d="M66 222H354"/>
+
+                        <g transform="translate(66 222)">
+                            <path class="iso-side-dash" d="M-34 4 0 21 34 4"/>
+                            <path class="iso-top iso-top-ongoing" d="M0-17 34 0 0 17-34 0Z"/>
+                            <text class="proc-step-label" x="0" y="42" text-anchor="middle">Host &amp; support</text>
+                        </g>
+                        <g transform="translate(210 222)">
+                            <path class="iso-side-dash" d="M-34 4 0 21 34 4"/>
+                            <path class="iso-top iso-top-ongoing" d="M0-17 34 0 0 17-34 0Z"/>
+                            <text class="proc-step-label" x="0" y="42" text-anchor="middle">SEO &amp; AI search</text>
+                        </g>
+                        <g transform="translate(354 222)">
+                            <path class="iso-side-dash" d="M-34 4 0 21 34 4"/>
+                            <path class="iso-top iso-top-ongoing" d="M0-17 34 0 0 17-34 0Z"/>
+                            <text class="proc-step-label" x="0" y="42" text-anchor="middle">Improve &amp; scale</text>
+                        </g>
+
+                        <path class="proc-loop" d="M354 270C310 290 110 290 68 271"/>
+                        <path class="proc-loop-head" d="M67 278l1-8 8 2"/>
+                        <rect class="proc-loop-bg" x="174" y="274" width="72" height="18" rx="9"/>
+                        <text class="proc-loop-text" x="210" y="287" text-anchor="middle">Repeats</text>
+                    </svg>
+                </div>
+
+                <!-- Two numbered cards (01–03 | 04–06) -->
+                <div class="approach-cards">
+                    <ol class="step-card">
+                        <li>
+                            <span class="step-num mono">01</span>
+                            <div>
+                                <h3>Clear offer and UX first</h3>
+                                <p>We structure your pages and user flows around what visitors need to understand before they get in touch — reviewed with you before we build.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="step-num mono">02</span>
+                            <div>
+                                <h3>Web, apps and AI built cleanly</h3>
+                                <p>Custom websites, web applications, e-commerce and AI assistants engineered for speed, reliability and straightforward day-to-day control.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="step-num mono">03</span>
+                            <div>
+                                <h3>Ready to convert from day one</h3>
+                                <p>Shipped with fast performance, analytics, structured data and clear enquiry paths across mobile and desktop.</p>
+                            </div>
+                        </li>
+                    </ol>
+
+                    <ol class="step-card" start="4">
+                        <li>
+                            <span class="step-num mono">04</span>
+                            <div>
+                                <h3>Managed hosting and 24/7 support</h3>
+                                <p>Hosting, security updates and responsive support handled proactively so your product stays fast and online.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="step-num mono">05</span>
+                            <div>
+                                <h3>Found on Google and AI search</h3>
+                                <p>Data-driven SEO and ongoing page improvements that bring in qualified traffic and connect you with the right buyers.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="step-num mono">06</span>
+                            <div>
+                                <h3>Continuous AI and product evolution</h3>
+                                <p>As your operations grow, we ship new features, automations and integrations without rebuilding from scratch.</p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
             </div>
 
-            <div class="grid grid-3 reveal">
-                <article class="principle">
+            <!-- Core partnership principles -->
+            <div class="principles-row reveal">
+                <article class="principle-item">
+                    <svg class="principle-icon" viewBox="0 0 56 44" aria-hidden="true" focusable="false">
+                        <path class="iso-base" d="M28 18 48 28 28 38 8 28Z"/>
+                        <path class="iso-cube-top" d="M28 6 40 12 28 18 16 12Z"/>
+                        <path class="iso-cube-left" d="M16 12v11l12 6V18Z"/>
+                        <path class="iso-cube-right" d="M40 12v11l-12 6V18Z"/>
+                    </svg>
                     <h3>Commitment</h3>
-                    <p>We put our expertise at our partners’ service and own our side of every project — accountable
-                        for our work and treating your project as our own.</p>
+                    <p>We put our expertise at our partners’ service and own our side of every project — accountable for our work and treating your project as our own.</p>
                 </article>
-                <article class="principle">
+                <article class="principle-item">
+                    <svg class="principle-icon" viewBox="0 0 56 44" aria-hidden="true" focusable="false">
+                        <path class="iso-base" d="M28 22 48 32 28 42 8 32Z"/>
+                        <path class="iso-plane" d="M28 13 46 22 28 31 10 22Z"/>
+                        <path class="iso-plane-dash" d="M28 4 44 12 28 20 12 12Z"/>
+                        <circle class="iso-node" cx="28" cy="12" r="3"/>
+                    </svg>
                     <h3>Transparency</h3>
-                    <p>Honest and open on budgets and project management alike. We never trade long-term value
-                        for short-term results.</p>
+                    <p>Honest and open on budgets and project management alike. We never trade long-term value for short-term results.</p>
                 </article>
-                <article class="principle">
+                <article class="principle-item">
+                    <svg class="principle-icon" viewBox="0 0 56 44" aria-hidden="true" focusable="false">
+                        <path class="iso-base" d="M28 22 48 32 28 42 8 32Z"/>
+                        <path class="iso-plane" d="M18 17 28 12 38 17 28 22Z"/>
+                        <path d="M18 17v9l10 5 10-5v-9M28 22v9" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"/>
+                        <circle class="iso-node" cx="28" cy="7" r="3"/>
+                    </svg>
                     <h3>Professionalism</h3>
-                    <p>Precise, dependable delivery. Our clients’ satisfaction with our work speaks louder than
-                        words.</p>
+                    <p>Precise, dependable delivery. Our clients’ satisfaction with our work speaks louder than words.</p>
                 </article>
             </div>
         </div>
