@@ -31,20 +31,20 @@ favicon.ico, favicon.svg # "=>" mark; the SVG flips to off-white in dark mode
 
 ## Design tokens
 Palette matched to cursor.com/home, defined once in `:root` in `css/main.css`:
-`--bg #F7F7F4`, `--surface #E6E5E0`, `--text #26251F`, `--muted #6B6B66`, `--muted-soft #84847F`, `--border #CDCDC9`.
+`--bg #F7F7F4`, `--surface #E6E5E0`, `--text #26251F`, `--muted #6B6B66`, `--muted-soft #84847F`, `--border #CDCDC9`, `--panel #F2F1ED`, `--panel-well #EBEAE5`, `--card #FFFFFF`.
 - No separate accent: links/buttons use `--text`; hover is an underline, `--surface`, or a slight opacity change.
 - `--muted-soft` (3.5:1) is for large/decorative text only; keep small `--muted` text off `--surface` (4.25:1).
 - `--border` is decorative (1.5:1); form controls use `--muted` for their outline.
-- Client cards use `--panel #F2F1ED` (muted text 4.7:1) with a `--panel-well #EBEAE5` image backdrop (no small muted text on the well).
+- Client cards use `--panel #F2F1ED` (muted text 4.7:1) with a `--panel-well #EBEAE5` image backdrop (no small muted text on the well); elevated cards inside `--panel` containers use `--card #FFFFFF` (muted text 5.4:1).
 - Buttons are pills: `.button` (dark primary), `.button-secondary` (grey `--surface`), `.button-outline` (thin border, used in the nav).
-- Dividers are 1px `--border`, including the rules around the hero title.
+- Dividers are 1px `--border`, including the rule below the hero title.
 
 ## Sections (in order)
 1. **Header** — sticky, logo + nav + "Free quote"; hamburger menu below 48rem
-2. **Hero** — serif eyebrow, uppercase display title between 1px rules, lead, CTAs, then a rounded media panel with the looping hero video (poster only under prefers-reduced-motion; paused when off-screen)
+2. **Hero** — uppercase display title with a 1px bottom rule (no eyebrow above), lead, CTAs, then a rounded media panel with the looping hero video (poster only under prefers-reduced-motion; paused when off-screen)
 3. **01 About** — "We build websites for Malaysian brands" + 4-item checklist
 4. **02 Services** — 4 columns (2 on tablet, 1 on mobile), each with a hand-built inline SVG line illustration, serif heading and bullet list: Web Design & Development, Applied AI, Product & Design, Engineering & Cloud
-5. **03 Approach** — Commitment, Transparency, Professionalism
+5. **03 Approach** — rounded `--panel` container ("How we build and partner long-term.") with a two-phase isometric workflow diagram (`Build & launch` → `Long-term partnership` with repeating loop), two elevated `--card` numbered step cards (`01–03` and `04–06`), and a 3-column principles row below (Commitment, Transparency, Professionalism)
 6. **04 Clients** — card grid (4 cols ≥72rem, 2 cols ≥40rem, 1 col mobile); each card has a framed browser preview of the client's homepage (`images/clients/*.webp`, 800x500), stats below the grid
 7. **05 Testimonials** — three client quotes (text only)
 8. **06 Contact** — contact details + Formspree form
