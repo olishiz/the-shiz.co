@@ -42,7 +42,7 @@ Palette matched to cursor.com/home, defined once in `:root` in `css/main.css`:
 
 ## Sections (in order; section labels are unnumbered)
 1. **Header** — sticky, logo + nav + "WhatsApp" (green icon) + "Free quote"; hamburger menu below 48rem
-2. **Hero** — OpenAI "Sol & Luna" inspired full-bleed cosmic 3D star-cluster & starburst `<canvas id="hero-cosmos">` (central luminous Sol orb, 3D swirling amber/sapphire/white star cluster, 4-point cross lens-flare stars, outward comet light streaks; paused off-screen and static under `prefers-reduced-motion`) with centered lower-third copy ("Your success is our mission."), green WhatsApp CTA (`Message me!`), and ghost CTA (`How we help` → `#services`)
+2. **Hero** — full-viewport black field with soft crossing colour ribbons (gold, violet, magenta, blue; slow drift, still under `prefers-reduced-motion`). Centered copy ("Your success is our mission."), one solid orange button (`See how we help` → `#services`), and a client-name row along the bottom. The header is transparent white type over the hero and turns solid after scroll.
 3. **About** — 2-column layout: "We build websites for Malaysian brands" + 4-item checklist on the left, and a `--panel` showcase card on the right with an animated 3D isometric ascending staircase + summit flag
 4. **Services** — 5 columns on desktop (`≥72rem`), 3 on tablet (`≥56rem`), 2 on small tablet (`≥40rem`), 1 on mobile, each with a hand-built inline SVG line illustration, serif heading and bullet list: Web Design & Development, AI Automation, Product & Design, Engineering & Cloud, Applied AI
 5. **Approach** — left-aligned `.section-head` ("How we build and partner long-term.") above an interactive `--panel` container with an animated 6-node isometric closed-loop diagram + 6 compact stage selector pills; mouse-hovering any stage previews its meaning in a floating popover card, and clicking/tapping any stage opens a modal popup card with prev/next navigation
@@ -64,7 +64,7 @@ Palette matched to cursor.com/home, defined once in `:root` in `css/main.css`:
 - `.reveal` elements fade in on scroll only when JS runs and `prefers-reduced-motion` is not set
 - Copyright year is set by `scripts/main.js`
 - Scroll-to-top button: fixed bottom-left (`#scrolltop`, visible when scrolled past 240px)
-- Floating WhatsApp button: fixed bottom-right (`#whatsapp-float`, WhatsApp green `#25d366`); all WhatsApp icons and the hero `Message me!` CTA also use `#25d366`
+- Floating WhatsApp button: fixed bottom-right (`#whatsapp-float`, WhatsApp green `#25d366`); WhatsApp icons use `#25d366`. The hero call to action is a solid orange rectangle (`#c2410c`).
 - Never invent clients, numbers, testimonials or services; mark gaps with `TODO(content)` comments
 
 ## Clients
