@@ -647,4 +647,30 @@
       if (section) sectionObserver.observe(section);
     });
   }
+
+  var inquiryForm = document.querySelector('.inquiry-form');
+  if (inquiryForm) {
+    var inquiryError = document.getElementById('inquiry-error');
+    inquiryForm.addEventListener('submit', function (e) {
+      var needs = inquiryForm.querySelectorAll('input[name="need"]:checked');
+      var budget = inquiryForm.querySelector('input[name="budget"]:checked');
+      var missing = [];
+      if (!needs.length) missing.push('what you need');
+      if (!budget) missing.push('a budget range');
+      if (!missing.length) {
+        inquiryError.hidden = true;
+        return;
+      }
+      e.preventDefault();
+      inquiryError.hidden = false;
+      inquiryError.textContent = 'Select ' + missing.join(' and ') + ' before sending.';
+      var focusTarget = !needs.length
+        ? inquiryForm.querySelector('input[name="need"]')
+        : inquiryForm.querySelector('input[name="budget"]');
+      if (focusTarget) focusTarget.focus();
+    });
+    inquiryForm.addEventListener('change', function () {
+      if (inquiryError && !inquiryError.hidden) inquiryError.hidden = true;
+    });
+  }
 })();
