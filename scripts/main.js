@@ -76,6 +76,16 @@
   }
 
   if ('IntersectionObserver' in window) {
+    var isoStages = document.querySelectorAll('.iso-stage');
+    if (isoStages.length) {
+      var isoObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          entry.target.classList.toggle('is-offscreen', !entry.isIntersecting);
+        });
+      });
+      isoStages.forEach(function (stage) { isoObserver.observe(stage); });
+    }
+
     var navLinks = nav.querySelectorAll('ul a[href^="#"]');
     var sectionObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
