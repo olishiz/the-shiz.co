@@ -16,7 +16,7 @@ index.html # Single-page site — all sections here
 css/main.css # All styles; design tokens in :root at the top
 scripts/main.js # Mobile menu, sticky-header border, reveal-on-scroll, active nav link, copyright year
 fonts/ # Self-hosted woff2 + OFL licences
-media/hero.mp4, hero.webm # Hero loop (1080p, no audio, colour-graded to blend with --bg)
+media/hero.mp4, hero.webm # Full-bleed dark 3D architectural/AI hero loop (1080p, no audio)
 media/hero-poster.webp # Hero poster frame (also the reduced-motion fallback)
 images/og-image.png # 1200x630 social preview rendered from the wordmark
 images/logo.png # Transparent wordmark PNG (JSON-LD logo)
@@ -40,10 +40,10 @@ Palette matched to cursor.com/home, defined once in `:root` in `css/main.css`:
 - Dividers are 1px `--border`, including the rule below the hero title.
 
 ## Sections (in order)
-1. **Header** — sticky, logo + nav + "Free quote"; hamburger menu below 48rem
-2. **Hero** — uppercase display title with a 1px bottom rule (no eyebrow above), lead, CTAs, then a rounded media panel with the looping hero video (poster only under prefers-reduced-motion; paused when off-screen)
+1. **Header** — sticky, logo + nav + "WhatsApp" + "Free quote"; hamburger menu below 48rem
+2. **Hero** — full-bleed dark 3D background video (`media/hero.webm` + `media/hero.mp4` + `media/hero-poster.webp`, paused off-screen and poster-only under `prefers-reduced-motion`) with gradient scrim, white headline + lead, primary WhatsApp CTA (`Message me!` with WhatsApp logo) + secondary ghost CTA (`How we help` → `#services`), and subtle scroll indicator
 3. **01 About** — "We build websites for Malaysian brands" + 4-item checklist
-4. **02 Services** — 4 columns (2 on tablet, 1 on mobile), each with a hand-built inline SVG line illustration, serif heading and bullet list: Web Design & Development, Applied AI, Product & Design, Engineering & Cloud
+4. **02 Services** — 5 columns on desktop (`≥72rem`), 3 on tablet (`≥56rem`), 2 on small tablet (`≥40rem`), 1 on mobile, each with a hand-built inline SVG line illustration, serif heading and bullet list: Web Design & Development, Applied AI, Product & Design, Engineering & Cloud, AI Automation
 5. **03 Approach** — rounded `--panel` container ("How we build and partner long-term.") with a two-phase isometric workflow diagram (`Build & launch` → `Long-term partnership` with repeating loop), two elevated `--card` numbered step cards (`01–03` and `04–06`), and a 3-column principles row below (Commitment, Transparency, Professionalism)
 6. **04 Clients** — card grid (4 cols ≥72rem, 2 cols ≥40rem, 1 col mobile); each card has a framed browser preview of the client's homepage (`images/clients/*.webp`, 800x500), stats below the grid
 7. **05 Testimonials** — three client quotes (text only)
