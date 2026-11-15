@@ -21,6 +21,7 @@ media/hero-poster.webp # Hero poster frame (also the reduced-motion fallback)
 images/og-image.png # 1200x630 social preview rendered from the wordmark
 images/logo.png # Transparent wordmark PNG (JSON-LD logo)
 images/clients/*.webp # Client homepage previews
+images/testimonials/*.{webp,png} # Client testimonial profile photos
 favicon.ico, favicon.svg # "=>" mark; the SVG flips to off-white in dark mode
 ```
 
@@ -40,15 +41,15 @@ Palette matched to cursor.com/home, defined once in `:root` in `css/main.css`:
 - Dividers are 1px `--border`, including the rule below the hero title.
 
 ## Sections (in order; section labels are unnumbered)
-1. **Header** — sticky, logo + nav + "WhatsApp" + "Free quote"; hamburger menu below 48rem
-2. **Hero** — full-bleed dark 3D background video (`media/hero.webm` + `media/hero.mp4` + `media/hero-poster.webp`, paused off-screen and poster-only under `prefers-reduced-motion`) with gradient scrim, white headline + lead, primary WhatsApp CTA (`Message me!` with WhatsApp logo) + secondary ghost CTA (`How we help` → `#services`), and subtle scroll indicator
-3. **About** — 2-column layout: "We build websites for Malaysian brands" + 4-item checklist on the left, and a `--panel` showcase card on the right with an animated 3D isometric ascending staircase + summit flag (paused off-screen; static at summit under `prefers-reduced-motion`)
+1. **Header** — sticky, logo + nav + "WhatsApp" (green icon) + "Free quote"; hamburger menu below 48rem
+2. **Hero** — OpenAI "Sol & Luna" inspired full-bleed cosmic 3D star-cluster & starburst `<canvas id="hero-cosmos">` (central luminous Sol orb, 3D swirling amber/sapphire/white star cluster, 4-point cross lens-flare stars, outward comet light streaks; paused off-screen and static under `prefers-reduced-motion`) with centered lower-third copy ("Your success is our mission."), green WhatsApp CTA (`Message me!`), and ghost CTA (`How we help` → `#services`)
+3. **About** — 2-column layout: "We build websites for Malaysian brands" + 4-item checklist on the left, and a `--panel` showcase card on the right with an animated 3D isometric ascending staircase + summit flag
 4. **Services** — 5 columns on desktop (`≥72rem`), 3 on tablet (`≥56rem`), 2 on small tablet (`≥40rem`), 1 on mobile, each with a hand-built inline SVG line illustration, serif heading and bullet list: Web Design & Development, Applied AI, Product & Design, Engineering & Cloud, AI Automation
-5. **Approach** — left-aligned `.section-head` ("How we build and partner long-term.") above a rounded `--panel` container with an animated 6-node isometric closed-loop diagram (3D sphere arcing tile-to-tile with shadow + tile glow + label highlight, plus a vertical hexagonal loop below `40rem`), a `3×2` grid of 6 elevated `--card` step cards (`01–06`), and a 3-column principles row below (Commitment, Transparency, Professionalism)
+5. **Approach** — left-aligned `.section-head` ("How we build and partner long-term.") above an interactive `--panel` container with an animated 6-node isometric closed-loop diagram + 6 compact stage selector pills; mouse-hovering any stage previews its meaning in a floating popover card, and clicking/tapping any stage opens a modal popup card with prev/next navigation, followed by the 3-column principles row below (Commitment, Transparency, Professionalism)
 6. **Clients** — card grid (4 cols ≥72rem, 2 cols ≥40rem, 1 col mobile); each card has a framed browser preview of the client's homepage (`images/clients/*.webp`, 800x500), stats below the grid
-7. **Testimonials** — three client quotes (text only)
-8. **Contact** — contact details + Formspree form
-9. **Footer** — brand, sitemap, services, contact, bottom bar + JSON-LD
+7. **Testimonials** — three client quote cards with opening `“` quote mark, quote text, and right-aligned author name/org + rounded profile photo (`images/testimonials/*.webp` + `.png` fallback)
+8. **Contact** — contact details (with green WhatsApp icon) + Formspree form
+9. **Footer** — brand, sitemap, services, contact, bottom bar (copyright on left + animated cute penguin dribbling a football left-and-right on right) + JSON-LD
 
 ## Key Details
 - Contact person: Oliver Sim, software engineer
@@ -62,7 +63,8 @@ Palette matched to cursor.com/home, defined once in `:root` in `css/main.css`:
 - Sticky header; `html { scroll-padding-top }` clears it for anchor links
 - `.reveal` elements fade in on scroll only when JS runs and `prefers-reduced-motion` is not set
 - Copyright year is set by `scripts/main.js`
-- Floating WhatsApp button: fixed bottom-right (`#whatsapp-float`)
+- Scroll-to-top button: fixed bottom-left (`#scrolltop`, visible when scrolled past 240px)
+- Floating WhatsApp button: fixed bottom-right (`#whatsapp-float`, WhatsApp green `#25d366`); all WhatsApp icons and the hero `Message me!` CTA also use `#25d366`
 - Never invent clients, numbers, testimonials or services; mark gaps with `TODO(content)` comments
 
 ## Clients
@@ -78,4 +80,3 @@ Previews are 1280x800 captures of each live homepage, resized to 800x500 WebP. R
 ## SEO
 - Meta description/keywords, canonical, Open Graph + Twitter card tags in `<head>`
 - JSON-LD structured data (`schema.org/ProfessionalService`) in footer
-- Footer bottom bar includes keyword anchor: "Web Design & Development in Malaysia"

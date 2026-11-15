@@ -31,8 +31,7 @@
 
     <link rel="preload" href="./fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="./fonts/league-spartan-latin-var.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="./media/hero-poster.webp?ver=2.6.0" as="image" type="image/webp">
-    <link rel="stylesheet" href="./css/main.css?ver=2.7.0">
+    <link rel="stylesheet" href="./css/main.css?ver=2.8.0">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y96LVQYJJ6"></script>
@@ -75,7 +74,12 @@
             </ul>
             <div class="nav-actions">
                 <a class="button button-small button-outline" target="_blank" rel="noopener"
-                   href="https://api.whatsapp.com/send/?phone=%2B60168694900&amp;text=Hi%2C%20I%20would%20like%20to%20inquire%20about%20your%20web%20design%20services.&amp;type=phone_number&amp;app_absent=0">WhatsApp</a>
+                   href="https://api.whatsapp.com/send/?phone=%2B60168694900&amp;text=Hi%2C%20I%20would%20like%20to%20inquire%20about%20your%20web%20design%20services.&amp;type=phone_number&amp;app_absent=0">
+                    <svg class="wa-icon-green" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="15" height="15" fill="currentColor" aria-hidden="true" focusable="false">
+                        <path d="M16 .5C7.439.5.5 7.439.5 16c0 2.777.726 5.45 2.105 7.8L.5 31.5l7.93-2.076A15.434 15.434 0 0016 31.5C24.561 31.5 31.5 24.561 31.5 16S24.561.5 16 .5zm0 28.2a13.113 13.113 0 01-6.682-1.826l-.48-.286-4.706 1.233 1.255-4.58-.313-.498A13.073 13.073 0 012.84 16C2.84 9.268 8.268 3.84 16 3.84S29.16 9.268 29.16 16 23.732 28.7 16 28.7zm7.17-9.788c-.394-.197-2.328-1.148-2.69-1.279-.362-.131-.625-.197-.888.197-.263.394-1.018 1.279-1.248 1.542-.23.263-.46.296-.854.099-.394-.197-1.662-.613-3.166-1.952-1.17-1.044-1.96-2.333-2.19-2.727-.23-.394-.025-.607.172-.804.177-.176.394-.46.591-.69.197-.23.263-.394.394-.657.131-.263.066-.493-.033-.69-.099-.197-.888-2.141-1.217-2.93-.32-.77-.646-.665-.888-.677l-.757-.013c-.263 0-.69.099-1.051.493-.362.394-1.38 1.348-1.38 3.29 0 1.942 1.413 3.818 1.61 4.081.197.263 2.781 4.247 6.738 5.956.942.407 1.678.65 2.25.832.945.3 1.806.258 2.487.156.759-.113 2.328-.952 2.657-1.872.329-.92.329-1.71.23-1.872-.098-.164-.362-.263-.756-.46z"/>
+                    </svg>
+                    <span>WhatsApp</span>
+                </a>
                 <a class="button button-small" href="#contact">Free quote</a>
             </div>
         </nav>
@@ -84,23 +88,11 @@
 
 <main id="main">
 
-    <!-- Hero -->
+    <!-- Hero (OpenAI Sol & Luna inspired 3D cosmic star-cluster canvas + centered The Shiz copy) -->
     <section class="hero" aria-labelledby="hero-title">
         <div class="hero-backdrop" aria-hidden="true">
-            <video id="hero-video" class="hero-video" autoplay muted loop playsinline preload="metadata"
-                   poster="media/hero-poster.webp?ver=2.6.0" width="1920" height="1080"
-                   disablepictureinpicture disableremoteplayback>
-                <source src="media/hero.webm?ver=2.6.0" type="video/webm">
-                <source src="media/hero.mp4?ver=2.6.0" type="video/mp4">
-            </video>
+            <canvas id="hero-cosmos" class="hero-canvas"></canvas>
             <div class="hero-scrim"></div>
-            <script>
-              if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                var heroVideo = document.getElementById('hero-video');
-                heroVideo.removeAttribute('autoplay');
-                heroVideo.preload = 'none';
-              }
-            </script>
         </div>
 
         <div class="container hero-content">
@@ -112,7 +104,7 @@
                     and attractive.
                 </p>
                 <div class="actions hero-actions">
-                    <a class="button button-hero-primary" target="_blank" rel="noopener"
+                    <a class="button button-hero-whatsapp" target="_blank" rel="noopener"
                        href="https://api.whatsapp.com/send/?phone=%2B60168694900&amp;text=Hi%2C%20I%20would%20like%20to%20inquire%20about%20your%20web%20design%20services.&amp;type=phone_number&amp;app_absent=0">
                         <svg class="button-wa-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false">
                             <path d="M16 .5C7.439.5.5 7.439.5 16c0 2.777.726 5.45 2.105 7.8L.5 31.5l7.93-2.076A15.434 15.434 0 0016 31.5C24.561 31.5 31.5 24.561 31.5 16S24.561.5 16 .5zm0 28.2a13.113 13.113 0 01-6.682-1.826l-.48-.286-4.706 1.233 1.255-4.58-.313-.498A13.073 13.073 0 012.84 16C2.84 9.268 8.268 3.84 16 3.84S29.16 9.268 29.16 16 23.732 28.7 16 28.7zm7.17-9.788c-.394-.197-2.328-1.148-2.69-1.279-.362-.131-.625-.197-.888.197-.263.394-1.018 1.279-1.248 1.542-.23.263-.46.296-.854.099-.394-.197-1.662-.613-3.166-1.952-1.17-1.044-1.96-2.333-2.19-2.727-.23-.394-.025-.607.172-.804.177-.176.394-.46.591-.69.197-.23.263-.394.394-.657.131-.263.066-.493-.033-.69-.099-.197-.888-2.141-1.217-2.93-.32-.77-.646-.665-.888-.677l-.757-.013c-.263 0-.69.099-1.051.493-.362.394-1.38 1.348-1.38 3.29 0 1.942 1.413 3.818 1.61 4.081.197.263 2.781 4.247 6.738 5.956.942.407 1.678.65 2.25.832.945.3 1.806.258 2.487.156.759-.113 2.328-.952 2.657-1.872.329-.92.329-1.71.23-1.872-.098-.164-.362-.263-.756-.46z"/>
@@ -336,16 +328,23 @@
                 <p class="section-label">Approach</p>
                 <h2 id="approach-title">How we build and partner long-term.</h2>
                 <p class="section-intro">
-                    First we make your website, app or AI workflow clear, fast and ready to convert.
-                    Then we stay on to host, grow search visibility and keep improving it with you.
+                    We design and engineer websites, applications and AI workflows built for clarity, speed and
+                    conversion — then partner with you long-term to manage hosting, strengthen search visibility
+                    and continuously evolve your product.
                 </p>
             </div>
 
-            <div class="approach-panel iso-stage reveal">
-                <!-- Animated 6-step isometric closed-loop system -->
-                <div class="loop-diagram" aria-hidden="true">
+            <div class="approach-panel iso-stage reveal" id="approach-panel">
+                <p class="approach-hint">
+                    <span class="approach-hint-dot" aria-hidden="true"></span>
+                    <span class="hint-hover">Hover any stage to preview its meaning — or click to open</span>
+                    <span class="hint-tap">Tap any stage to see what happens</span>
+                </p>
+
+                <!-- Animated & interactive 6-step isometric closed-loop system -->
+                <div class="loop-diagram" id="loop-diagram">
                     <!-- Desktop / tablet hexagonal loop (>= 40rem) -->
-                    <svg class="loop-svg loop-svg-wide" viewBox="0 0 760 356" fill="none" focusable="false">
+                    <svg class="loop-svg loop-svg-wide" viewBox="0 0 760 356" fill="none" aria-label="Interactive six-stage build and long-term partnership workflow">
                         <defs>
                             <radialGradient id="iso-sphere-grad-wide" cx="34%" cy="28%" r="72%">
                                 <stop offset="0%" stop-color="#8b877d"/>
@@ -369,48 +368,54 @@
                         <path class="loop-line loop-line-active" d="M134 114L380 58"/>
                         <path class="loop-arrow loop-arrow-active" d="M-4-4L2 0-4 4" transform="translate(257 86) rotate(-12.8)"/>
 
-                        <!-- 01: Scope & UX (380, 58) -->
-                        <g>
+                        <!-- Stage 0: Scope & UX (380, 58) -->
+                        <g class="loop-node" data-step="0" tabindex="0" role="button" aria-label="Scope &amp; UX: Clear offer and UX first">
+                            <rect class="loop-hit" x="310" y="28" width="140" height="90" rx="10"/>
                             <path class="loop-left" d="M346 58l34 17v9l-34-17Z"/>
                             <path class="loop-right" d="M414 58l-34 17v9l34-17Z"/>
                             <path class="loop-top" d="M380 41l34 17-34 17-34-17Z"/>
                             <path class="loop-glow loop-glow-w-0" d="M380 41l34 17-34 17-34-17Z"/>
                             <text x="380" y="106" class="loop-text loop-text-w-0">Scope &amp; UX</text>
                         </g>
-                        <!-- 02: Design & build (626, 114) -->
-                        <g>
+                        <!-- Stage 1: Design & build (626, 114) -->
+                        <g class="loop-node" data-step="1" tabindex="0" role="button" aria-label="Design &amp; build: Web, apps and AI built cleanly">
+                            <rect class="loop-hit" x="556" y="84" width="140" height="90" rx="10"/>
                             <path class="loop-left" d="M592 114l34 17v9l-34-17Z"/>
                             <path class="loop-right" d="M660 114l-34 17v9l34-17Z"/>
                             <path class="loop-top" d="M626 97l34 17-34 17-34-17Z"/>
                             <path class="loop-glow loop-glow-w-1" d="M626 97l34 17-34 17-34-17Z"/>
                             <text x="626" y="162" class="loop-text loop-text-w-1">Design &amp; build</text>
                         </g>
-                        <!-- 03: Launch (626, 228) -->
-                        <g>
+                        <!-- Stage 2: Launch (626, 228) -->
+                        <g class="loop-node" data-step="2" tabindex="0" role="button" aria-label="Launch: Ready to convert from day one">
+                            <rect class="loop-hit" x="556" y="198" width="140" height="90" rx="10"/>
                             <path class="loop-left" d="M592 228l34 17v9l-34-17Z"/>
                             <path class="loop-right" d="M660 228l-34 17v9l34-17Z"/>
                             <path class="loop-top" d="M626 211l34 17-34 17-34-17Z"/>
                             <path class="loop-glow loop-glow-w-2" d="M626 211l34 17-34 17-34-17Z"/>
                             <text x="626" y="276" class="loop-text loop-text-w-2">Launch</text>
                         </g>
-                        <!-- 04: Host & support (380, 284) -->
-                        <g>
+                        <!-- Stage 3: Host & support (380, 284) -->
+                        <g class="loop-node" data-step="3" tabindex="0" role="button" aria-label="Host &amp; support: Managed hosting and 24/7 support">
+                            <rect class="loop-hit" x="310" y="254" width="140" height="90" rx="10"/>
                             <path class="loop-left loop-fb" d="M346 284l34 17v9l-34-17Z"/>
                             <path class="loop-right loop-fb" d="M414 284l-34 17v9l34-17Z"/>
                             <path class="loop-top loop-fb" d="M380 267l34 17-34 17-34-17Z"/>
                             <path class="loop-glow loop-glow-w-3" d="M380 267l34 17-34 17-34-17Z"/>
                             <text x="380" y="332" class="loop-text loop-text-w-3">Host &amp; support</text>
                         </g>
-                        <!-- 05: SEO & AI search (134, 228) -->
-                        <g>
+                        <!-- Stage 4: SEO & AI search (134, 228) -->
+                        <g class="loop-node" data-step="4" tabindex="0" role="button" aria-label="SEO &amp; AI search: Found on Google and AI search">
+                            <rect class="loop-hit" x="64" y="198" width="140" height="90" rx="10"/>
                             <path class="loop-left loop-fb" d="M100 228l34 17v9l-34-17Z"/>
                             <path class="loop-right loop-fb" d="M168 228l-34 17v9l34-17Z"/>
                             <path class="loop-top loop-fb" d="M134 211l34 17-34 17-34-17Z"/>
                             <path class="loop-glow loop-glow-w-4" d="M134 211l34 17-34 17-34-17Z"/>
                             <text x="134" y="276" class="loop-text loop-text-w-4">SEO &amp; AI search</text>
                         </g>
-                        <!-- 06: Improve & scale (134, 114) -->
-                        <g>
+                        <!-- Stage 5: Improve & scale (134, 114) -->
+                        <g class="loop-node" data-step="5" tabindex="0" role="button" aria-label="Improve &amp; scale: Continuous AI and product evolution">
+                            <rect class="loop-hit" x="64" y="84" width="140" height="90" rx="10"/>
                             <path class="loop-left loop-fb" d="M100 114l34 17v9l-34-17Z"/>
                             <path class="loop-right loop-fb" d="M168 114l-34 17v9l34-17Z"/>
                             <path class="loop-top loop-fb" d="M134 97l34 17-34 17-34-17Z"/>
@@ -426,7 +431,7 @@
                     </svg>
 
                     <!-- Mobile hexagonal loop (< 40rem) -->
-                    <svg class="loop-svg loop-svg-mobile" viewBox="0 0 380 492" fill="none" focusable="false">
+                    <svg class="loop-svg loop-svg-mobile" viewBox="0 0 380 492" fill="none" aria-label="Interactive six-stage build and long-term partnership workflow">
                         <defs>
                             <radialGradient id="iso-sphere-grad-mob" cx="34%" cy="28%" r="72%">
                                 <stop offset="0%" stop-color="#8b877d"/>
@@ -449,42 +454,48 @@
                         <path class="loop-line loop-line-active" d="M94 148l96-96"/>
                         <path class="loop-arrow loop-arrow-active" d="M-3.5-3.5L1.8 0-3.5 3.5" transform="translate(142 100) rotate(-45)"/>
 
-                        <g>
+                        <g class="loop-node" data-step="0" tabindex="0" role="button" aria-label="Scope &amp; UX: Clear offer and UX first">
+                            <rect class="loop-hit" x="130" y="24" width="120" height="84" rx="10"/>
                             <path class="loop-left" d="M160 52l30 15v8l-30-15Z"/>
                             <path class="loop-right" d="M220 52l-30 15v8l30-15Z"/>
                             <path class="loop-top" d="M190 37l30 15-30 15-30-15Z"/>
                             <path class="loop-glow loop-glow-m-0" d="M190 37l30 15-30 15-30-15Z"/>
                             <text x="190" y="96" class="loop-text loop-text-m loop-text-m-0">Scope &amp; UX</text>
                         </g>
-                        <g>
+                        <g class="loop-node" data-step="1" tabindex="0" role="button" aria-label="Design &amp; build: Web, apps and AI built cleanly">
+                            <rect class="loop-hit" x="226" y="120" width="120" height="84" rx="10"/>
                             <path class="loop-left" d="M256 148l30 15v8l-30-15Z"/>
                             <path class="loop-right" d="M316 148l-30 15v8l30-15Z"/>
                             <path class="loop-top" d="M286 133l30 15-30 15-30-15Z"/>
                             <path class="loop-glow loop-glow-m-1" d="M286 133l30 15-30 15-30-15Z"/>
                             <text x="286" y="192" class="loop-text loop-text-m loop-text-m-1">Design &amp; build</text>
                         </g>
-                        <g>
+                        <g class="loop-node" data-step="2" tabindex="0" role="button" aria-label="Launch: Ready to convert from day one">
+                            <rect class="loop-hit" x="226" y="308" width="120" height="84" rx="10"/>
                             <path class="loop-left" d="M256 336l30 15v8l-30-15Z"/>
                             <path class="loop-right" d="M316 336l-30 15v8l30-15Z"/>
                             <path class="loop-top" d="M286 321l30 15-30 15-30-15Z"/>
                             <path class="loop-glow loop-glow-m-2" d="M286 321l30 15-30 15-30-15Z"/>
                             <text x="286" y="380" class="loop-text loop-text-m loop-text-m-2">Launch</text>
                         </g>
-                        <g>
+                        <g class="loop-node" data-step="3" tabindex="0" role="button" aria-label="Host &amp; support: Managed hosting and 24/7 support">
+                            <rect class="loop-hit" x="130" y="404" width="120" height="84" rx="10"/>
                             <path class="loop-left loop-fb" d="M160 432l30 15v8l-30-15Z"/>
                             <path class="loop-right loop-fb" d="M220 432l-30 15v8l30-15Z"/>
                             <path class="loop-top loop-fb" d="M190 417l30 15-30 15-30-15Z"/>
                             <path class="loop-glow loop-glow-m-3" d="M190 417l30 15-30 15-30-15Z"/>
                             <text x="190" y="476" class="loop-text loop-text-m loop-text-m-3">Host &amp; support</text>
                         </g>
-                        <g>
+                        <g class="loop-node" data-step="4" tabindex="0" role="button" aria-label="SEO &amp; AI search: Found on Google and AI search">
+                            <rect class="loop-hit" x="34" y="308" width="120" height="84" rx="10"/>
                             <path class="loop-left loop-fb" d="M64 336l30 15v8l-30-15Z"/>
                             <path class="loop-right loop-fb" d="M124 336l-30 15v8l30-15Z"/>
                             <path class="loop-top loop-fb" d="M94 321l30 15-30 15-30-15Z"/>
                             <path class="loop-glow loop-glow-m-4" d="M94 321l30 15-30 15-30-15Z"/>
                             <text x="94" y="380" class="loop-text loop-text-m loop-text-m-4">SEO &amp; AI search</text>
                         </g>
-                        <g>
+                        <g class="loop-node" data-step="5" tabindex="0" role="button" aria-label="Improve &amp; scale: Continuous AI and product evolution">
+                            <rect class="loop-hit" x="34" y="120" width="120" height="84" rx="10"/>
                             <path class="loop-left loop-fb" d="M64 148l30 15v8l-30-15Z"/>
                             <path class="loop-right loop-fb" d="M124 148l-30 15v8l30-15Z"/>
                             <path class="loop-top loop-fb" d="M94 133l30 15-30 15-30-15Z"/>
@@ -497,41 +508,118 @@
                         </g>
                         <circle class="loop-ball-m" cx="0" cy="0" r="9.5" fill="url(#iso-sphere-grad-mob)"/>
                     </svg>
+
+                    <!-- Floating hover preview card (desktop pointer hover) -->
+                    <div class="step-hover-popover" id="step-hover-popover" role="tooltip" hidden>
+                        <span class="step-popover-phase mono" id="hover-popover-phase"></span>
+                        <h3 class="step-popover-title" id="hover-popover-title"></h3>
+                        <p class="step-popover-desc" id="hover-popover-desc"></p>
+                        <ul class="step-popover-tags" id="hover-popover-tags"></ul>
+                    </div>
                 </div>
 
-                <!-- 6 elevated step cards (3x2 grid on desktop, 2x3 on tablet, 1 col on mobile) -->
-                <ol class="approach-grid">
-                    <li class="approach-step approach-step-0">
-                        <span class="step-num mono">01</span>
-                        <h3>Clear offer and UX first</h3>
-                        <p>We structure your pages and user flows around what visitors need to understand before they get in touch — reviewed with you before we build.</p>
-                    </li>
-                    <li class="approach-step approach-step-1">
-                        <span class="step-num mono">02</span>
-                        <h3>Web, apps and AI built cleanly</h3>
-                        <p>Custom websites, web applications, e-commerce and AI assistants engineered for speed, reliability and straightforward day-to-day control.</p>
-                    </li>
-                    <li class="approach-step approach-step-2">
-                        <span class="step-num mono">03</span>
-                        <h3>Ready to convert from day one</h3>
-                        <p>Shipped with fast performance, analytics, structured data and clear enquiry paths across mobile and desktop.</p>
-                    </li>
-                    <li class="approach-step approach-step-3">
-                        <span class="step-num mono">04</span>
-                        <h3>Managed hosting and 24/7 support</h3>
-                        <p>Hosting, security updates and responsive support handled proactively so your product stays fast and online.</p>
-                    </li>
-                    <li class="approach-step approach-step-4">
-                        <span class="step-num mono">05</span>
-                        <h3>Found on Google and AI search</h3>
-                        <p>Data-driven SEO and ongoing page improvements that bring in qualified traffic and connect you with the right buyers.</p>
-                    </li>
-                    <li class="approach-step approach-step-5">
-                        <span class="step-num mono">06</span>
-                        <h3>Continuous AI and product evolution</h3>
-                        <p>As your operations grow, we ship new features, automations and integrations without rebuilding from scratch.</p>
-                    </li>
-                </ol>
+                <!-- Interactive compact stage selector cards (hover on desktop, tap/click popup on all devices) -->
+                <div class="stage-pills" role="list" aria-label="Stages of how we build and partner">
+                    <button type="button" class="stage-pill stage-pill-0" data-step="0"
+                            data-phase="Build &amp; launch"
+                            data-stage="Scope &amp; UX"
+                            data-title="Clear offer and UX first"
+                            data-desc="We structure your pages and user flows around what visitors need to understand before they get in touch — reviewed with you before we build."
+                            data-tags="Offer clarity|User flows|Wireframe review">
+                        <span class="stage-pill-head">
+                            <span class="stage-pill-name">Scope &amp; UX</span>
+                            <span class="stage-pill-plus" aria-hidden="true">+</span>
+                        </span>
+                        <span class="stage-pill-sub">Clear offer and UX first</span>
+                    </button>
+
+                    <button type="button" class="stage-pill stage-pill-1" data-step="1"
+                            data-phase="Build &amp; launch"
+                            data-stage="Design &amp; build"
+                            data-title="Web, apps and AI built cleanly"
+                            data-desc="Custom websites, web applications, e-commerce and AI assistants engineered for speed, reliability and straightforward day-to-day control."
+                            data-tags="Custom code|Web &amp; AI apps|Easy management">
+                        <span class="stage-pill-head">
+                            <span class="stage-pill-name">Design &amp; build</span>
+                            <span class="stage-pill-plus" aria-hidden="true">+</span>
+                        </span>
+                        <span class="stage-pill-sub">Web, apps and AI built cleanly</span>
+                    </button>
+
+                    <button type="button" class="stage-pill stage-pill-2" data-step="2"
+                            data-phase="Build &amp; launch"
+                            data-stage="Launch"
+                            data-title="Ready to convert from day one"
+                            data-desc="Shipped with fast performance, analytics, structured data and clear enquiry paths across mobile and desktop."
+                            data-tags="Fast load times|Analytics &amp; SEO|WhatsApp &amp; forms">
+                        <span class="stage-pill-head">
+                            <span class="stage-pill-name">Launch</span>
+                            <span class="stage-pill-plus" aria-hidden="true">+</span>
+                        </span>
+                        <span class="stage-pill-sub">Ready to convert from day one</span>
+                    </button>
+
+                    <button type="button" class="stage-pill stage-pill-3" data-step="3"
+                            data-phase="Long-term partnership"
+                            data-stage="Host &amp; support"
+                            data-title="Managed hosting and 24/7 support"
+                            data-desc="Hosting, security updates and responsive support handled proactively so your product stays fast and online."
+                            data-tags="Managed cloud|Security updates|24/7 support">
+                        <span class="stage-pill-head">
+                            <span class="stage-pill-name">Host &amp; support</span>
+                            <span class="stage-pill-plus" aria-hidden="true">+</span>
+                        </span>
+                        <span class="stage-pill-sub">Managed hosting and 24/7 support</span>
+                    </button>
+
+                    <button type="button" class="stage-pill stage-pill-4" data-step="4"
+                            data-phase="Long-term partnership"
+                            data-stage="SEO &amp; AI search"
+                            data-title="Found on Google and AI search"
+                            data-desc="Data-driven SEO and ongoing page improvements that bring in qualified traffic and connect you with the right buyers."
+                            data-tags="Google SEO|AI search visibility|Page refinement">
+                        <span class="stage-pill-head">
+                            <span class="stage-pill-name">SEO &amp; AI search</span>
+                            <span class="stage-pill-plus" aria-hidden="true">+</span>
+                        </span>
+                        <span class="stage-pill-sub">Found on Google and AI search</span>
+                    </button>
+
+                    <button type="button" class="stage-pill stage-pill-5" data-step="5"
+                            data-phase="Long-term partnership"
+                            data-stage="Improve &amp; scale"
+                            data-title="Continuous AI and product evolution"
+                            data-desc="As your operations grow, we ship new features, automations and integrations without rebuilding from scratch."
+                            data-tags="New features|AI automation|API integrations">
+                        <span class="stage-pill-head">
+                            <span class="stage-pill-name">Improve &amp; scale</span>
+                            <span class="stage-pill-plus" aria-hidden="true">+</span>
+                        </span>
+                        <span class="stage-pill-sub">Continuous AI and product evolution</span>
+                    </button>
+                </div>
+
+                <!-- Click / device tap popup modal inside Approach -->
+                <div class="step-popup-backdrop" id="step-popup" role="dialog" aria-modal="true" aria-labelledby="popup-title" hidden>
+                    <div class="step-popup-card">
+                        <div class="step-popup-top">
+                            <span class="step-popover-phase mono" id="popup-phase"></span>
+                            <button type="button" class="step-popup-close" id="popup-close" aria-label="Close stage details">
+                                <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+                                    <path d="M5 5l10 10M15 5 5 15"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <p class="step-popup-stage" id="popup-stage"></p>
+                        <h3 class="step-popup-title" id="popup-title"></h3>
+                        <p class="step-popup-desc" id="popup-desc"></p>
+                        <ul class="step-popover-tags" id="popup-tags"></ul>
+                        <div class="step-popup-nav">
+                            <button type="button" class="step-nav-btn" id="popup-prev">← Previous</button>
+                            <button type="button" class="step-nav-btn" id="popup-next">Next stage →</button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- Core partnership principles -->
@@ -693,39 +781,77 @@
                 <h2 id="testimonials-title">In our clients’ words.</h2>
             </div>
 
-            <div class="grid grid-3 reveal">
-                <figure class="quote">
-                    <blockquote>
-                        <p>“Extremely helpful and knowledgeable in his line of work that even someone as clueless
-                            about IT like me understood the process in no time after his explanation. Best of all,
-                            he is efficient, responsive and produced results in a short period of time.”</p>
-                    </blockquote>
-                    <figcaption>
-                        <span class="quote-name">Russell</span>
-                        <span class="quote-org">RS Property Services</span>
+            <div class="testimonials-grid reveal">
+                <figure class="testimonial-card">
+                    <div class="testimonial-body">
+                        <svg class="quote-mark" viewBox="0 0 32 24" width="28" height="21" fill="currentColor" aria-hidden="true" focusable="false">
+                            <path d="M0 15.2C0 7.4 4.6 2.1 12.2 0l1.6 3.1C9 4.8 6.8 7.8 6.5 11.6H12V24H0v-8.8zm18.2 0C18.2 7.4 22.8 2.1 30.4 0L32 3.1c-4.8 1.7-7 4.7-7.3 8.5h5.5V24H18.2v-8.8z"/>
+                        </svg>
+                        <blockquote>
+                            <p>Extremely helpful and knowledgeable in his line of work that even someone as clueless
+                                about IT like me understood the process in no time after his explanation. Best of all,
+                                he is efficient, responsive and produced results in a short period of time.</p>
+                        </blockquote>
+                    </div>
+                    <figcaption class="testimonial-author">
+                        <div class="testimonial-meta">
+                            <span class="quote-name">Russell</span>
+                            <span class="quote-org">RS Property Services</span>
+                        </div>
+                        <picture>
+                            <source srcset="images/testimonials/russell_lee.webp" type="image/webp">
+                            <img class="testimonial-avatar" src="images/testimonials/russell_lee.png" width="72" height="72"
+                                 loading="lazy" decoding="async" alt="Russell from RS Property Services">
+                        </picture>
                     </figcaption>
                 </figure>
-                <figure class="quote">
-                    <blockquote>
-                        <p>“Working with Oliver was a seamless experience from start to finish. He took the time to
-                            understand exactly what we needed and delivered a website that truly represents our
-                            brand. Professional, reliable, and easy to work with — highly recommended.”</p>
-                    </blockquote>
-                    <figcaption>
-                        <span class="quote-name">Marisa</span>
-                        <span class="quote-org">DMIA – MQBC</span>
+
+                <figure class="testimonial-card">
+                    <div class="testimonial-body">
+                        <svg class="quote-mark" viewBox="0 0 32 24" width="28" height="21" fill="currentColor" aria-hidden="true" focusable="false">
+                            <path d="M0 15.2C0 7.4 4.6 2.1 12.2 0l1.6 3.1C9 4.8 6.8 7.8 6.5 11.6H12V24H0v-8.8zm18.2 0C18.2 7.4 22.8 2.1 30.4 0L32 3.1c-4.8 1.7-7 4.7-7.3 8.5h5.5V24H18.2v-8.8z"/>
+                        </svg>
+                        <blockquote>
+                            <p>Working with Oliver was a seamless experience from start to finish. He took the time to
+                                understand exactly what we needed and delivered a website that truly represents our
+                                brand. Professional, reliable, and easy to work with — highly recommended.</p>
+                        </blockquote>
+                    </div>
+                    <figcaption class="testimonial-author">
+                        <div class="testimonial-meta">
+                            <span class="quote-name">Marisa</span>
+                            <span class="quote-org">DMIA – MQBC</span>
+                        </div>
+                        <picture>
+                            <source srcset="images/testimonials/marisa.webp" type="image/webp">
+                            <img class="testimonial-avatar" src="images/testimonials/marisa.png" width="72" height="72"
+                                 loading="lazy" decoding="async" alt="Marisa from DMIA – MQBC">
+                        </picture>
                     </figcaption>
                 </figure>
+
                 <!-- TODO(content): confirm reviewer name "Frankitas Turner" with the client before launch. -->
-                <figure class="quote">
-                    <blockquote>
-                        <p>“I wasn’t sure what to expect, but Oliver made the whole process straightforward and
-                            stress-free. The final result exceeded my expectations — clean, modern, and exactly what
-                            I had in mind. Will definitely be working with him again.”</p>
-                    </blockquote>
-                    <figcaption>
-                        <span class="quote-name">Frankitas Turner</span>
-                        <span class="quote-org">Frankitas</span>
+                <figure class="testimonial-card">
+                    <div class="testimonial-body">
+                        <svg class="quote-mark" viewBox="0 0 32 24" width="28" height="21" fill="currentColor" aria-hidden="true" focusable="false">
+                            <path d="M0 15.2C0 7.4 4.6 2.1 12.2 0l1.6 3.1C9 4.8 6.8 7.8 6.5 11.6H12V24H0v-8.8zm18.2 0C18.2 7.4 22.8 2.1 30.4 0L32 3.1c-4.8 1.7-7 4.7-7.3 8.5h5.5V24H18.2v-8.8z"/>
+                        </svg>
+                        <blockquote>
+                            <p>I wasn’t sure what to expect, but Oliver made the whole process straightforward and
+                                stress-free. The final result exceeded my expectations — clean, modern, and exactly what
+                                I had in mind. Will definitely be working with him again.</p>
+                        </blockquote>
+                    </div>
+                    <figcaption class="testimonial-author">
+                        <div class="testimonial-meta">
+                            <span class="quote-name">Frankitas Turner</span>
+                            <span class="quote-org">Frankitas</span>
+                        </div>
+                        <picture>
+                            <source srcset="images/testimonials/frankitas.webp" type="image/webp">
+                            <img class="testimonial-avatar" src="images/testimonials/frankitas.png" width="72" height="72"
+                                 loading="lazy" decoding="async" alt="Frankitas Turner from Frankitas">
+                        </picture>
                     </figcaption>
                 </figure>
             </div>
@@ -752,8 +878,13 @@
                     </li>
                     <li>
                         <span class="detail-label">WhatsApp</span>
-                        <a target="_blank" rel="noopener"
-                           href="https://api.whatsapp.com/send/?phone=%2B60168694900&amp;text=Hi%2C%20I%20would%20like%20to%20inquire%20about%20your%20web%20design%20services.&amp;type=phone_number&amp;app_absent=0">Chat on WhatsApp</a>
+                        <a class="wa-inline-link" target="_blank" rel="noopener"
+                           href="https://api.whatsapp.com/send/?phone=%2B60168694900&amp;text=Hi%2C%20I%20would%20like%20to%20inquire%20about%20your%20web%20design%20services.&amp;type=phone_number&amp;app_absent=0">
+                            <svg class="wa-icon-green" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="currentColor" aria-hidden="true" focusable="false">
+                                <path d="M16 .5C7.439.5.5 7.439.5 16c0 2.777.726 5.45 2.105 7.8L.5 31.5l7.93-2.076A15.434 15.434 0 0016 31.5C24.561 31.5 31.5 24.561 31.5 16S24.561.5 16 .5zm0 28.2a13.113 13.113 0 01-6.682-1.826l-.48-.286-4.706 1.233 1.255-4.58-.313-.498A13.073 13.073 0 012.84 16C2.84 9.268 8.268 3.84 16 3.84S29.16 9.268 29.16 16 23.732 28.7 16 28.7zm7.17-9.788c-.394-.197-2.328-1.148-2.69-1.279-.362-.131-.625-.197-.888.197-.263.394-1.018 1.279-1.248 1.542-.23.263-.46.296-.854.099-.394-.197-1.662-.613-3.166-1.952-1.17-1.044-1.96-2.333-2.19-2.727-.23-.394-.025-.607.172-.804.177-.176.394-.46.591-.69.197-.23.263-.394.394-.657.131-.263.066-.493-.033-.69-.099-.197-.888-2.141-1.217-2.93-.32-.77-.646-.665-.888-.677l-.757-.013c-.263 0-.69.099-1.051.493-.362.394-1.38 1.348-1.38 3.29 0 1.942 1.413 3.818 1.61 4.081.197.263 2.781 4.247 6.738 5.956.942.407 1.678.65 2.25.832.945.3 1.806.258 2.487.156.759-.113 2.328-.952 2.657-1.872.329-.92.329-1.71.23-1.872-.098-.164-.362-.263-.756-.46z"/>
+                            </svg>
+                            <span>Chat on WhatsApp</span>
+                        </a>
                     </li>
                     <li>
                         <span class="detail-label">Email</span>
@@ -830,7 +961,7 @@
                     <li><span itemprop="address">Kuala Lumpur, Malaysia</span></li>
                     <li><a href="mailto:hello@the-shiz.co" itemprop="email">hello@the-shiz.co</a></li>
                     <li><a href="tel:+60168694900" itemprop="telephone">+60 16 869 4900</a></li>
-                    <li><a target="_blank" rel="noopener" href="https://api.whatsapp.com/send/?phone=%2B60168694900&amp;text=Hi%2C%20I%20would%20like%20to%20inquire%20about%20your%20web%20design%20services.&amp;type=phone_number&amp;app_absent=0">WhatsApp</a></li>
+                    <li><a class="wa-inline-link" target="_blank" rel="noopener" href="https://api.whatsapp.com/send/?phone=%2B60168694900&amp;text=Hi%2C%20I%20would%20like%20to%20inquire%20about%20your%20web%20design%20services.&amp;type=phone_number&amp;app_absent=0"><svg class="wa-icon-green" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="15" height="15" fill="currentColor" aria-hidden="true" focusable="false"><path d="M16 .5C7.439.5.5 7.439.5 16c0 2.777.726 5.45 2.105 7.8L.5 31.5l7.93-2.076A15.434 15.434 0 0016 31.5C24.561 31.5 31.5 24.561 31.5 16S24.561.5 16 .5zm0 28.2a13.113 13.113 0 01-6.682-1.826l-.48-.286-4.706 1.233 1.255-4.58-.313-.498A13.073 13.073 0 012.84 16C2.84 9.268 8.268 3.84 16 3.84S29.16 9.268 29.16 16 23.732 28.7 16 28.7zm7.17-9.788c-.394-.197-2.328-1.148-2.69-1.279-.362-.131-.625-.197-.888.197-.263.394-1.018 1.279-1.248 1.542-.23.263-.46.296-.854.099-.394-.197-1.662-.613-3.166-1.952-1.17-1.044-1.96-2.333-2.19-2.727-.23-.394-.025-.607.172-.804.177-.176.394-.46.591-.69.197-.23.263-.394.394-.657.131-.263.066-.493-.033-.69-.099-.197-.888-2.141-1.217-2.93-.32-.77-.646-.665-.888-.677l-.757-.013c-.263 0-.69.099-1.051.493-.362.394-1.38 1.348-1.38 3.29 0 1.942 1.413 3.818 1.61 4.081.197.263 2.781 4.247 6.738 5.956.942.407 1.678.65 2.25.832.945.3 1.806.258 2.487.156.759-.113 2.328-.952 2.657-1.872.329-.92.329-1.71.23-1.872-.098-.164-.362-.263-.756-.46z"/></svg><span>WhatsApp</span></a></li>
                 </ul>
                 <meta itemprop="name" content="The Shiz">
                 <meta itemprop="url" content="https://the-shiz.co">
@@ -839,7 +970,63 @@
 
         <div class="footer-bottom">
             <small>© <span id="copyright-year">2026</span> The Shiz. All rights reserved.</small>
-            <small>Web Design &amp; Development in Malaysia — <a href="#contact">Get a free quote</a></small>
+            <div class="penguin-pitch iso-stage" aria-hidden="true">
+                <span class="penguin-turf"></span>
+                <div class="penguin-roam">
+                    <div class="penguin-flip">
+                        <svg class="penguin-svg" viewBox="0 0 84 50" width="76" height="45" focusable="false">
+                            <!-- Soft shadows -->
+                            <ellipse cx="27" cy="46.2" rx="12.5" ry="2.8" fill="#e6e5e0"/>
+                            <ellipse class="pg-ball-shadow" cx="58" cy="46.2" rx="7.2" ry="2.2" fill="#e6e5e0"/>
+
+                            <!-- Waddling / dribbling cute penguin -->
+                            <g class="pg-waddle">
+                                <!-- Back webbed foot -->
+                                <ellipse class="pg-foot-back" cx="22.5" cy="44.2" rx="4.8" ry="2.2" fill="#d98a3c"/>
+                                <!-- Little tail -->
+                                <path d="M15.5 36 L11.5 39 L17 40.5 Z" fill="#26251f"/>
+                                <!-- Plump tuxedo body + head -->
+                                <path d="M15 29 C15 13.5 19.8 5.5 27.5 5.5 C35.2 5.5 40 13.5 40 29 C40 39.2 35.2 43.8 27.5 43.8 C19.8 43.8 15 39.2 15 29 Z" fill="#26251f"/>
+                                <!-- Cute crown tuft -->
+                                <path d="M25.5 6.2 Q24.5 2.2 27.5 4.2 Q30 1.6 30.2 6.2" fill="#26251f" stroke="#26251f" stroke-width="1" stroke-linejoin="round"/>
+                                <!-- White chubby belly & face mask -->
+                                <path d="M19.5 30.5 C19.5 21.2 22.4 17 27.5 17 C32.6 17 35.5 21.2 35.5 30.5 C35.5 38 32.3 41.8 27.5 41.8 C22.7 41.8 19.5 38 19.5 30.5 Z" fill="#ffffff"/>
+                                <circle cx="25.2" cy="14.2" r="4.1" fill="#ffffff"/>
+                                <circle cx="31.6" cy="14.2" r="4.1" fill="#ffffff"/>
+                                <!-- Expressive eyes + catchlights -->
+                                <circle cx="26.2" cy="14" r="1.9" fill="#26251f"/>
+                                <circle cx="26.8" cy="13.3" r="0.65" fill="#ffffff"/>
+                                <circle cx="32.4" cy="14" r="1.9" fill="#26251f"/>
+                                <circle cx="33" cy="13.3" r="0.65" fill="#ffffff"/>
+                                <!-- Rosy cheeks -->
+                                <ellipse cx="22.4" cy="16.8" rx="2" ry="1.15" fill="#e29f87" opacity="0.88"/>
+                                <ellipse cx="34.6" cy="16.8" rx="2" ry="1.15" fill="#e29f87" opacity="0.88"/>
+                                <!-- Smiling amber beak -->
+                                <path d="M28.2 14.8 L34.8 16.6 L28.2 18.6 Z" fill="#d98a3c" stroke="#26251f" stroke-width="0.6" stroke-linejoin="round"/>
+                                <!-- Warm stone scarf -->
+                                <path d="M18.2 21.2 Q27.5 24.2 36.8 21.2" fill="none" stroke="#cdcdc9" stroke-width="3.2" stroke-linecap="round"/>
+                                <path d="M23.5 22.5 L21.8 28.2" fill="none" stroke="#cdcdc9" stroke-width="2.8" stroke-linecap="round"/>
+                                <!-- Flapping wing -->
+                                <path class="pg-wing" d="M19.8 22.8 C13.8 25.8 13.5 33.8 17.8 35.8 C20.2 36.8 21.6 31 21 24.8 Z" fill="#26251f"/>
+                                <!-- Front kicking webbed foot -->
+                                <ellipse class="pg-foot-front" cx="34" cy="43.8" rx="5.2" ry="2.3" fill="#d98a3c"/>
+                            </g>
+
+                            <!-- Bouncing & spinning pentagon football -->
+                            <g class="pg-ball-bounce" transform="translate(58 37.5)">
+                                <g class="pg-ball-spin">
+                                    <circle cx="0" cy="0" r="7.8" fill="#ffffff" stroke="#26251f" stroke-width="1.35"/>
+                                    <polygon points="0,-3.4 3.2,-1 2,2.8 -2,2.8 -3.2,-1" fill="#26251f"/>
+                                    <path d="M0-3.4V-7.8M3.2-1L7.4-2.4M2 2.8L4.6 6.3M-2 2.8L-4.6 6.3M-3.2-1L-7.4-2.4" stroke="#26251f" stroke-width="1.05" stroke-linecap="round"/>
+                                    <circle cx="0" cy="-7.2" r="1.3" fill="#26251f"/>
+                                    <circle cx="6.8" cy="-2.2" r="1.2" fill="#26251f"/>
+                                    <circle cx="-6.8" cy="-2.2" r="1.2" fill="#26251f"/>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -891,15 +1078,23 @@
     </script>
 </footer>
 
+<a class="scrolltop" id="scrolltop" href="#top" aria-label="Scroll back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none"
+         stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+         aria-hidden="true" focusable="false">
+        <path d="M18 15l-6-6-6 6"/>
+    </svg>
+</a>
+
 <a class="whatsapp-float" id="whatsapp-float" target="_blank" rel="noopener"
    href="https://api.whatsapp.com/send/?phone=%2B60168694900&amp;text=Hi%2C%20I%20would%20like%20to%20inquire%20about%20your%20web%20design%20services.&amp;type=phone_number&amp;app_absent=0"
    aria-label="Chat with The Shiz on WhatsApp">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="22" height="22" fill="currentColor"
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="24" height="24" fill="currentColor"
          aria-hidden="true" focusable="false">
         <path d="M16 .5C7.439.5.5 7.439.5 16c0 2.777.726 5.45 2.105 7.8L.5 31.5l7.93-2.076A15.434 15.434 0 0016 31.5C24.561 31.5 31.5 24.561 31.5 16S24.561.5 16 .5zm0 28.2a13.113 13.113 0 01-6.682-1.826l-.48-.286-4.706 1.233 1.255-4.58-.313-.498A13.073 13.073 0 012.84 16C2.84 9.268 8.268 3.84 16 3.84S29.16 9.268 29.16 16 23.732 28.7 16 28.7zm7.17-9.788c-.394-.197-2.328-1.148-2.69-1.279-.362-.131-.625-.197-.888.197-.263.394-1.018 1.279-1.248 1.542-.23.263-.46.296-.854.099-.394-.197-1.662-.613-3.166-1.952-1.17-1.044-1.96-2.333-2.19-2.727-.23-.394-.025-.607.172-.804.177-.176.394-.46.591-.69.197-.23.263-.394.394-.657.131-.263.066-.493-.033-.69-.099-.197-.888-2.141-1.217-2.93-.32-.77-.646-.665-.888-.677l-.757-.013c-.263 0-.69.099-1.051.493-.362.394-1.38 1.348-1.38 3.29 0 1.942 1.413 3.818 1.61 4.081.197.263 2.781 4.247 6.738 5.956.942.407 1.678.65 2.25.832.945.3 1.806.258 2.487.156.759-.113 2.328-.952 2.657-1.872.329-.92.329-1.71.23-1.872-.098-.164-.362-.263-.756-.46z"/>
     </svg>
 </a>
 
-<script src="./scripts/main.js?ver=2.7.0" defer></script>
+<script src="./scripts/main.js?ver=2.8.0" defer></script>
 </body>
 </html>
