@@ -42,11 +42,11 @@ Palette matched to cursor.com/home, defined once in `:root` in `css/main.css`:
 
 ## Sections (in order; section labels are unnumbered)
 1. **Header** — sticky, logo + nav + "WhatsApp" (green icon) + "Free quote"; hamburger menu below 48rem
-2. **Hero** — full-viewport black field with soft crossing colour ribbons (gold, violet, magenta, blue; slow drift, still under `prefers-reduced-motion`). Centered copy ("Your success is our mission."), one solid orange button (`See how we help` → `#services`), and a client-name row along the bottom. The header is transparent white type over the hero and turns solid after scroll.
+2. **Hero** — full-viewport cosmic canvas (`#hero-cosmos`): star field, flares and a 3D cluster. Sticky cream header sits above it. Centered copy ("Your success is our mission.") with a short lead, a green WhatsApp button ("Message me!") and a ghost "How we help" link. The canvas pauses off-screen, in a hidden tab, and draws one static frame under `prefers-reduced-motion`.
 3. **About** — 2-column layout: "We build websites for Malaysian brands" + 4-item checklist on the left, and a `--panel` showcase card on the right with an animated 3D isometric ascending staircase + summit flag
 4. **Services** — 5 columns on desktop (`≥72rem`), 3 on tablet (`≥56rem`), 2 on small tablet (`≥40rem`), 1 on mobile, each with a hand-built inline SVG line illustration, serif heading and bullet list: Web Design & Development, AI Automation, Product & Design, Engineering & Cloud, Applied AI
-5. **Approach** — left-aligned `.section-head` ("How we build and partner long-term.") above an interactive `--panel` container with an animated 6-node isometric closed-loop diagram + 6 compact stage selector pills; mouse-hovering any stage previews its meaning in a floating popover card, and clicking/tapping any stage opens a modal popup card with prev/next navigation
-6. **Clients** — text card grid (4 cols ≥72rem, 2 cols ≥40rem, 1 col mobile) with the client name, a one-line quote, and the site domain. No browser frames and no stats row
+5. **Approach** — left-aligned `.section-head` above an isometric 6-node loop and stage pills. Hovering (fine pointer) or tapping a stage updates the in-flow `#stage-detail` note. There is no modal.
+6. **Clients** — preview cards for MQBC, Frankitas and Carbnb (`images/clients/*.webp`) linking to case studies in `works/`. RS Property Services stays a text card (their site does not resolve). No stats row.
 7. **Testimonials** — three client quote cards with opening `“` quote mark, quote text, and right-aligned author name/org + rounded profile photo (`images/testimonials/*.webp` + `.png` fallback)
 8. **Contact** — a four-step inquiry flow (what you need, budget, how to reply, message) posted to Formspree, with Oliver’s phone, WhatsApp and email beside it
 9. **Footer** — brand, sitemap, services, contact, bottom bar (copyright on left + animated cute penguin dribbling a football left-and-right on right) + JSON-LD
@@ -64,7 +64,8 @@ Palette matched to cursor.com/home, defined once in `:root` in `css/main.css`:
 - `.reveal` elements fade in on scroll only when JS runs and `prefers-reduced-motion` is not set
 - Copyright year is set by `scripts/main.js`
 - Scroll-to-top button: fixed bottom-left (`#scrolltop`, visible when scrolled past 240px)
-- Floating WhatsApp button: fixed bottom-right (`#whatsapp-float`, WhatsApp green `#25d366`); WhatsApp icons use `#25d366`. The hero call to action is a solid orange rectangle (`#c2410c`).
+- Floating WhatsApp button: fixed bottom-right (`#whatsapp-float`, WhatsApp green `#25d366`); WhatsApp icons and the hero "Message me!" button use `#25d366`.
+- Case studies: `works/mqbc.html`, `works/frankitas.html`, `works/carbnb.html`, listed at `works/index.html`. Copy stays factual: no invented timelines, metrics, or quotes. Carbnb has no testimonial on this site.
 - Never invent clients, numbers, testimonials or services; mark gaps with `TODO(content)` comments
 
 ## Clients
@@ -75,7 +76,7 @@ Palette matched to cursor.com/home, defined once in `:root` in `css/main.css`:
 | Carbnb | https://www.carbnb.my | images/clients/carbnb.webp |
 | RS Property Services | rspropservices.com (NXDOMAIN — unlinked placeholder card) | none |
 
-Previews are 1280x800 captures of each live homepage, resized to 800x500 WebP. Re-capture when a client's site changes. Card descriptions come from existing testimonials only.
+Previews are 1280x800 captures of each live homepage, resized to 800x500 WebP. Re-capture when a client's site changes. Case-study quotes are only the ones already in the testimonials section.
 
 ## SEO
 - Meta description/keywords, canonical, Open Graph + Twitter card tags in `<head>`

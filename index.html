@@ -31,7 +31,7 @@
 
     <link rel="preload" href="./fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="./fonts/league-spartan-latin-var.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="./css/main.css?ver=3.0.0">
+    <link rel="stylesheet" href="./css/main.css?ver=3.1.0">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y96LVQYJJ6"></script>
@@ -82,21 +82,22 @@
                 </a>
                 <a class="button button-small" href="#contact">Free quote</a>
             </div>
+            <div class="menu-play">
+                <div class="menu-sky" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <p>Same night sky as the homepage. The reply is still Oliver, in Kuala Lumpur.</p>
+            </div>
         </nav>
     </div>
 </header>
 
 <main id="main">
 
-    <!-- Hero: dark field, soft crossing colour ribbons, one solid call to action, client row -->
+    <!-- Hero: cosmic star field, short lead, WhatsApp and services -->
     <section class="hero" aria-labelledby="hero-title">
         <div class="hero-backdrop" aria-hidden="true">
-            <div class="hero-ribbons">
-                <span class="ribbon ribbon-gold"></span>
-                <span class="ribbon ribbon-violet"></span>
-                <span class="ribbon ribbon-magenta"></span>
-                <span class="ribbon ribbon-blue"></span>
-            </div>
+            <canvas id="hero-cosmos" class="hero-canvas"></canvas>
             <div class="hero-scrim"></div>
         </div>
 
@@ -104,22 +105,24 @@
             <div class="hero-copy">
                 <h1 class="hero-title" id="hero-title">Your success is our mission.</h1>
                 <p class="lead">
-                    Websites have evolved, and the way you build them should too. No one-size-fits-all
-                    templates, no paying more than you need to — just a site that is simple, functional
-                    and attractive.
+                    No templates, and nothing you don’t need — just a site that is simple, functional and attractive.
                 </p>
                 <div class="actions hero-actions">
-                    <a class="button button-hero-cta" href="#services">See how we help <span aria-hidden="true">↓</span></a>
+                    <a class="button button-hero-whatsapp" target="_blank" rel="noopener"
+                       href="https://api.whatsapp.com/send/?phone=%2B60168694900&amp;text=Hi%2C%20I%20would%20like%20to%20inquire%20about%20your%20web%20design%20services.&amp;type=phone_number&amp;app_absent=0">
+                        <svg class="button-wa-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false">
+                            <path d="M16 .5C7.439.5.5 7.439.5 16c0 2.777.726 5.45 2.105 7.8L.5 31.5l7.93-2.076A15.434 15.434 0 0016 31.5C24.561 31.5 31.5 24.561 31.5 16S24.561.5 16 .5zm0 28.2a13.113 13.113 0 01-6.682-1.826l-.48-.286-4.706 1.233 1.255-4.58-.313-.498A13.073 13.073 0 012.84 16C2.84 9.268 8.268 3.84 16 3.84S29.16 9.268 29.16 16 23.732 28.7 16 28.7zm7.17-9.788c-.394-.197-2.328-1.148-2.69-1.279-.362-.131-.625-.197-.888.197-.263.394-1.018 1.279-1.248 1.542-.23.263-.46.296-.854.099-.394-.197-1.662-.613-3.166-1.952-1.17-1.044-1.96-2.333-2.19-2.727-.23-.394-.025-.607.172-.804.177-.176.394-.46.591-.69.197-.23.263-.394.394-.657.131-.263.066-.493-.033-.69-.099-.197-.888-2.141-1.217-2.93-.32-.77-.646-.665-.888-.677l-.757-.013c-.263 0-.69.099-1.051.493-.362.394-1.38 1.348-1.38 3.29 0 1.942 1.413 3.818 1.61 4.081.197.263 2.781 4.247 6.738 5.956.942.407 1.678.65 2.25.832.945.3 1.806.258 2.487.156.759-.113 2.328-.952 2.657-1.872.329-.92.329-1.71.23-1.872-.098-.164-.362-.263-.756-.46z"/>
+                        </svg>
+                        <span>Message me!</span>
+                    </a>
+                    <a class="button button-hero-ghost" href="#services">How we help</a>
                 </div>
             </div>
         </div>
 
-        <ul class="hero-clients" aria-label="Clients">
-            <li>MQBC</li>
-            <li>Frankitas</li>
-            <li>Carbnb</li>
-            <li>RS Property</li>
-        </ul>
+        <a class="hero-scroll" href="#about" aria-label="Scroll to About section">
+            <span class="hero-scroll-wheel" aria-hidden="true"></span>
+        </a>
     </section>
 
     <!-- About -->
@@ -129,15 +132,18 @@
                 <p class="section-label">About</p>
                 <h2 id="about-title">We build websites for Malaysian brands.</h2>
                 <p class="about-lead">
-                    We are a full-service web development studio working with businesses of all sizes, from
-                    emerging startups to established companies. Using current technology and proven best
-                    practice, we help you stand out and reach more customers.
+                    The Shiz is Oliver Sim’s studio in Kuala Lumpur. You work with the person who designs
+                    the pages and writes the code — from the first sketch through launch, and after.
+                </p>
+                <p class="about-note">
+                    Startups and established Malaysian businesses get the same thing: a clear site, built
+                    for how you actually sell, then hosted, supported and improved as the work grows.
                 </p>
                 <ul class="checklist" aria-label="What you can expect">
-                    <li>Great design</li>
-                    <li>On-schedule delivery</li>
-                    <li>Maintenance &amp; hosting</li>
-                    <li>24/7 support</li>
+                    <li>Designed for your offer</li>
+                    <li>You talk to Oliver</li>
+                    <li>Hosting and a WhatsApp line</li>
+                    <li>Search, after launch</li>
                 </ul>
             </div>
 
@@ -338,8 +344,8 @@
             <div class="approach-panel iso-stage reveal" id="approach-panel">
                 <p class="approach-hint">
                     <span class="approach-hint-dot" aria-hidden="true"></span>
-                    <span class="hint-hover">Hover any stage to preview its meaning — or click to open</span>
-                    <span class="hint-tap">Tap any stage to see what happens</span>
+                    <span class="hint-hover">Move across a stage. The note below follows.</span>
+                    <span class="hint-tap">Tap a stage. The note below updates.</span>
                 </p>
 
                 <!-- Animated & interactive 6-step isometric closed-loop system -->
@@ -510,14 +516,18 @@
                         <circle class="loop-ball-m" cx="0" cy="0" r="9.5" fill="url(#iso-sphere-grad-mob)"/>
                     </svg>
 
-                    <!-- Floating hover preview card (desktop pointer hover) -->
-                    <div class="step-hover-popover" id="step-hover-popover" role="tooltip" hidden>
-                        <span class="step-popover-phase mono" id="hover-popover-phase"></span>
-                        <h3 class="step-popover-title" id="hover-popover-title"></h3>
-                        <p class="step-popover-desc" id="hover-popover-desc"></p>
-                        <ul class="step-popover-tags" id="hover-popover-tags"></ul>
-                    </div>
                 </div>
+
+                <article class="stage-detail" id="stage-detail" aria-live="polite">
+                    <p class="stage-detail-kicker" id="stage-kicker">Build &amp; launch · Scope &amp; UX</p>
+                    <h3 id="stage-title">Clear offer and UX first</h3>
+                    <p id="stage-desc">We structure your pages and user flows around what visitors need to understand before they get in touch — reviewed with you before we build.</p>
+                    <ul class="step-popover-tags" id="stage-tags">
+                        <li>Offer clarity</li>
+                        <li>User flows</li>
+                        <li>Wireframe review</li>
+                    </ul>
+                </article>
 
                 <!-- Interactive compact stage selector cards (hover on desktop, tap/click popup on all devices) -->
                 <div class="stage-pills" role="list" aria-label="Stages of how we build and partner">
@@ -600,27 +610,6 @@
                     </button>
                 </div>
 
-                <!-- Click / device tap popup modal inside Approach -->
-                <div class="step-popup-backdrop" id="step-popup" role="dialog" aria-modal="true" aria-labelledby="popup-title" hidden>
-                    <div class="step-popup-card">
-                        <div class="step-popup-top">
-                            <span class="step-popover-phase mono" id="popup-phase"></span>
-                            <button type="button" class="step-popup-close" id="popup-close" aria-label="Close stage details">
-                                <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
-                                    <path d="M5 5l10 10M15 5 5 15"/>
-                                </svg>
-                            </button>
-                        </div>
-                        <p class="step-popup-stage" id="popup-stage"></p>
-                        <h3 class="step-popup-title" id="popup-title"></h3>
-                        <p class="step-popup-desc" id="popup-desc"></p>
-                        <ul class="step-popover-tags" id="popup-tags"></ul>
-                        <div class="step-popup-nav">
-                            <button type="button" class="step-nav-btn" id="popup-prev">← Previous</button>
-                            <button type="button" class="step-nav-btn" id="popup-next">Next stage →</button>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -632,41 +621,58 @@
                 <p class="section-label">Clients</p>
                 <h2 id="clients-title">Trusted by businesses across Malaysia.</h2>
                 <p class="section-intro">
-                    We’re proud to have partnered with these brands to build their digital presence.
+                    A look at three sites we designed and built. Open a case study, or visit the live page.
                 </p>
             </div>
 
             <ul class="client-grid reveal">
                 <li>
-                    <a class="client-card" href="https://mqbc.com.my/" target="_blank" rel="noopener">
-                        <h3 class="client-card-title">MQBC</h3>
-                        <p class="client-card-desc">“A website that truly represents our brand.”</p>
-                        <span class="client-link">mqbc.com.my</span>
-                        <span class="visually-hidden">(opens in a new tab)</span>
+                    <a class="client-card" href="works/mqbc.html">
+                        <div class="client-shot">
+                            <img src="images/clients/mqbc.webp" width="800" height="500" loading="lazy" decoding="async"
+                                 alt="Homepage of the Malaysia-Qatar Joint Business Council website">
+                        </div>
+                        <div class="client-card-body">
+                            <h3 class="client-card-title">MQBC</h3>
+                            <p class="client-card-desc">A council site for trade between Malaysia and Qatar.</p>
+                            <span class="client-link">View case study</span>
+                        </div>
                     </a>
                 </li>
                 <li>
-                    <a class="client-card" href="https://www.frankitas.co/" target="_blank" rel="noopener">
-                        <h3 class="client-card-title">Frankitas</h3>
-                        <p class="client-card-desc">“Clean, modern, and exactly what I had in mind.”</p>
-                        <span class="client-link">frankitas.co</span>
-                        <span class="visually-hidden">(opens in a new tab)</span>
+                    <a class="client-card" href="works/frankitas.html">
+                        <div class="client-shot">
+                            <img src="images/clients/frankitas.webp" width="800" height="500" loading="lazy" decoding="async"
+                                 alt="Homepage of the Frankitas online store for handwoven bags">
+                        </div>
+                        <div class="client-card-body">
+                            <h3 class="client-card-title">Frankitas</h3>
+                            <p class="client-card-desc">A shop for handwoven bags, built around the collections.</p>
+                            <span class="client-link">View case study</span>
+                        </div>
                     </a>
                 </li>
-                <!-- TODO(content): Carbnb has no testimonial or description on the current site; replace this line with an approved one-liner. -->
                 <li>
-                    <a class="client-card" href="https://www.carbnb.my/" target="_blank" rel="noopener">
-                        <h3 class="client-card-title">Carbnb</h3>
-                        <p class="client-card-desc">Partnered to build their digital presence.</p>
-                        <span class="client-link">carbnb.my</span>
-                        <span class="visually-hidden">(opens in a new tab)</span>
+                    <a class="client-card" href="works/carbnb.html">
+                        <div class="client-shot">
+                            <img src="images/clients/carbnb.webp" width="800" height="500" loading="lazy" decoding="async"
+                                 alt="Homepage of Carbnb, a car subscription service in Malaysia">
+                        </div>
+                        <div class="client-card-body">
+                            <h3 class="client-card-title">Carbnb</h3>
+                            <p class="client-card-desc">A clearer way to explain car subscription.</p>
+                            <span class="client-link">View case study</span>
+                        </div>
                     </a>
                 </li>
                 <!-- TODO(content): rspropservices.com no longer resolves (NXDOMAIN); restore a link once the client's site is back. -->
                 <li>
                     <div class="client-card client-card-static">
-                        <h3 class="client-card-title">RS Property Services</h3>
-                        <p class="client-card-desc">“Efficient, responsive and produced results in a short period of time.”</p>
+                        <div class="client-card-body">
+                            <h3 class="client-card-title">RS Property Services</h3>
+                            <p class="client-card-desc">“Efficient, responsive and produced results in a short period of time.”</p>
+                            <span class="client-link">Site offline for now</span>
+                        </div>
                     </div>
                 </li>
             </ul>
@@ -1061,6 +1067,6 @@
     </svg>
 </a>
 
-<script src="./scripts/main.js?ver=3.0.0" defer></script>
+<script src="./scripts/main.js?ver=3.1.0" defer></script>
 </body>
 </html>
