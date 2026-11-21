@@ -1,35 +1,37 @@
 <!DOCTYPE html>
-<html lang="en-US">
-
-<!-- HEAD [START] -->
+<html lang="en-MY">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>The Shiz</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
-    <link rel="preload" as="style"
-          href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;800&amp;display=swap"/>
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;800&amp;display=swap"
-          media="print" onload="this.media='all'"/>
-    <noscript>
-        <link rel="stylesheet"
-              href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;800&amp;display=swap"/>
-    </noscript>
-    <link href="./css/font-awesome/css/all.min.css?ver=1.2.0" rel="stylesheet">
-    <link href="./css/bootstrap-icons/bootstrap-icons.css?ver=1.2.0" rel="stylesheet">
-    <link href="./css/bootstrap.min.css?ver=1.2.0" rel="stylesheet">
-    <link href="./css/aos.css?ver=1.2.0" rel="stylesheet">
-    <link href="./css/main.css?ver=1.2.0" rel="stylesheet">
-    <noscript>
-        <style type="text/css">
-            [data-aos] {
-                opacity: 1 !important;
-                transform: translate(0) scale(1) !important;
-            }
-        </style>
-    </noscript>
+    <title>The Shiz — Web Design &amp; Development in Malaysia</title>
+    <meta name="description"
+          content="The Shiz is a Malaysian web and AI engineering studio. Custom websites, web applications, e-commerce, SEO and applied AI for Malaysian businesses.">
+    <meta name="keywords"
+          content="web design Malaysia, web development Malaysia, website design Kuala Lumpur, e-commerce website Malaysia, SEO Malaysia, web application development, AI development Malaysia, AI chatbot Malaysia">
+    <meta name="theme-color" content="#f7f7f4">
+    <link rel="canonical" href="https://the-shiz.co/">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="The Shiz">
+    <meta property="og:title" content="The Shiz — Web Design &amp; Development in Malaysia">
+    <meta property="og:description"
+          content="Web design, development and applied AI for Malaysian businesses — simple, functional and well built.">
+    <meta property="og:url" content="https://the-shiz.co/">
+    <meta property="og:image" content="https://the-shiz.co/images/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="The Shiz wordmark">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Shiz — Web Design &amp; Development in Malaysia">
+    <meta name="twitter:description"
+          content="Simple, functional, well-built websites for Malaysian businesses.">
+    <meta name="twitter:image" content="https://the-shiz.co/images/og-image.png">
+
+    <link rel="preload" href="./fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./fonts/league-spartan-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="./css/main.css?ver=3.2.0">
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y96LVQYJJ6"></script>
@@ -39,7 +41,6 @@
       function gtag () {dataLayer.push(arguments);}
 
       gtag('js', new Date());
-
       gtag('config', 'G-Y96LVQYJJ6');
     </script>
 
@@ -49,1057 +50,1086 @@
     </script>
     <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 
+    <script>document.documentElement.classList.add('js');</script>
 </head>
-<!-- HEAD [END] -->
 
 <body id="top">
+<a class="skip-link" href="#main">Skip to content</a>
 
-<!-- HEADER [START] -->
-<header class="bg-light">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="header-nav" role="navigation">
-        <div class="container">
-            <a href="#top"><img src="images/the-shiz-cropped-removebg-preview.png" alt="The Shiz Logo" width="200"></a>
-            <!--            <a class="link-dark navbar-brand site-title mb-0" href="#">The Shiz</a>-->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto me-2 mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-                <div class="d-grid d-lg-block mb-2 mb-lg-0">
-                    <a class="btn btn-primary" href="#contact">Free Quote</a>
+<header class="site-header" id="site-header">
+    <div class="container header-inner">
+        <a class="brand" href="#top">
+            <svg class="brand-mark" viewBox="0 0 38 24" aria-hidden="true" focusable="false"><rect x="0" y="5" width="20" height="4.5"/><rect x="0" y="14.5" width="20" height="4.5"/><path d="M24.5 2.5 34 12l-9.5 9.5" fill="none" stroke="currentColor" stroke-width="4.75"/></svg><span class="brand-name">The Shiz</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+            <span class="visually-hidden">Menu</span>
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+        </button>
+
+        <nav class="site-nav" id="site-nav" aria-label="Primary">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#clients">Clients</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a class="button button-small button-outline" target="_blank" rel="noopener"
+                   href="https://api.whatsapp.com/send/?phone=%2B60168694900&amp;text=Hi%2C%20I%20would%20like%20to%20inquire%20about%20your%20web%20design%20services.&amp;type=phone_number&amp;app_absent=0">
+                    <svg class="wa-icon-green" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="15" height="15" fill="currentColor" aria-hidden="true" focusable="false">
+                        <path d="M16 .5C7.439.5.5 7.439.5 16c0 2.777.726 5.45 2.105 7.8L.5 31.5l7.93-2.076A15.434 15.434 0 0016 31.5C24.561 31.5 31.5 24.561 31.5 16S24.561.5 16 .5zm0 28.2a13.113 13.113 0 01-6.682-1.826l-.48-.286-4.706 1.233 1.255-4.58-.313-.498A13.073 13.073 0 012.84 16C2.84 9.268 8.268 3.84 16 3.84S29.16 9.268 29.16 16 23.732 28.7 16 28.7zm7.17-9.788c-.394-.197-2.328-1.148-2.69-1.279-.362-.131-.625-.197-.888.197-.263.394-1.018 1.279-1.248 1.542-.23.263-.46.296-.854.099-.394-.197-1.662-.613-3.166-1.952-1.17-1.044-1.96-2.333-2.19-2.727-.23-.394-.025-.607.172-.804.177-.176.394-.46.591-.69.197-.23.263-.394.394-.657.131-.263.066-.493-.033-.69-.099-.197-.888-2.141-1.217-2.93-.32-.77-.646-.665-.888-.677l-.757-.013c-.263 0-.69.099-1.051.493-.362.394-1.38 1.348-1.38 3.29 0 1.942 1.413 3.818 1.61 4.081.197.263 2.781 4.247 6.738 5.956.942.407 1.678.65 2.25.832.945.3 1.806.258 2.487.156.759-.113 2.328-.952 2.657-1.872.329-.92.329-1.71.23-1.872-.098-.164-.362-.263-.756-.46z"/>
+                    </svg>
+                    <span>WhatsApp</span>
+                </a>
+                <a class="button button-small" href="#contact">Free quote</a>
+            </div>
+            <div class="menu-play">
+                <div class="menu-match" id="menu-match" aria-hidden="true">
+                    <span class="match-ground"></span>
+                    <div class="match-goal match-goal-a"></div>
+                    <div class="match-goal match-goal-b"></div>
+                    <div class="match-penguin">
+                        <div class="match-face">
+                            <svg class="penguin-svg" viewBox="0 0 84 50" focusable="false">
+                                <g class="pg-waddle">
+                                    <ellipse class="pg-foot-back" cx="22.5" cy="44.2" rx="4.8" ry="2.2" fill="#d98a3c"/>
+                                    <path d="M15.5 36 L11.5 39 L17 40.5 Z" fill="#26251f"/>
+                                    <path d="M15 29 C15 13.5 19.8 5.5 27.5 5.5 C35.2 5.5 40 13.5 40 29 C40 39.2 35.2 43.8 27.5 43.8 C19.8 43.8 15 39.2 15 29 Z" fill="#26251f"/>
+                                    <path d="M25.5 6.2 Q24.5 2.2 27.5 4.2 Q30 1.6 30.2 6.2" fill="#26251f"/>
+                                    <path d="M19.5 30.5 C19.5 21.2 22.4 17 27.5 17 C32.6 17 35.5 21.2 35.5 30.5 C35.5 38 32.3 41.8 27.5 41.8 C22.7 41.8 19.5 38 19.5 30.5 Z" fill="#ffffff"/>
+                                    <circle cx="25.2" cy="14.2" r="4.1" fill="#ffffff"/>
+                                    <circle cx="31.6" cy="14.2" r="4.1" fill="#ffffff"/>
+                                    <circle cx="26.2" cy="14" r="1.9" fill="#26251f"/>
+                                    <circle cx="26.8" cy="13.3" r="0.65" fill="#ffffff"/>
+                                    <circle cx="32.4" cy="14" r="1.9" fill="#26251f"/>
+                                    <circle cx="33" cy="13.3" r="0.65" fill="#ffffff"/>
+                                    <ellipse cx="22.4" cy="16.8" rx="2" ry="1.15" fill="#e29f87"/>
+                                    <ellipse cx="34.6" cy="16.8" rx="2" ry="1.15" fill="#e29f87"/>
+                                    <path d="M28.2 14.8 L34.8 16.6 L28.2 18.6 Z" fill="#d98a3c" stroke="#26251f" stroke-width="0.6" stroke-linejoin="round"/>
+                                    <path class="pg-scarf" d="M18.2 21.2 Q27.5 24.2 36.8 21.2" fill="none" stroke="#cdcdc9" stroke-width="3.2" stroke-linecap="round"/>
+                                    <path class="pg-scarf" d="M23.5 22.5 L21.8 28.2" fill="none" stroke="#cdcdc9" stroke-width="2.8" stroke-linecap="round"/>
+                                    <path class="pg-wing" d="M19.8 22.8 C13.8 25.8 13.5 33.8 17.8 35.8 C20.2 36.8 21.6 31 21 24.8 Z" fill="#26251f"/>
+                                    <ellipse class="pg-foot-front" cx="34" cy="43.8" rx="5.2" ry="2.3" fill="#d98a3c"/>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="match-penguin is-right">
+                        <div class="match-face">
+                            <svg class="penguin-svg" viewBox="0 0 84 50" focusable="false">
+                                <g class="pg-waddle">
+                                    <ellipse class="pg-foot-back" cx="22.5" cy="44.2" rx="4.8" ry="2.2" fill="#d98a3c"/>
+                                    <path d="M15.5 36 L11.5 39 L17 40.5 Z" fill="#26251f"/>
+                                    <path d="M15 29 C15 13.5 19.8 5.5 27.5 5.5 C35.2 5.5 40 13.5 40 29 C40 39.2 35.2 43.8 27.5 43.8 C19.8 43.8 15 39.2 15 29 Z" fill="#26251f"/>
+                                    <path d="M25.5 6.2 Q24.5 2.2 27.5 4.2 Q30 1.6 30.2 6.2" fill="#26251f"/>
+                                    <path d="M19.5 30.5 C19.5 21.2 22.4 17 27.5 17 C32.6 17 35.5 21.2 35.5 30.5 C35.5 38 32.3 41.8 27.5 41.8 C22.7 41.8 19.5 38 19.5 30.5 Z" fill="#ffffff"/>
+                                    <circle cx="25.2" cy="14.2" r="4.1" fill="#ffffff"/>
+                                    <circle cx="31.6" cy="14.2" r="4.1" fill="#ffffff"/>
+                                    <circle cx="26.2" cy="14" r="1.9" fill="#26251f"/>
+                                    <circle cx="26.8" cy="13.3" r="0.65" fill="#ffffff"/>
+                                    <circle cx="32.4" cy="14" r="1.9" fill="#26251f"/>
+                                    <circle cx="33" cy="13.3" r="0.65" fill="#ffffff"/>
+                                    <ellipse cx="22.4" cy="16.8" rx="2" ry="1.15" fill="#e29f87"/>
+                                    <ellipse cx="34.6" cy="16.8" rx="2" ry="1.15" fill="#e29f87"/>
+                                    <path d="M28.2 14.8 L34.8 16.6 L28.2 18.6 Z" fill="#d98a3c" stroke="#26251f" stroke-width="0.6" stroke-linejoin="round"/>
+                                    <path class="pg-scarf" d="M18.2 21.2 Q27.5 24.2 36.8 21.2" fill="none" stroke="#cdcdc9" stroke-width="3.2" stroke-linecap="round"/>
+                                    <path class="pg-scarf" d="M23.5 22.5 L21.8 28.2" fill="none" stroke="#cdcdc9" stroke-width="2.8" stroke-linecap="round"/>
+                                    <path class="pg-wing" d="M19.8 22.8 C13.8 25.8 13.5 33.8 17.8 35.8 C20.2 36.8 21.6 31 21 24.8 Z" fill="#26251f"/>
+                                    <ellipse class="pg-foot-front" cx="34" cy="43.8" rx="5.2" ry="2.3" fill="#d98a3c"/>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="match-ball">
+                        <svg viewBox="0 0 16 16" width="16" height="16" focusable="false">
+                            <circle cx="8" cy="8" r="7.2" fill="#fff" stroke="#26251f" stroke-width="1.2"/>
+                            <polygon points="8,5.2 10.6,7 9.6,10 6.4,10 5.4,7" fill="#26251f"/>
+                        </svg>
+                    </div>
+                    <span class="match-call"></span>
                 </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </div>
 </header>
-<!-- HEADER [END] -->
 
+<main id="main">
 
-<div class="page-content">
-    <div id="content">
+    <!-- Hero: cosmic star field, short lead, WhatsApp and services -->
+    <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-backdrop" aria-hidden="true">
+            <canvas id="hero-cosmos" class="hero-canvas"></canvas>
+            <div class="hero-scrim"></div>
+        </div>
 
-        <!--   HOME   -->
-        <header>
-            <div class="cover bg-light">
-                <div class="container px-2">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="mt-5 pt-lg-5">
-                                <h1 class="intro-title marker" data-aos="fade-left" data-aos-delay="50">Your Success is
-                                    Our Mission. </h1>
-                                <p class="lead fw-normal mt-4" data-aos="fade-up" data-aos-delay="100">
-                                    Websites have evolved, and the way you build them should, too. We don't believe in a
-                                    one-size-fits-all approach to web design. They shouldn't cost you more than they
-                                    have to, and it's our responsibility to make your website as simple, functional, and
-                                    attractive as possible!
-                                </p>
-                                <div class="mt-3" data-aos="fade-up" data-aos-delay="200">
-                                    <a class="btn btn-primary shadow-sm mt-1 me-2" href="#contact">
-                                        Free Quote <i class="fas fa-arrow-right ms-1"></i>
-                                    </a>
-                                    <!--                                    <a class="btn btn-outline-secondary mt-1"-->
-                                    <!--                                       data-bigpicture="{&quot;ytSrc&quot;: &quot;aqz-KE-bpKQ&quot;}" href="#">-->
-                                    <!--                                        <i class="fas fa-play-circle me-1"></i> Watch Video-->
-                                    <!--                                    </a>-->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 p-3 pe-lg-0" data-aos="fade-left" data-aos-delay="100"><img
-                                class="pt-2 img-fluid" src="images/illustrations/building_websites.svg" alt="hello"/>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="wave-bg"></div>
-        </header>
-
-        <!--   ABOUT US  -->
-        <div class="section pt-3 pt-lg-5 px-2 px-lg-4" id="about">
-            <div class="container">
-
-                <!--       About Us Marker      -->
-                <div class="text-center mb-4">
-                    <h2 class="marker marker-center">About Us</h2>
-                </div>
-
-                <!--        We build websites for Malaysian brands.      -->
-                <div class="row py-3 py-lg-5">
-                    <div class="col-lg-6 col-md-5 px-3 order-md-last" data-aos="fade-zoom-in" data-aos-delay="50"
-                         data-aos-easing="ease-in-back">
-                        <img class="my-3 img-fluid" src="images/illustrations/development.svg" alt="development"/>
-                    </div>
-
-                    <div class="col-lg-6 col-md-7 px-2" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="h3 mb-2">We build websites for Malaysian brands.</div>
-                        <p class="text-secondary mb-3">
-                            We are a full-service web development firm partnering with businesses of all sizes — from
-                            emerging startups to established enterprises.
-                            <br> <br>
-                            By leveraging the latest technologies and industry best practices, we help you stay ahead of
-                            the competition and reach more customers
-                            than ever before.
-                        </p>
-                        <div class="row">
-                            <div class="col-6 col-lg-6 mb-2">
-                                <div class="border border-3 rounded px-2 py-2 d-flex align-items-center">
-                                    <div class="badge bg-success me-2"><i class="fas fa-check"></i></div>
-                                    <div class="text-secondary fw-bold">Great Design</div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-6 mb-2">
-                                <div class="border border-3 rounded px-2 py-2 d-flex align-items-center">
-                                    <div class="badge bg-success me-2"><i class="fas fa-check"></i></div>
-                                    <div class="text-secondary fw-bold">On-Schedule Delivery</div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-6 mb-2">
-                                <div class="border border-3 rounded px-2 py-2 d-flex align-items-center">
-                                    <div class="badge bg-success me-2"><i class="fas fa-check"></i></div>
-                                    <div class="text-secondary fw-bold">Maintenance & Hosting</div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-lg-6 mb-2">
-                                <div class="border border-3 rounded px-2 py-2 d-flex align-items-center">
-                                    <div class="badge bg-success me-2"><i class="fas fa-check"></i></div>
-                                    <div class="text-secondary fw-bold">24x7 On-Support</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!--        We believe in Long Term Partnership.         -->
-                <div class="row py-3 py-lg-5">
-                    <div class="col-lg-6 col-md-5 px-3 order-md-last" data-aos="fade-zoom-in" data-aos-delay="50"
-                         data-aos-easing="ease-in-back">
-                        <img class="my-3 img-fluid" src="images/illustrations/work-chat.svg" alt="work-chat"/>
-                    </div>
-
-                    <div class="col-lg-6 col-md-7 px-2" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="h3 mb-2">We believe in <strong>Long Term Partnership</strong>.</div>
-
-                        <p class="text-secondary mb-3">
-                            <strong>Commitment, Transparency and Professionalism,</strong> that's how we present
-                            ourselves. <br>
-                            We look for partners that value our principles, and that we can build long-lasting
-                            relationships.
-                        </p>
-
-
-                        <ul class="nav nav-tabs nav-fill" role="tablist">
-
-                            <li class="nav-item" role="presentation">
-                                <a class="nav-link p-1 active" aria-current="page" href="#commitment"
-                                   data-bs-toggle="tab">
-                                    <span class="badge bg-secondary me-1">1</span> Commitment
-                                </a>
-                            </li>
-
-                            <li class="nav-item" role="presentation">
-                                <a class="nav-link p-1" href="#transparency" data-bs-toggle="tab">
-                                    <span class="badge bg-secondary me-1">2</span> Transparency
-                                </a>
-                            </li>
-
-
-                            <li class="nav-item" role="presentation">
-                                <a class="nav-link p-1" href="#professionalism" data-bs-toggle="tab">
-                                    <span class="badge bg-secondary me-1">3</span> Professionalism
-                                </a>
-                            </li>
-                        </ul>
-
-                        <div class="tab-content border border-top-0 text-secondary p-3" id="myTabContent">
-
-                            <!--   1. Commitment -->
-                            <div class="tab-pane fade show active" id="commitment" role="tabpanel"
-                                 aria-labelledby="home-tab">
-                                <p>
-                                    We put our expertise at the service of our partners and believe in providing them
-                                    the
-                                    highest quality of service possible.
-                                </p>
-
-                                <p>
-                                    We own our side of each partnership, being accountable for our performance and
-                                    treating our partners’ projects as our own to guarantee long-term success.
-                                </p>
-
-                            </div>
-
-                            <!--   2. Transparency -->
-                            <div class="tab-pane fade" id="transparency" role="tabpanel" aria-labelledby="profile-tab">
-                                <p>
-                                    We aim to be a trusted partner, operating with honesty and in full transparency,
-                                    never sacrificing long-term value for short-term results.
-                                </p>
-
-                                <p>
-                                    Whether it be on the financial part or project management, we believe true honesty
-                                    in business is the core foundation of building a successful business.
-                                </p>
-
-                            </div>
-
-                            <!--   3. Professionalism -->
-                            <div class="tab-pane fade" id="professionalism" role="tabpanel"
-                                 aria-labelledby="contact-tab">
-
-                                <p>
-                                    We deliver results with accurate pinpoint precision. We are pleased of our existing
-                                    clients' satisfaction with our work and services, which speaks louder than words.
-                                </p>
-
-                                <p>
-                                    Since then, we have helped dozens of companies across Malaysia to create, support
-                                    and maintain their digital products.
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
+        <div class="container hero-content">
+            <div class="hero-copy">
+                <h1 class="hero-title" id="hero-title">Your success is our mission.</h1>
+                <p class="lead">
+                    No templates, and nothing you don’t need — just a site that is simple, functional and attractive.
+                </p>
+                <div class="actions hero-actions">
+                    <a class="button button-hero-whatsapp" target="_blank" rel="noopener"
+                       href="https://api.whatsapp.com/send/?phone=%2B60168694900&amp;text=Hi%2C%20I%20would%20like%20to%20inquire%20about%20your%20web%20design%20services.&amp;type=phone_number&amp;app_absent=0">
+                        <svg class="button-wa-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false">
+                            <path d="M16 .5C7.439.5.5 7.439.5 16c0 2.777.726 5.45 2.105 7.8L.5 31.5l7.93-2.076A15.434 15.434 0 0016 31.5C24.561 31.5 31.5 24.561 31.5 16S24.561.5 16 .5zm0 28.2a13.113 13.113 0 01-6.682-1.826l-.48-.286-4.706 1.233 1.255-4.58-.313-.498A13.073 13.073 0 012.84 16C2.84 9.268 8.268 3.84 16 3.84S29.16 9.268 29.16 16 23.732 28.7 16 28.7zm7.17-9.788c-.394-.197-2.328-1.148-2.69-1.279-.362-.131-.625-.197-.888.197-.263.394-1.018 1.279-1.248 1.542-.23.263-.46.296-.854.099-.394-.197-1.662-.613-3.166-1.952-1.17-1.044-1.96-2.333-2.19-2.727-.23-.394-.025-.607.172-.804.177-.176.394-.46.591-.69.197-.23.263-.394.394-.657.131-.263.066-.493-.033-.69-.099-.197-.888-2.141-1.217-2.93-.32-.77-.646-.665-.888-.677l-.757-.013c-.263 0-.69.099-1.051.493-.362.394-1.38 1.348-1.38 3.29 0 1.942 1.413 3.818 1.61 4.081.197.263 2.781 4.247 6.738 5.956.942.407 1.678.65 2.25.832.945.3 1.806.258 2.487.156.759-.113 2.328-.952 2.657-1.872.329-.92.329-1.71.23-1.872-.098-.164-.362-.263-.756-.46z"/>
+                        </svg>
+                        <span>Message me!</span>
+                    </a>
+                    <a class="button button-hero-ghost" href="#services">How we help</a>
                 </div>
             </div>
         </div>
 
-        <!--   Services -->
-        <div class="section bg-light py-3 py-lg-5 px-2 px-lg-4" id="services">
-            <div class="container-narrow">
-                <div class="text-center mb-4">
-                    <h2 class="marker marker-center">Our Services</h2>
-                </div>
-                <div class="text-center">
-                    <p class="mx-auto mb-3" style="max-width:800px">
-                        We combine deep industry expertise with a clear understanding of your business objectives
-                        to deliver digital solutions that drive growth, elevate your brand, and create meaningful
-                        experiences for your audience.
-                    </p>
-                </div>
+        <a class="hero-scroll" href="#about" aria-label="Scroll to About section">
+            <span class="hero-scroll-wheel" aria-hidden="true"></span>
+        </a>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about" aria-labelledby="about-title">
+        <div class="container about-layout">
+            <div class="about-copy">
+                <p class="section-label">About</p>
+                <h2 id="about-title">We build websites for Malaysian brands.</h2>
+                <p class="about-lead">
+                    The Shiz is Oliver Sim’s studio in Kuala Lumpur. You work with the person who designs
+                    the pages and writes the code — from the first sketch through launch, and after.
+                </p>
+                <p class="about-note">
+                    Startups and established Malaysian businesses get the same thing: a clear site, built
+                    for how you actually sell, then hosted, supported and improved as the work grows.
+                </p>
+                <ul class="checklist" aria-label="What you can expect">
+                    <li>Designed for your offer</li>
+                    <li>You talk to Oliver</li>
+                    <li>Hosting and a WhatsApp line</li>
+                    <li>Search, after launch</li>
+                </ul>
             </div>
-            <div class="container">
-                <div class="row py-3">
 
-                    <!--   Web Application   -->
-                    <div class="col-md-6 col-lg-3 text-center" data-aos="fade-up" data-aos-delay="200">
-                        <div class="border rounded p-3 bg-light mb-3">
-                            <div class="text-center text-secondary display-3"><i class="bi bi-window"></i>
-                            </div>
-                            <h3 class="h4 mt-2">Web Applications</h3>
-                            <p class="text-small">
-                                We architect and build scalable, high-performance web applications tailored to
-                                streamline your operations and solve complex business challenges.
-                            </p>
-                        </div>
-                    </div>
+            <div class="about-visual iso-stage reveal" aria-hidden="true">
+                <svg class="iso-stairs-svg" viewBox="0 0 340 340" focusable="false">
+                    <defs>
+                        <radialGradient id="iso-sphere-grad-about" cx="34%" cy="28%" r="72%">
+                            <stop offset="0%" stop-color="#8b877d"/>
+                            <stop offset="42%" stop-color="#33312a"/>
+                            <stop offset="100%" stop-color="#141310"/>
+                        </radialGradient>
+                    </defs>
+                    <!-- 6 ascending isometric steps (painted back-to-front) + summit flag -->
+                    <polygon class="st-left" points="209.0,84.0 267.9,118.0 267.9,208.0 209.0,174.0"/>
+                    <polygon class="st-right" points="267.9,118.0 302.5,98.0 302.5,188.0 267.9,208.0"/>
+                    <polygon class="st-top st-top-summit" points="243.6,64.0 302.5,98.0 267.9,118.0 209.0,84.0"/>
+                    <line class="st-pole" x1="275.1" y1="100.2" x2="275.1" y2="66.2"/>
+                    <path class="st-flag" d="M275.1 66.2 l15 5.5 l-15 5.5 Z"/>
 
-                    <!--   Web Design   -->
-                    <div class="col-md-6 col-lg-3 text-center" data-aos="fade-up" data-aos-delay="100">
-                        <div class="border rounded p-3 bg-light mb-3">
-                            <div class="text-center text-secondary display-3"><i class="bi bi-palette-fill"></i></div>
-                            <h3 class="h4 mt-2">Web Design</h3>
-                            <p class="text-small">
-                                From bespoke HTML/CSS builds to Shopify and WordPress themes, we craft visually
-                                compelling designs that reflect your brand and engage your audience.
-                            </p>
-                        </div>
-                    </div>
+                    <polygon class="st-left" points="174.4,121.0 233.3,155.0 233.3,228.0 174.4,194.0"/>
+                    <polygon class="st-right" points="233.3,155.0 267.9,135.0 267.9,208.0 233.3,228.0"/>
+                    <polygon class="st-top" points="209.0,101.0 267.9,135.0 233.3,155.0 174.4,121.0"/>
 
-                    <!--   E-Commerce   -->
-                    <div class="col-md-6 col-lg-3 text-center" data-aos="fade-up" data-aos-delay="300">
-                        <div class="border rounded p-3 bg-light mb-3">
-                            <div class="text-center text-secondary display-3"><i class="bi bi-bag-check-fill"></i>
-                            </div>
-                            <h3 class="h4 mt-2">E-Commerce</h3>
-                            <p class="text-small">
-                                Launch and scale your online store with confidence. Our e-commerce solutions
-                                empower you to manage your business independently, without relying on a developer.
-                            </p>
-                        </div>
-                    </div>
+                    <polygon class="st-left" points="139.8,158.0 198.7,192.0 198.7,248.0 139.8,214.0"/>
+                    <polygon class="st-right" points="198.7,192.0 233.3,172.0 233.3,228.0 198.7,248.0"/>
+                    <polygon class="st-top" points="174.4,138.0 233.3,172.0 198.7,192.0 139.8,158.0"/>
 
-                    <!--  SEO   -->
-                    <div class="col-md-6 col-lg-3 text-center" data-aos="fade-up" data-aos-delay="400">
-                        <div class="border rounded p-3 bg-light mb-3">
-                            <div class="text-center text-secondary display-3"><i class="bi bi-graph-up"></i></div>
-                            <h3 class="h4 mt-2">SEO</h3>
-                            <p class="text-small">
-                                Maximize your online visibility with data-driven SEO strategies that improve
-                                search rankings, attract qualified traffic, and connect you with the right customers.
-                            </p>
-                        </div>
-                    </div>
+                    <polygon class="st-left" points="105.2,195.0 164.1,229.0 164.1,268.0 105.2,234.0"/>
+                    <polygon class="st-right" points="164.1,229.0 198.7,209.0 198.7,248.0 164.1,268.0"/>
+                    <polygon class="st-top" points="139.8,175.0 198.7,209.0 164.1,229.0 105.2,195.0"/>
 
-                </div>
-            </div>
-        </div>
+                    <polygon class="st-left" points="70.6,232.0 129.5,266.0 129.5,288.0 70.6,254.0"/>
+                    <polygon class="st-right" points="129.5,266.0 164.1,246.0 164.1,268.0 129.5,288.0"/>
+                    <polygon class="st-top" points="105.2,212.0 164.1,246.0 129.5,266.0 70.6,232.0"/>
 
-        <!--   Portfolio / Our Clients  -->
-        <div class="section py-3 py-lg-5 px-2 px-lg-4" id="portfolio">
-            <div class="container">
-                <div class="text-center mb-5">
-                    <h2 class="marker marker-center">Our Clients</h2>
-                </div>
-                <div class="text-center mb-4">
-                    <p class="mx-auto mb-1" style="max-width:800px">
-                        Trusted by <strong>4 businesses</strong> across Malaysia. We're proud to have partnered with
-                        these brands to build their digital presence.
-                    </p>
-                </div>
+                    <polygon class="st-left" points="36.0,269.0 94.9,303.0 94.9,308.0 36.0,274.0"/>
+                    <polygon class="st-right" points="94.9,303.0 129.5,283.0 129.5,288.0 94.9,308.0"/>
+                    <polygon class="st-top" points="70.6,249.0 129.5,283.0 94.9,303.0 36.0,269.0"/>
 
-                <div class="row justify-content-center g-3" data-aos="fade-up" data-aos-delay="100">
-
-                    <!-- RS Property Services -->
-                    <div class="col-6 col-md-3">
-                        <a href="https://rspropservices.com/" target="_blank" class="text-decoration-none">
-                            <div class="border rounded-3 p-3 text-center h-100 d-flex flex-column align-items-center justify-content-center client-card">
-                                <img src="images/logo/rs-logo-510.png" alt="RS Property Services" class="img-fluid mb-2"
-                                     style="max-height:70px; object-fit:contain;"/>
-                                <div class="fw-bold text-dark" style="font-size:0.85rem;">RS Property Services</div>
-                                <div class="text-muted" style="font-size:0.75rem;">rspropservices.com</div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- MQBC -->
-                    <div class="col-6 col-md-3">
-                        <a href="https://mqbc.com.my/" target="_blank" class="text-decoration-none">
-                            <div class="border rounded-3 p-3 text-center h-100 d-flex flex-column align-items-center justify-content-center client-card">
-                                <img src="images/logo/my-qt-flag.jpg" alt="MQBC" class="img-fluid mb-2"
-                                     style="max-height:70px; object-fit:contain;"/>
-                                <div class="fw-bold text-dark" style="font-size:0.85rem;">MQBC</div>
-                                <div class="text-muted" style="font-size:0.75rem;">mqbc.com.my</div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- Frankitas -->
-                    <div class="col-6 col-md-3">
-                        <a href="https://www.frankitas.co/" target="_blank" class="text-decoration-none">
-                            <div class="border rounded-3 p-3 text-center h-100 d-flex flex-column align-items-center justify-content-center client-card">
-                                <img src="images/logo/franki.png" alt="Frankitas" class="img-fluid mb-2"
-                                     style="max-height:70px; object-fit:contain;"/>
-                                <div class="fw-bold text-dark" style="font-size:0.85rem;">Frankitas</div>
-                                <div class="text-muted" style="font-size:0.75rem;">frankitas.co</div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- Carbnb -->
-                    <div class="col-6 col-md-3">
-                        <a href="https://www.carbnb.my/" target="_blank" class="text-decoration-none">
-                            <div class="border rounded-3 p-3 text-center h-100 d-flex flex-column align-items-center justify-content-center client-card">
-                                <img src="images/logo/carbnb-logo.png" alt="Carbnb" class="img-fluid mb-2"
-                                     style="max-height:70px; object-fit:contain;"
-                                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"/>
-                                <div class="fw-bold text-dark d-none align-items-center justify-content-center"
-                                     style="font-size:1.5rem; height:70px; color:#25d366;">🚗
-                                </div>
-                                <div class="fw-bold text-dark" style="font-size:0.85rem;">Carbnb</div>
-                                <div class="text-muted" style="font-size:0.75rem;">carbnb.my</div>
-                            </div>
-                        </a>
-                    </div>
-
-                </div>
+                    <!-- Animated shadow & bouncing 3D sphere -->
+                    <g class="st-shadow">
+                        <ellipse class="st-shadow-el" cx="0" cy="0" rx="11.5" ry="5.6"/>
+                    </g>
+                    <g class="st-ball">
+                        <circle cx="0" cy="0" r="11" fill="url(#iso-sphere-grad-about)"/>
+                    </g>
+                </svg>
             </div>
         </div>
+    </section>
 
-        <style>
-            .client-card {
-                transition: box-shadow 0.2s ease, transform 0.2s ease;
-                background: #fff;
-            }
+    <!-- Services -->
+    <section class="section" id="services" aria-labelledby="services-title">
+        <div class="container">
+            <div class="section-head">
+                <p class="section-label">Services</p>
+                <h2 id="services-title">Full-stack web and AI engineering.</h2>
+                <p class="section-intro">
+                    One studio from first sketch to launch and beyond — design, engineering and applied AI,
+                    shaped around your business goals.
+                </p>
+            </div>
 
-            .client-card:hover {
-                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-                transform: translateY(-3px);
-            }
-        </style>
+            <ul class="services-grid reveal">
+<li class="service">
+                    <svg class="service-art" viewBox="0 0 160 120" aria-hidden="true" focusable="false">
+                        <rect x="16" y="18" width="116" height="84" rx="4"/>
+                        <path d="M16 31h116"/>
+                        <circle class="fill" cx="25" cy="24.5" r="1.8"/><circle class="fill" cx="32" cy="24.5" r="1.8"/><circle class="fill" cx="39" cy="24.5" r="1.8"/>
+                        <rect class="fill" x="26" y="41" width="42" height="26"/>
+                        <path d="M78 44h42M78 53h34M78 62h40"/>
+                        <rect x="26" y="76" width="27" height="16"/><rect x="60" y="76" width="27" height="16"/><rect x="94" y="76" width="27" height="16"/>
+                        <path class="paper" d="M124 80v22l6-6 5 10 4-2-5-10h8z"/>
+                    </svg>
+                    <h3 class="service-title">Web Design &amp; Development</h3>
+                    <ul class="service-list">
+                        <li>Website design</li>
+                        <li>Landing pages</li>
+                        <li>Web applications</li>
+                        <li>E-commerce</li>
+                        <li>CMS &amp; content sites</li>
+                        <li>Performance &amp; SEO</li>
+                    </ul>
+                </li>
+<li class="service">
+                    <svg class="service-art" viewBox="0 0 160 120" aria-hidden="true" focusable="false">
+                        <!-- Pipeline connectors & autonomous return loop -->
+                        <path d="M50 60h14M98 51l9-15h9M98 69l9 15h9"/>
+                        <path d="M131 96v8a4 4 0 0 1-4 4H38a4 4 0 0 1-4-4V76" stroke-dasharray="3 4"/>
+                        <path d="M30.5 81.5 34 76.5l3.5 5"/>
+                        <!-- Trigger card with lightning bolt -->
+                        <rect class="paper" x="18" y="44" width="32" height="32" rx="4"/>
+                        <path class="fill" d="M36.5 49.5 27.5 61h6l-2 9.5 9-11.5h-6z"/>
+                        <!-- Central precision automation hub -->
+                        <path d="M82 37v5M82 78v5M59 60h5M100 60h5M65.7 43.7l3.5 3.5M94.8 72.8l3.5 3.5M98.3 43.7l-3.5 3.5M69.2 72.8l-3.5 3.5"/>
+                        <circle class="paper" cx="82" cy="60" r="17"/>
+                        <circle class="fill" cx="82" cy="60" r="8.5"/>
+                        <circle class="paper" cx="82" cy="60" r="3"/>
+                        <!-- Branched automated action cards -->
+                        <rect class="paper" x="116" y="24" width="30" height="24" rx="3"/>
+                        <path d="M125 36.5l4 4 8-8"/>
+                        <rect class="paper" x="116" y="72" width="30" height="24" rx="3"/>
+                        <path d="M122 81h11M122 87h15"/>
+                        <circle class="fill" cx="139" cy="81" r="1.8"/>
+                        <path d="M82 14v8M78 18h8"/>
+                    </svg>
+                    <h3 class="service-title">AI Automation</h3>
+                    <ul class="service-list">
+                        <li>Workflow &amp; process automation</li>
+                        <li>Autonomous AI agents</li>
+                        <li>WhatsApp, CRM &amp; email flows</li>
+                        <li>Lead capture &amp; auto-follow-ups</li>
+                        <li>Reporting &amp; back-office ops</li>
+                        <li>API &amp; webhook orchestration</li>
+                    </ul>
+                </li>
+<li class="service">
+                    <svg class="service-art" viewBox="0 0 160 120" aria-hidden="true" focusable="false">
+                        <rect x="14" y="14" width="132" height="92" rx="2" stroke-dasharray="3 5"/>
+                        <path d="M30 88C46 20 104 108 128 34"/>
+                        <path d="M30 88 50 40M128 34l-14 42"/>
+                        <circle class="paper" cx="50" cy="40" r="3.5"/><circle class="paper" cx="114" cy="76" r="3.5"/>
+                        <rect class="paper" x="26" y="84" width="8" height="8"/>
+                        <rect class="paper" x="124" y="30" width="8" height="8"/>
+                        <rect class="fill" x="74" y="56" width="9" height="9"/>
+                        <path d="M98 96l20-20 6 6-20 20-8 2z"/>
+                        <path d="M114 80l6 6"/>
+                    </svg>
+                    <h3 class="service-title">Product &amp; Design</h3>
+                    <ul class="service-list">
+                        <li>UX/UI design</li>
+                        <li>Design systems</li>
+                        <li>Brand &amp; digital identity</li>
+                        <li>Prototyping</li>
+                        <li>UX audits</li>
+                    </ul>
+                </li>
+<li class="service">
+                    <svg class="service-art" viewBox="0 0 160 120" aria-hidden="true" focusable="false">
+                        <path d="M48 64h66a14 14 0 0 0 1-28 20 20 0 0 0-38-6 15 15 0 0 0-26 9 13 13 0 0 0-3 25z"/>
+                        <path d="M70 42l-6 6 6 6M92 42l6 6-6 6M84 40l-6 16"/>
+                        <path d="M80 64v10" stroke-dasharray="2 3"/>
+                        <rect x="40" y="76" width="80" height="13" rx="2"/>
+                        <rect x="40" y="93" width="80" height="13" rx="2"/>
+                        <path d="M50 82.5h22M50 99.5h22"/>
+                        <circle class="fill" cx="110" cy="82.5" r="2.2"/><circle cx="102" cy="82.5" r="2.2"/>
+                        <circle cx="110" cy="99.5" r="2.2"/><circle cx="102" cy="99.5" r="2.2"/>
+                        <path d="M128 28h12M134 22v12" />
+                    </svg>
+                    <h3 class="service-title">Engineering &amp; Cloud</h3>
+                    <ul class="service-list">
+                        <li>Full-stack development</li>
+                        <li>API &amp; integrations</li>
+                        <li>Mobile-friendly &amp; PWA</li>
+                        <li>Cloud hosting &amp; DevOps</li>
+                        <li>Maintenance &amp; support</li>
+                        <li>Technical consulting</li>
+                    </ul>
+                </li>
+<li class="service">
+                    <svg class="service-art" viewBox="0 0 160 120" aria-hidden="true" focusable="false">
+                        <path d="M64 50 38 28M96 50l26-24M64 74l-28 22M96 74l28 20M80 44V16M80 76v28M38 28l-14 30 12 38M122 26l16 32-14 36"/>
+                        <path d="M70 44v-6M80 44v-6M90 44v-6M70 82v-6M80 82v-6M90 82v-6M58 54h6M58 62h6M58 70h6M96 54h6M96 62h6M96 70h6"/>
+                        <rect class="fill" x="64" y="44" width="32" height="32" rx="3"/>
+                        <circle class="paper" cx="38" cy="28" r="5"/><circle class="paper" cx="122" cy="26" r="5"/>
+                        <circle class="paper" cx="36" cy="96" r="5"/><circle class="paper" cx="124" cy="94" r="5"/>
+                        <circle class="paper" cx="80" cy="14" r="4"/><circle class="paper" cx="80" cy="106" r="4"/>
+                        <circle class="fill" cx="24" cy="58" r="2.5"/><circle class="fill" cx="138" cy="58" r="2.5"/>
+                        <path d="M146 18v10M141 23h10"/>
+                    </svg>
+                    <h3 class="service-title">Applied AI</h3>
+                    <ul class="service-list">
+                        <li>AI strategy &amp; readiness</li>
+                        <li>LLM apps &amp; copilots</li>
+                        <li>AI chatbots &amp; assistants</li>
+                        <li>RAG &amp; knowledge systems</li>
+                        <li>Document &amp; data intelligence</li>
+                        <li>AI integration into existing products</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
 
-        <!--   Stats -->
-        <div class="section bg-secondary text-light py-3 py-lg-5 px-2 px-lg-4" id="stats">
-            <div class="container-narrow">
-                <div class="row px-4">
+    <!-- Approach -->
+    <section class="section" id="approach" aria-labelledby="approach-title">
+        <div class="container">
+            <div class="section-head">
+                <p class="section-label">Approach</p>
+                <h2 id="approach-title">How we build and partner long-term.</h2>
+                <p class="section-intro">
+                    We design and engineer websites, applications and AI workflows built for clarity, speed and
+                    conversion — then partner with you long-term to manage hosting, strengthen search visibility
+                    and continuously evolve your product.
+                </p>
+            </div>
 
-                    <!--   Projects Done -->
-                    <div class="col-md-3 col-sm-6">
-                        <div class="d-flex py-2"><i class="mr-3 fas fa-clipboard-check fa-4x fa-fw"></i>
-                            <div class="ms-1">
-                                <div class="h2 mb-1 purecounter" data-purecounter-start="0" data-purecounter-end="4"
-                                     data-purecounter-duration="1">4
-                                </div>
-                                <div class="h6">Projects Done</div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="approach-panel iso-stage reveal" id="approach-panel">
+                <p class="approach-hint">
+                    <span class="approach-hint-dot" aria-hidden="true"></span>
+                    <span class="hint-hover">Move across a stage. The note below follows.</span>
+                    <span class="hint-tap">Tap a stage. The note below updates.</span>
+                </p>
 
-                    <!--   Happy Clients -->
-                    <div class="col-md-3 col-sm-6">
-                        <div class="d-flex py-2"><i class="mr-3 fas fa-smile fa-4x fa-fw"></i>
-                            <div class="ms-1">
-                                <div class="h2 mb-1 purecounter" data-purecounter-start="0" data-purecounter-end="4"
-                                     data-purecounter-duration="1">4
-                                </div>
-                                <div class="h6">Happy Clients</div>
-                            </div>
-                        </div>
-                    </div>
+                <!-- Animated & interactive 6-step isometric closed-loop system -->
+                <div class="loop-diagram" id="loop-diagram">
+                    <!-- Desktop / tablet hexagonal loop (>= 40rem) -->
+                    <svg class="loop-svg loop-svg-wide" viewBox="0 0 760 356" fill="none" aria-label="Interactive six-stage build and long-term partnership workflow">
+                        <defs>
+                            <radialGradient id="iso-sphere-grad-wide" cx="34%" cy="28%" r="72%">
+                                <stop offset="0%" stop-color="#8b877d"/>
+                                <stop offset="42%" stop-color="#33312a"/>
+                                <stop offset="100%" stop-color="#141310"/>
+                            </radialGradient>
+                        </defs>
 
-                    <!--   Hours of Development -->
-                    <div class="col-md-3 col-sm-6">
-                        <div class="d-flex py-2"><i class="mr-3 fas fa-cogs fa-4x fa-fw"></i>
-                            <div class="ms-1">
-                                <div class="h2 mb-1 purecounter" data-purecounter-start="0" data-purecounter-end="100"
-                                     data-purecounter-duration="1">100
-                                </div>
-                                <div class="h6">Hours of Development</div>
-                            </div>
-                        </div>
-                    </div>
+                        <!-- Dashed isometric connector loop + directional chevrons -->
+                        <path class="loop-line" d="M380 58L626 114"/>
+                        <path class="loop-arrow" d="M-4-4L2 0-4 4" transform="translate(503 86) rotate(12.8)"/>
+                        <path class="loop-line" d="M626 114V228"/>
+                        <path class="loop-arrow" d="M-4-4L2 0-4 4" transform="translate(626 171) rotate(90)"/>
+                        <path class="loop-line" d="M626 228L380 284"/>
+                        <path class="loop-arrow" d="M-4-4L2 0-4 4" transform="translate(503 256) rotate(167.2)"/>
 
-                    <!--   Support Hours -->
-                    <div class="col-md-3 col-sm-6">
-                        <div class="d-flex py-2"><i class="mr-3 fas fa-tasks fa-4x fa-fw"></i>
-                            <div class="ms-1">
-                                <div class="h2 mb-1 purecounter" data-purecounter-start="0" data-purecounter-end="1"
-                                     data-purecounter-duration="1">1
-                                </div>
-                                <div class="h6">Ongoing Project</div>
-                            </div>
-                        </div>
-                    </div>
+                        <path class="loop-line loop-line-active" d="M380 284L134 228"/>
+                        <path class="loop-arrow loop-arrow-active" d="M-4-4L2 0-4 4" transform="translate(257 256) rotate(-167.2)"/>
+                        <path class="loop-line loop-line-active" d="M134 228V114"/>
+                        <path class="loop-arrow loop-arrow-active" d="M-4-4L2 0-4 4" transform="translate(134 171) rotate(-90)"/>
+                        <path class="loop-line loop-line-active" d="M134 114L380 58"/>
+                        <path class="loop-arrow loop-arrow-active" d="M-4-4L2 0-4 4" transform="translate(257 86) rotate(-12.8)"/>
+
+                        <!-- Stage 0: Scope & UX (380, 58) -->
+                        <g class="loop-node" data-step="0" tabindex="0" role="button" aria-label="Scope &amp; UX: Clear offer and UX first">
+                            <rect class="loop-hit" x="310" y="28" width="140" height="90" rx="10"/>
+                            <path class="loop-left" d="M346 58l34 17v9l-34-17Z"/>
+                            <path class="loop-right" d="M414 58l-34 17v9l34-17Z"/>
+                            <path class="loop-top" d="M380 41l34 17-34 17-34-17Z"/>
+                            <path class="loop-glow loop-glow-w-0" d="M380 41l34 17-34 17-34-17Z"/>
+                            <text x="380" y="106" class="loop-text loop-text-w-0">Scope &amp; UX</text>
+                        </g>
+                        <!-- Stage 1: Design & build (626, 114) -->
+                        <g class="loop-node" data-step="1" tabindex="0" role="button" aria-label="Design &amp; build: Web, apps and AI built cleanly">
+                            <rect class="loop-hit" x="556" y="84" width="140" height="90" rx="10"/>
+                            <path class="loop-left" d="M592 114l34 17v9l-34-17Z"/>
+                            <path class="loop-right" d="M660 114l-34 17v9l34-17Z"/>
+                            <path class="loop-top" d="M626 97l34 17-34 17-34-17Z"/>
+                            <path class="loop-glow loop-glow-w-1" d="M626 97l34 17-34 17-34-17Z"/>
+                            <text x="626" y="162" class="loop-text loop-text-w-1">Design &amp; build</text>
+                        </g>
+                        <!-- Stage 2: Launch (626, 228) -->
+                        <g class="loop-node" data-step="2" tabindex="0" role="button" aria-label="Launch: Ready to convert from day one">
+                            <rect class="loop-hit" x="556" y="198" width="140" height="90" rx="10"/>
+                            <path class="loop-left" d="M592 228l34 17v9l-34-17Z"/>
+                            <path class="loop-right" d="M660 228l-34 17v9l34-17Z"/>
+                            <path class="loop-top" d="M626 211l34 17-34 17-34-17Z"/>
+                            <path class="loop-glow loop-glow-w-2" d="M626 211l34 17-34 17-34-17Z"/>
+                            <text x="626" y="276" class="loop-text loop-text-w-2">Launch</text>
+                        </g>
+                        <!-- Stage 3: Host & support (380, 284) -->
+                        <g class="loop-node" data-step="3" tabindex="0" role="button" aria-label="Host &amp; support: Managed hosting and 24/7 support">
+                            <rect class="loop-hit" x="310" y="254" width="140" height="90" rx="10"/>
+                            <path class="loop-left loop-fb" d="M346 284l34 17v9l-34-17Z"/>
+                            <path class="loop-right loop-fb" d="M414 284l-34 17v9l34-17Z"/>
+                            <path class="loop-top loop-fb" d="M380 267l34 17-34 17-34-17Z"/>
+                            <path class="loop-glow loop-glow-w-3" d="M380 267l34 17-34 17-34-17Z"/>
+                            <text x="380" y="332" class="loop-text loop-text-w-3">Host &amp; support</text>
+                        </g>
+                        <!-- Stage 4: SEO & AI search (134, 228) -->
+                        <g class="loop-node" data-step="4" tabindex="0" role="button" aria-label="SEO &amp; AI search: Found on Google and AI search">
+                            <rect class="loop-hit" x="64" y="198" width="140" height="90" rx="10"/>
+                            <path class="loop-left loop-fb" d="M100 228l34 17v9l-34-17Z"/>
+                            <path class="loop-right loop-fb" d="M168 228l-34 17v9l34-17Z"/>
+                            <path class="loop-top loop-fb" d="M134 211l34 17-34 17-34-17Z"/>
+                            <path class="loop-glow loop-glow-w-4" d="M134 211l34 17-34 17-34-17Z"/>
+                            <text x="134" y="276" class="loop-text loop-text-w-4">SEO &amp; AI search</text>
+                        </g>
+                        <!-- Stage 5: Improve & scale (134, 114) -->
+                        <g class="loop-node" data-step="5" tabindex="0" role="button" aria-label="Improve &amp; scale: Continuous AI and product evolution">
+                            <rect class="loop-hit" x="64" y="84" width="140" height="90" rx="10"/>
+                            <path class="loop-left loop-fb" d="M100 114l34 17v9l-34-17Z"/>
+                            <path class="loop-right loop-fb" d="M168 114l-34 17v9l34-17Z"/>
+                            <path class="loop-top loop-fb" d="M134 97l34 17-34 17-34-17Z"/>
+                            <path class="loop-glow loop-glow-w-5" d="M134 97l34 17-34 17-34-17Z"/>
+                            <text x="134" y="162" class="loop-text loop-text-w-5">Improve &amp; scale</text>
+                        </g>
+
+                        <!-- Animated ground shadow + hopping 3D sphere -->
+                        <g class="loop-shadow-w">
+                            <ellipse class="loop-shadow-el" cx="0" cy="0" rx="10" ry="5"/>
+                        </g>
+                        <circle class="loop-ball-w" cx="0" cy="0" r="10.5" fill="url(#iso-sphere-grad-wide)"/>
+                    </svg>
+
+                    <!-- Mobile hexagonal loop (< 40rem) -->
+                    <svg class="loop-svg loop-svg-mobile" viewBox="0 0 380 492" fill="none" aria-label="Interactive six-stage build and long-term partnership workflow">
+                        <defs>
+                            <radialGradient id="iso-sphere-grad-mob" cx="34%" cy="28%" r="72%">
+                                <stop offset="0%" stop-color="#8b877d"/>
+                                <stop offset="42%" stop-color="#33312a"/>
+                                <stop offset="100%" stop-color="#141310"/>
+                            </radialGradient>
+                        </defs>
+
+                        <path class="loop-line" d="M190 52l96 96"/>
+                        <path class="loop-arrow" d="M-3.5-3.5L1.8 0-3.5 3.5" transform="translate(238 100) rotate(45)"/>
+                        <path class="loop-line" d="M286 148v188"/>
+                        <path class="loop-arrow" d="M-3.5-3.5L1.8 0-3.5 3.5" transform="translate(286 242) rotate(90)"/>
+                        <path class="loop-line" d="M286 336l-96 96"/>
+                        <path class="loop-arrow" d="M-3.5-3.5L1.8 0-3.5 3.5" transform="translate(238 384) rotate(135)"/>
+
+                        <path class="loop-line loop-line-active" d="M190 432l-96-96"/>
+                        <path class="loop-arrow loop-arrow-active" d="M-3.5-3.5L1.8 0-3.5 3.5" transform="translate(142 384) rotate(-135)"/>
+                        <path class="loop-line loop-line-active" d="M94 336V148"/>
+                        <path class="loop-arrow loop-arrow-active" d="M-3.5-3.5L1.8 0-3.5 3.5" transform="translate(94 242) rotate(-90)"/>
+                        <path class="loop-line loop-line-active" d="M94 148l96-96"/>
+                        <path class="loop-arrow loop-arrow-active" d="M-3.5-3.5L1.8 0-3.5 3.5" transform="translate(142 100) rotate(-45)"/>
+
+                        <g class="loop-node" data-step="0" tabindex="0" role="button" aria-label="Scope &amp; UX: Clear offer and UX first">
+                            <rect class="loop-hit" x="130" y="24" width="120" height="84" rx="10"/>
+                            <path class="loop-left" d="M160 52l30 15v8l-30-15Z"/>
+                            <path class="loop-right" d="M220 52l-30 15v8l30-15Z"/>
+                            <path class="loop-top" d="M190 37l30 15-30 15-30-15Z"/>
+                            <path class="loop-glow loop-glow-m-0" d="M190 37l30 15-30 15-30-15Z"/>
+                            <text x="190" y="96" class="loop-text loop-text-m loop-text-m-0">Scope &amp; UX</text>
+                        </g>
+                        <g class="loop-node" data-step="1" tabindex="0" role="button" aria-label="Design &amp; build: Web, apps and AI built cleanly">
+                            <rect class="loop-hit" x="226" y="120" width="120" height="84" rx="10"/>
+                            <path class="loop-left" d="M256 148l30 15v8l-30-15Z"/>
+                            <path class="loop-right" d="M316 148l-30 15v8l30-15Z"/>
+                            <path class="loop-top" d="M286 133l30 15-30 15-30-15Z"/>
+                            <path class="loop-glow loop-glow-m-1" d="M286 133l30 15-30 15-30-15Z"/>
+                            <text x="286" y="192" class="loop-text loop-text-m loop-text-m-1">Design &amp; build</text>
+                        </g>
+                        <g class="loop-node" data-step="2" tabindex="0" role="button" aria-label="Launch: Ready to convert from day one">
+                            <rect class="loop-hit" x="226" y="308" width="120" height="84" rx="10"/>
+                            <path class="loop-left" d="M256 336l30 15v8l-30-15Z"/>
+                            <path class="loop-right" d="M316 336l-30 15v8l30-15Z"/>
+                            <path class="loop-top" d="M286 321l30 15-30 15-30-15Z"/>
+                            <path class="loop-glow loop-glow-m-2" d="M286 321l30 15-30 15-30-15Z"/>
+                            <text x="286" y="380" class="loop-text loop-text-m loop-text-m-2">Launch</text>
+                        </g>
+                        <g class="loop-node" data-step="3" tabindex="0" role="button" aria-label="Host &amp; support: Managed hosting and 24/7 support">
+                            <rect class="loop-hit" x="130" y="404" width="120" height="84" rx="10"/>
+                            <path class="loop-left loop-fb" d="M160 432l30 15v8l-30-15Z"/>
+                            <path class="loop-right loop-fb" d="M220 432l-30 15v8l30-15Z"/>
+                            <path class="loop-top loop-fb" d="M190 417l30 15-30 15-30-15Z"/>
+                            <path class="loop-glow loop-glow-m-3" d="M190 417l30 15-30 15-30-15Z"/>
+                            <text x="190" y="476" class="loop-text loop-text-m loop-text-m-3">Host &amp; support</text>
+                        </g>
+                        <g class="loop-node" data-step="4" tabindex="0" role="button" aria-label="SEO &amp; AI search: Found on Google and AI search">
+                            <rect class="loop-hit" x="34" y="308" width="120" height="84" rx="10"/>
+                            <path class="loop-left loop-fb" d="M64 336l30 15v8l-30-15Z"/>
+                            <path class="loop-right loop-fb" d="M124 336l-30 15v8l30-15Z"/>
+                            <path class="loop-top loop-fb" d="M94 321l30 15-30 15-30-15Z"/>
+                            <path class="loop-glow loop-glow-m-4" d="M94 321l30 15-30 15-30-15Z"/>
+                            <text x="94" y="380" class="loop-text loop-text-m loop-text-m-4">SEO &amp; AI search</text>
+                        </g>
+                        <g class="loop-node" data-step="5" tabindex="0" role="button" aria-label="Improve &amp; scale: Continuous AI and product evolution">
+                            <rect class="loop-hit" x="34" y="120" width="120" height="84" rx="10"/>
+                            <path class="loop-left loop-fb" d="M64 148l30 15v8l-30-15Z"/>
+                            <path class="loop-right loop-fb" d="M124 148l-30 15v8l30-15Z"/>
+                            <path class="loop-top loop-fb" d="M94 133l30 15-30 15-30-15Z"/>
+                            <path class="loop-glow loop-glow-m-5" d="M94 133l30 15-30 15-30-15Z"/>
+                            <text x="94" y="192" class="loop-text loop-text-m loop-text-m-5">Improve &amp; scale</text>
+                        </g>
+
+                        <g class="loop-shadow-m">
+                            <ellipse class="loop-shadow-el" cx="0" cy="0" rx="9" ry="4.5"/>
+                        </g>
+                        <circle class="loop-ball-m" cx="0" cy="0" r="9.5" fill="url(#iso-sphere-grad-mob)"/>
+                    </svg>
 
                 </div>
+
+                <article class="stage-detail" id="stage-detail" aria-live="polite">
+                    <p class="stage-detail-kicker" id="stage-kicker">Build &amp; launch · Scope &amp; UX</p>
+                    <h3 id="stage-title">Clear offer and UX first</h3>
+                    <p id="stage-desc">We structure your pages and user flows around what visitors need to understand before they get in touch — reviewed with you before we build.</p>
+                    <ul class="step-popover-tags" id="stage-tags">
+                        <li>Offer clarity</li>
+                        <li>User flows</li>
+                        <li>Wireframe review</li>
+                    </ul>
+                </article>
+
+                <!-- Interactive compact stage selector cards (hover on desktop, tap/click popup on all devices) -->
+                <div class="stage-pills" role="list" aria-label="Stages of how we build and partner">
+                    <button type="button" class="stage-pill stage-pill-0" data-step="0"
+                            data-phase="Build &amp; launch"
+                            data-stage="Scope &amp; UX"
+                            data-title="Clear offer and UX first"
+                            data-desc="We structure your pages and user flows around what visitors need to understand before they get in touch — reviewed with you before we build."
+                            data-tags="Offer clarity|User flows|Wireframe review">
+                        <span class="stage-pill-head">
+                            <span class="stage-pill-name">Scope &amp; UX</span>
+                            <span class="stage-pill-plus" aria-hidden="true">+</span>
+                        </span>
+                        <span class="stage-pill-sub">Clear offer and UX first</span>
+                    </button>
+
+                    <button type="button" class="stage-pill stage-pill-1" data-step="1"
+                            data-phase="Build &amp; launch"
+                            data-stage="Design &amp; build"
+                            data-title="Web, apps and AI built cleanly"
+                            data-desc="Custom websites, web applications, e-commerce and AI assistants engineered for speed, reliability and straightforward day-to-day control."
+                            data-tags="Custom code|Web &amp; AI apps|Easy management">
+                        <span class="stage-pill-head">
+                            <span class="stage-pill-name">Design &amp; build</span>
+                            <span class="stage-pill-plus" aria-hidden="true">+</span>
+                        </span>
+                        <span class="stage-pill-sub">Web, apps and AI built cleanly</span>
+                    </button>
+
+                    <button type="button" class="stage-pill stage-pill-2" data-step="2"
+                            data-phase="Build &amp; launch"
+                            data-stage="Launch"
+                            data-title="Ready to convert from day one"
+                            data-desc="Shipped with fast performance, analytics, structured data and clear enquiry paths across mobile and desktop."
+                            data-tags="Fast load times|Analytics &amp; SEO|WhatsApp &amp; forms">
+                        <span class="stage-pill-head">
+                            <span class="stage-pill-name">Launch</span>
+                            <span class="stage-pill-plus" aria-hidden="true">+</span>
+                        </span>
+                        <span class="stage-pill-sub">Ready to convert from day one</span>
+                    </button>
+
+                    <button type="button" class="stage-pill stage-pill-3" data-step="3"
+                            data-phase="Long-term partnership"
+                            data-stage="Host &amp; support"
+                            data-title="Managed hosting and 24/7 support"
+                            data-desc="Hosting, security updates and responsive support handled proactively so your product stays fast and online."
+                            data-tags="Managed cloud|Security updates|24/7 support">
+                        <span class="stage-pill-head">
+                            <span class="stage-pill-name">Host &amp; support</span>
+                            <span class="stage-pill-plus" aria-hidden="true">+</span>
+                        </span>
+                        <span class="stage-pill-sub">Managed hosting and 24/7 support</span>
+                    </button>
+
+                    <button type="button" class="stage-pill stage-pill-4" data-step="4"
+                            data-phase="Long-term partnership"
+                            data-stage="SEO &amp; AI search"
+                            data-title="Found on Google and AI search"
+                            data-desc="Data-driven SEO and ongoing page improvements that bring in qualified traffic and connect you with the right buyers."
+                            data-tags="Google SEO|AI search visibility|Page refinement">
+                        <span class="stage-pill-head">
+                            <span class="stage-pill-name">SEO &amp; AI search</span>
+                            <span class="stage-pill-plus" aria-hidden="true">+</span>
+                        </span>
+                        <span class="stage-pill-sub">Found on Google and AI search</span>
+                    </button>
+
+                    <button type="button" class="stage-pill stage-pill-5" data-step="5"
+                            data-phase="Long-term partnership"
+                            data-stage="Improve &amp; scale"
+                            data-title="Continuous AI and product evolution"
+                            data-desc="As your operations grow, we ship new features, automations and integrations without rebuilding from scratch."
+                            data-tags="New features|AI automation|API integrations">
+                        <span class="stage-pill-head">
+                            <span class="stage-pill-name">Improve &amp; scale</span>
+                            <span class="stage-pill-plus" aria-hidden="true">+</span>
+                        </span>
+                        <span class="stage-pill-sub">Continuous AI and product evolution</span>
+                    </button>
+                </div>
+
             </div>
         </div>
+    </section>
 
+    <!-- Clients -->
+    <section class="section" id="clients" aria-labelledby="clients-title">
+        <div class="container">
+            <div class="section-head">
+                <p class="section-label">Clients</p>
+                <h2 id="clients-title">Trusted by businesses across Malaysia.</h2>
+                <p class="section-intro">
+                    A look at three sites we designed and built. Open a case study, or visit the live page.
+                </p>
+            </div>
 
-        <!--   Our Team -->
-        <!--        <div class="section pt-5 pb-3 py-lg-5 px-2 px-lg-4" id="team">-->
-        <!--            <div class="container">-->
-        <!--                <div class="text-center mb-5">-->
-        <!--                    <h2 class="marker marker-center">Meet our Team</h2>-->
-        <!--                </div>-->
-        <!--            </div>-->
-        <!--            <div class="carousel carousel-dark slide pb-3" id="carouselTeam" data-bs-ride="carousel"-->
-        <!--                 data-aos="zoom-in-up">-->
-        <!--                <div class="container-narrow">-->
-        <!--                    <ol class="carousel-indicators">-->
-        <!--                        <li class="active" data-bs-target="#carouselTeam" data-bs-slide-to="0"-->
-        <!--                            aria-label="Slide 1"></li>-->
-        <!--                        <li data-bs-target="#carouselTeam" data-bs-slide-to="1" aria-label="Slide 2"></li>-->
-        <!--                    </ol>-->
-        <!--                    <div class="carousel-inner">-->
-        <!--                        <div class="carousel-item active" data-bs-interval="6000">-->
-        <!--                            <div class="row">-->
-        <!--                                <div class="col-md-4">-->
-        <!--                                    <div class="card d-block mb-3"><img class="card-img-top" src="images/team/emp-1.jpg"-->
-        <!--                                                                        alt="image"/>-->
-        <!--                                        <div class="card-body text-center">-->
-        <!--                                            <div class="h5 mb-1">Pamela Lopez</div>-->
-        <!--                                            <div class="text-muted mb-1">CEO</div>-->
-        <!--                                            <div class="nav text-light justify-content-center"><a class="nav-link"-->
-        <!--                                                                                                  href="#!"-->
-        <!--                                                                                                  title="Twitter"><i-->
-        <!--                                                    class="fab fa-twitter"></i><span-->
-        <!--                                                    class="menu-title sr-only">Twitter</span></a><a class="nav-link"-->
-        <!--                                                                                                    href="#!"-->
-        <!--                                                                                                    title="Facebook"><i-->
-        <!--                                                    class="fab fa-facebook"></i><span class="menu-title sr-only">Facebook</span></a><a-->
-        <!--                                                    class="nav-link" href="#!" title="Instagram"><i-->
-        <!--                                                    class="fab fa-instagram"></i><span class="menu-title sr-only">Instagram</span></a><a-->
-        <!--                                                    class="nav-link" href="#!" title="LinkedIn"><i-->
-        <!--                                                    class="fab fa-linkedin"></i><span class="menu-title sr-only">LinkedIn</span></a>-->
-        <!--                                            </div>-->
-        <!--                                        </div>-->
-        <!--                                    </div>-->
-        <!--                                </div>-->
-        <!--                                <div class="col-md-4">-->
-        <!--                                    <div class="card d-block mb-3"><img class="card-img-top" src="images/team/emp-2.jpg"-->
-        <!--                                                                        alt="image"/>-->
-        <!--                                        <div class="card-body text-center">-->
-        <!--                                            <div class="h5 mb-1">John Bowman</div>-->
-        <!--                                            <div class="text-muted mb-1">Graphic Designer</div>-->
-        <!--                                            <div class="nav text-light justify-content-center"><a class="nav-link"-->
-        <!--                                                                                                  href="#!"-->
-        <!--                                                                                                  title="Twitter"><i-->
-        <!--                                                    class="fab fa-twitter"></i><span-->
-        <!--                                                    class="menu-title sr-only">Twitter</span></a><a class="nav-link"-->
-        <!--                                                                                                    href="#!"-->
-        <!--                                                                                                    title="Facebook"><i-->
-        <!--                                                    class="fab fa-facebook"></i><span class="menu-title sr-only">Facebook</span></a><a-->
-        <!--                                                    class="nav-link" href="#!" title="Instagram"><i-->
-        <!--                                                    class="fab fa-instagram"></i><span class="menu-title sr-only">Instagram</span></a><a-->
-        <!--                                                    class="nav-link" href="#!" title="LinkedIn"><i-->
-        <!--                                                    class="fab fa-linkedin"></i><span class="menu-title sr-only">LinkedIn</span></a>-->
-        <!--                                            </div>-->
-        <!--                                        </div>-->
-        <!--                                    </div>-->
-        <!--                                </div>-->
-        <!--                                <div class="col-md-4">-->
-        <!--                                    <div class="card d-block mb-3"><img class="card-img-top" src="images/team/emp-3.jpg"-->
-        <!--                                                                        alt="image"/>-->
-        <!--                                        <div class="card-body text-center">-->
-        <!--                                            <div class="h5 mb-1">Mark Shaw</div>-->
-        <!--                                            <div class="text-muted mb-1">Software Developer</div>-->
-        <!--                                            <div class="nav text-light justify-content-center"><a class="nav-link"-->
-        <!--                                                                                                  href="#!"-->
-        <!--                                                                                                  title="Twitter"><i-->
-        <!--                                                    class="fab fa-twitter"></i><span-->
-        <!--                                                    class="menu-title sr-only">Twitter</span></a><a class="nav-link"-->
-        <!--                                                                                                    href="#!"-->
-        <!--                                                                                                    title="Facebook"><i-->
-        <!--                                                    class="fab fa-facebook"></i><span class="menu-title sr-only">Facebook</span></a><a-->
-        <!--                                                    class="nav-link" href="#!" title="Instagram"><i-->
-        <!--                                                    class="fab fa-instagram"></i><span class="menu-title sr-only">Instagram</span></a><a-->
-        <!--                                                    class="nav-link" href="#!" title="LinkedIn"><i-->
-        <!--                                                    class="fab fa-linkedin"></i><span class="menu-title sr-only">LinkedIn</span></a>-->
-        <!--                                            </div>-->
-        <!--                                        </div>-->
-        <!--                                    </div>-->
-        <!--                                </div>-->
-        <!--                            </div>-->
-        <!--                        </div>-->
-        <!--                        <div class="carousel-item">-->
-        <!--                            <div class="row">-->
-        <!--                                <div class="col-md-4">-->
-        <!--                                    <div class="card d-block mb-3"><img class="card-img-top" src="images/team/emp-4.jpg"-->
-        <!--                                                                        alt="image"/>-->
-        <!--                                        <div class="card-body text-center">-->
-        <!--                                            <div class="h5 mb-1">Melissa Long</div>-->
-        <!--                                            <div class="text-muted mb-1">Software Developer</div>-->
-        <!--                                            <div class="nav text-light justify-content-center"><a class="nav-link"-->
-        <!--                                                                                                  href="#!"-->
-        <!--                                                                                                  title="Twitter"><i-->
-        <!--                                                    class="fab fa-twitter"></i><span-->
-        <!--                                                    class="menu-title sr-only">Twitter</span></a><a class="nav-link"-->
-        <!--                                                                                                    href="#!"-->
-        <!--                                                                                                    title="Facebook"><i-->
-        <!--                                                    class="fab fa-facebook"></i><span class="menu-title sr-only">Facebook</span></a><a-->
-        <!--                                                    class="nav-link" href="#!" title="Instagram"><i-->
-        <!--                                                    class="fab fa-instagram"></i><span class="menu-title sr-only">Instagram</span></a><a-->
-        <!--                                                    class="nav-link" href="#!" title="LinkedIn"><i-->
-        <!--                                                    class="fab fa-linkedin"></i><span class="menu-title sr-only">LinkedIn</span></a>-->
-        <!--                                            </div>-->
-        <!--                                        </div>-->
-        <!--                                    </div>-->
-        <!--                                </div>-->
-        <!--                                <div class="col-md-4">-->
-        <!--                                    <div class="card d-block mb-3"><img class="card-img-top" src="images/team/emp-5.jpg"-->
-        <!--                                                                        alt="image"/>-->
-        <!--                                        <div class="card-body text-center">-->
-        <!--                                            <div class="h5 mb-1">Betty West</div>-->
-        <!--                                            <div class="text-muted mb-1">Software Developer</div>-->
-        <!--                                            <div class="nav text-light justify-content-center"><a class="nav-link"-->
-        <!--                                                                                                  href="#!"-->
-        <!--                                                                                                  title="Twitter"><i-->
-        <!--                                                    class="fab fa-twitter"></i><span-->
-        <!--                                                    class="menu-title sr-only">Twitter</span></a><a class="nav-link"-->
-        <!--                                                                                                    href="#!"-->
-        <!--                                                                                                    title="Facebook"><i-->
-        <!--                                                    class="fab fa-facebook"></i><span class="menu-title sr-only">Facebook</span></a><a-->
-        <!--                                                    class="nav-link" href="#!" title="Instagram"><i-->
-        <!--                                                    class="fab fa-instagram"></i><span class="menu-title sr-only">Instagram</span></a><a-->
-        <!--                                                    class="nav-link" href="#!" title="LinkedIn"><i-->
-        <!--                                                    class="fab fa-linkedin"></i><span class="menu-title sr-only">LinkedIn</span></a>-->
-        <!--                                            </div>-->
-        <!--                                        </div>-->
-        <!--                                    </div>-->
-        <!--                                </div>-->
-        <!--                                <div class="col-md-4">-->
-        <!--                                    <div class="card d-block mb-3"><img class="card-img-top" src="images/team/emp-6.jpg"-->
-        <!--                                                                        alt="image"/>-->
-        <!--                                        <div class="card-body text-center">-->
-        <!--                                            <div class="h5 mb-1">Jeremy Little</div>-->
-        <!--                                            <div class="text-muted mb-1">Digital Marketing</div>-->
-        <!--                                            <div class="nav text-light justify-content-center"><a class="nav-link"-->
-        <!--                                                                                                  href="#!"-->
-        <!--                                                                                                  title="Twitter"><i-->
-        <!--                                                    class="fab fa-twitter"></i><span-->
-        <!--                                                    class="menu-title sr-only">Twitter</span></a><a class="nav-link"-->
-        <!--                                                                                                    href="#!"-->
-        <!--                                                                                                    title="Facebook"><i-->
-        <!--                                                    class="fab fa-facebook"></i><span class="menu-title sr-only">Facebook</span></a><a-->
-        <!--                                                    class="nav-link" href="#!" title="Instagram"><i-->
-        <!--                                                    class="fab fa-instagram"></i><span class="menu-title sr-only">Instagram</span></a><a-->
-        <!--                                                    class="nav-link" href="#!" title="LinkedIn"><i-->
-        <!--                                                    class="fab fa-linkedin"></i><span class="menu-title sr-only">LinkedIn</span></a>-->
-        <!--                                            </div>-->
-        <!--                                        </div>-->
-        <!--                                    </div>-->
-        <!--                                </div>-->
-        <!--                            </div>-->
-        <!--                        </div>-->
-        <!--                    </div>-->
-        <!--                </div>-->
-        <!--            </div>-->
-        <!--        </div>-->
-
-        <!--   Portfolio -->
-        <!--        <div class="section py-3 py-lg-5 px-2 px-lg-4" id="portfolio">-->
-        <!--            <div class="container">-->
-        <!--                <div class="text-center mb-5">-->
-        <!--                    <h2 class="marker marker-center">Portfolio </h2>-->
-        <!--                </div>-->
-
-        <!--                <div class="grid bp-gallery pb-3" data-aos="zoom-in-up" data-aos-delay="100">-->
-        <!--                    <div class="grid-sizer"></div>-->
-
-        <!--                    &lt;!&ndash;   RS Property Services &ndash;&gt;-->
-        <!--                    <div class="grid-item">-->
-        <!--                        <a href="https://rspropservices.com/" target="_blank">-->
-        <!--                            <figure class="portfolio-item">-->
-        <!--                                <img src="images/logo/rs-logo-510.png" data-bp="images/portfolio/rs_prop.png" alt="RS LOGO"/>-->
-        <!--                                <figcaption>-->
-        <!--                                    <h4 class="h5 mb-0">RS Property Services</h4>-->
-        <!--                                    <div>rspropservices.com</div>-->
-        <!--                                </figcaption>-->
-        <!--                            </figure>-->
-        <!--                        </a>-->
-        <!--                    </div>-->
-
-        <!--                    &lt;!&ndash;  MQBC Project &ndash;&gt;-->
-        <!--                    <div class="grid-item">-->
-        <!--                        <a href="https://mqbc.com.my/" target="_blank">-->
-        <!--                            <figure class="portfolio-item">-->
-        <!--                                <img src="images/logo/my-qt-flag.jpg" data-bp="images/portfolio/mqbc_image.jpg" alt="MQBC Logo"/>-->
-        <!--                                <figcaption>-->
-        <!--                                    <h4 class="h5 mb-0">MQBC</h4>-->
-        <!--                                    <div>mqbc.com.my</div>-->
-        <!--                                </figcaption>-->
-        <!--                            </figure>-->
-        <!--                        </a>-->
-        <!--                    </div>-->
-
-        <!--                    &lt;!&ndash;  Frankitas Project &ndash;&gt;-->
-        <!--                    <div class="grid-item">-->
-        <!--                        <a href="https://www.frankitas.co/" target="_blank">-->
-        <!--                            <figure class="portfolio-item">-->
-        <!--                                <img src="images/logo/frankitas.png" data-bp="images/portfolio/frankitas_image.png" alt="Frankitas Logo"/>-->
-        <!--                                <figcaption>-->
-        <!--                                    <h4 class="h5 mb-0">Frankitas</h4>-->
-        <!--                                    <div>frankitas.co</div>-->
-        <!--                                </figcaption>-->
-        <!--                            </figure>-->
-        <!--                        </a>-->
-        <!--                    </div>-->
-
-        <!--                </div>-->
-        <!--            </div>-->
-        <!--        </div>-->
-
-        <!-- Testimonials -->
-        <div class="section py-3 py-lg-5 px-2 px-lg-4" id="testimonials">
-            <div class="container-narrow">
-
-                <div class="text-center mb-5">
-                    <h2 class="marker marker-center">Client Testimonials</h2>
-                </div>
-
-                <div class="row">
-
-                    <!-- RS Property Services -->
-                    <div class="col-md-6 mb-5" data-aos="fade-right" data-aos-delay="100">
-                        <div class="d-flex ms-md-3">
-                            <span><i class="fas fa-2x fa-quote-left"></i></span>
-                            <span class="m-2">Extremely helpful and knowledgeable in his line of work that even someone as clueless about IT like me understood the process in no time after his explanation. Best of all, he is efficient, responsive and produced results in a short period of time.
-                            </span>
+            <ul class="client-grid reveal">
+                <li>
+                    <a class="client-card" href="works/mqbc.html">
+                        <div class="client-shot">
+                            <img src="images/clients/mqbc.webp" width="800" height="500" loading="lazy" decoding="async"
+                                 alt="Homepage of the Malaysia-Qatar Joint Business Council website">
                         </div>
-
-                        <div class="d-flex justify-content-end align-items-end">
-                            <div class="text-end me-2">
-                                <div class="fw-bolder">Russell</div>
-                                <div class="text-small">RS Property Services</div>
-                            </div>
-                            <img class="me-md-3 rounded" src="images/testimonials/russell_lee.png" width="96"
-                                 height="96" alt="client 1"/>
+                        <div class="client-card-body">
+                            <h3 class="client-card-title">MQBC</h3>
+                            <p class="client-card-desc">A council site for trade between Malaysia and Qatar.</p>
+                            <span class="client-link">View case study</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="client-card" href="works/frankitas.html">
+                        <div class="client-shot">
+                            <img src="images/clients/frankitas.webp" width="800" height="500" loading="lazy" decoding="async"
+                                 alt="Homepage of the Frankitas online store for handwoven bags">
+                        </div>
+                        <div class="client-card-body">
+                            <h3 class="client-card-title">Frankitas</h3>
+                            <p class="client-card-desc">A shop for handwoven bags, built around the collections.</p>
+                            <span class="client-link">View case study</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="client-card" href="works/carbnb.html">
+                        <div class="client-shot">
+                            <img src="images/clients/carbnb.webp" width="800" height="500" loading="lazy" decoding="async"
+                                 alt="Homepage of Carbnb, a car subscription service in Malaysia">
+                        </div>
+                        <div class="client-card-body">
+                            <h3 class="client-card-title">Carbnb</h3>
+                            <p class="client-card-desc">A clearer way to explain car subscription.</p>
+                            <span class="client-link">View case study</span>
+                        </div>
+                    </a>
+                </li>
+                <!-- TODO(content): rspropservices.com no longer resolves (NXDOMAIN); restore a link once the client's site is back. -->
+                <li>
+                    <div class="client-card client-card-static">
+                        <div class="client-card-body">
+                            <h3 class="client-card-title">RS Property Services</h3>
+                            <p class="client-card-desc">“Efficient, responsive and produced results in a short period of time.”</p>
+                            <span class="client-link">Site offline for now</span>
                         </div>
                     </div>
+                </li>
+            </ul>
+        </div>
+    </section>
 
-                    <!-- MQBC - Marisa Testimonial -->
-                    <div class="col-md-6 mb-5" data-aos="fade-left" data-aos-delay="200">
-                        <div class="d-flex ms-md-3">
-                            <span><i class="fas fa-2x fa-quote-left"></i></span>
-                            <span class="m-2">Working with Oliver was a seamless experience from start to finish. He took the time to understand exactly what we needed and delivered a website that truly represents our brand. Professional, reliable, and easy to work with — highly recommended
-                            </span>
-                        </div>
-                        <div class="d-flex justify-content-end align-items-end">
-                            <div class="text-end me-2">
-                                <div class="fw-bolder">Marisa</div>
-                                <div class="text-small">DMIA - MQBC</div>
-                            </div>
-                            <img class="me-md-3 rounded" src="images/testimonials/marisa.png" width="96"
-                                 height="96" alt="client 1"/>
-                        </div>
+    <!-- Testimonials -->
+    <section class="section" id="testimonials" aria-labelledby="testimonials-title">
+        <div class="container">
+            <div class="section-head">
+                <p class="section-label">Testimonials</p>
+                <h2 id="testimonials-title">In our clients’ words.</h2>
+            </div>
+
+            <div class="testimonials-grid reveal">
+                <figure class="testimonial-card">
+                    <div class="testimonial-body">
+                        <svg class="quote-mark" viewBox="0 0 32 24" width="28" height="21" fill="currentColor" aria-hidden="true" focusable="false">
+                            <path d="M0 15.2C0 7.4 4.6 2.1 12.2 0l1.6 3.1C9 4.8 6.8 7.8 6.5 11.6H12V24H0v-8.8zm18.2 0C18.2 7.4 22.8 2.1 30.4 0L32 3.1c-4.8 1.7-7 4.7-7.3 8.5h5.5V24H18.2v-8.8z"/>
+                        </svg>
+                        <blockquote>
+                            <p>Extremely helpful and knowledgeable in his line of work that even someone as clueless
+                                about IT like me understood the process in no time after his explanation. Best of all,
+                                he is efficient, responsive and produced results in a short period of time.</p>
+                        </blockquote>
                     </div>
+                    <figcaption class="testimonial-author">
+                        <div class="testimonial-meta">
+                            <span class="quote-name">Russell</span>
+                            <span class="quote-org">RS Property Services</span>
+                        </div>
+                        <picture>
+                            <source srcset="images/testimonials/russell_lee.webp" type="image/webp">
+                            <img class="testimonial-avatar" src="images/testimonials/russell_lee.png" width="72" height="72"
+                                 loading="lazy" decoding="async" alt="Russell from RS Property Services">
+                        </picture>
+                    </figcaption>
+                </figure>
 
-                    <!-- Testimonial 3 - Frankitas -->
-                    <div class="col-md-6 mb-5" data-aos="fade-right" data-aos-delay="300">
-                        <div class="d-flex ms-md-3">
-                            <span><i class="fas fa-2x fa-quote-left"></i></span>
-                            <span class="m-2">I wasn't sure what to expect, but Oliver made the whole process straightforward and stress-free. The final result exceeded my expectations — clean, modern, and exactly what I had in mind. Will definitely be working with him again.
-                            </span>
-                        </div>
-                        <div class="d-flex justify-content-end align-items-end">
-                            <div class="text-end me-2">
-                                <div class="fw-bolder">Frankitas Turner</div>
-                                <div class="text-small">Frankitas</div>
-                            </div>
-                            <img class="me-md-3 rounded" src="images/testimonials/frankitas.png" width="96"
-                                 height="96" alt="client 1"/>
-                        </div>
+                <figure class="testimonial-card">
+                    <div class="testimonial-body">
+                        <svg class="quote-mark" viewBox="0 0 32 24" width="28" height="21" fill="currentColor" aria-hidden="true" focusable="false">
+                            <path d="M0 15.2C0 7.4 4.6 2.1 12.2 0l1.6 3.1C9 4.8 6.8 7.8 6.5 11.6H12V24H0v-8.8zm18.2 0C18.2 7.4 22.8 2.1 30.4 0L32 3.1c-4.8 1.7-7 4.7-7.3 8.5h5.5V24H18.2v-8.8z"/>
+                        </svg>
+                        <blockquote>
+                            <p>Working with Oliver was a seamless experience from start to finish. He took the time to
+                                understand exactly what we needed and delivered a website that truly represents our
+                                brand. Professional, reliable, and easy to work with — highly recommended.</p>
+                        </blockquote>
                     </div>
+                    <figcaption class="testimonial-author">
+                        <div class="testimonial-meta">
+                            <span class="quote-name">Marisa</span>
+                            <span class="quote-org">DMIA – MQBC</span>
+                        </div>
+                        <picture>
+                            <source srcset="images/testimonials/marisa.webp" type="image/webp">
+                            <img class="testimonial-avatar" src="images/testimonials/marisa.png" width="72" height="72"
+                                 loading="lazy" decoding="async" alt="Marisa from DMIA – MQBC">
+                        </picture>
+                    </figcaption>
+                </figure>
 
-
-                    <!--                    <div class="col-md-6 mb-5" data-aos="fade-left" data-aos-delay="300">-->
-                    <!--                        <div class="d-flex ms-md-3"><span><i class="fas fa-2x fa-quote-left"></i></span><span-->
-                    <!--                                class="m-2">Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Organically grow the holistic world view of disruptive innovation.</span>-->
-                    <!--                        </div>-->
-                    <!--                        <div class="d-flex justify-content-end align-items-end">-->
-                    <!--                            <div class="text-end me-2">-->
-                    <!--                                <div class="fw-bolder">Alexander</div>-->
-                    <!--                                <div class="text-small">CEO / Combtree</div>-->
-                    <!--                            </div>-->
-                    <!--                            <img class="me-md-3 rounded" src="images/testimonials/client2.jpg" width="96" height="96"-->
-                    <!--                                 alt="client 1"/>-->
-                    <!--                        </div>-->
-                    <!--                    </div>-->
-
-
-                    <!--                    <div class="col-md-6 mb-5" data-aos="fade-right" data-aos-delay="100">-->
-                    <!--                        <div class="d-flex ms-md-3"><span><i class="fas fa-2x fa-quote-left"></i></span><span-->
-                    <!--                                class="m-2">Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise potential.</span>-->
-                    <!--                        </div>-->
-                    <!--                        <div class="d-flex justify-content-end align-items-end">-->
-                    <!--                            <div class="text-end me-2">-->
-                    <!--                                <div class="fw-bolder">Ariya</div>-->
-                    <!--                                <div class="text-small">CTO / Softone</div>-->
-                    <!--                            </div>-->
-                    <!--                            <img class="me-md-3 rounded" src="images/testimonials/client3.jpg" width="96" height="96"-->
-                    <!--                                 alt="client 1"/>-->
-                    <!--                        </div>-->
-                    <!--                    </div>-->
-
-                    <!--                    -->
-                    <!--                    <div class="col-md-6 mb-5" data-aos="fade-left" data-aos-delay="300">-->
-                    <!--                        <div class="d-flex ms-md-3"><span><i class="fas fa-2x fa-quote-left"></i></span><span-->
-                    <!--                                class="m-2">Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits.</span>-->
-                    <!--                        </div>-->
-                    <!--                        <div class="d-flex justify-content-end align-items-end">-->
-                    <!--                            <div class="text-end me-2">-->
-                    <!--                                <div class="fw-bolder">Braiden</div>-->
-                    <!--                                <div class="text-small">CFO / Markoo</div>-->
-                    <!--                            </div>-->
-                    <!--                            <img class="me-md-3 rounded" src="images/testimonials/client4.jpg" width="96" height="96"-->
-                    <!--                                 alt="client 1"/>-->
-                    <!--                        </div>-->
-                    <!--                    </div>-->
-                    <!--                    -->
-
-                </div>
+                <!-- TODO(content): confirm reviewer name "Frankitas Turner" with the client before launch. -->
+                <figure class="testimonial-card">
+                    <div class="testimonial-body">
+                        <svg class="quote-mark" viewBox="0 0 32 24" width="28" height="21" fill="currentColor" aria-hidden="true" focusable="false">
+                            <path d="M0 15.2C0 7.4 4.6 2.1 12.2 0l1.6 3.1C9 4.8 6.8 7.8 6.5 11.6H12V24H0v-8.8zm18.2 0C18.2 7.4 22.8 2.1 30.4 0L32 3.1c-4.8 1.7-7 4.7-7.3 8.5h5.5V24H18.2v-8.8z"/>
+                        </svg>
+                        <blockquote>
+                            <p>I wasn’t sure what to expect, but Oliver made the whole process straightforward and
+                                stress-free. The final result exceeded my expectations — clean, modern, and exactly what
+                                I had in mind. Will definitely be working with him again.</p>
+                        </blockquote>
+                    </div>
+                    <figcaption class="testimonial-author">
+                        <div class="testimonial-meta">
+                            <span class="quote-name">Frankitas Turner</span>
+                            <span class="quote-org">Frankitas</span>
+                        </div>
+                        <picture>
+                            <source srcset="images/testimonials/frankitas.webp" type="image/webp">
+                            <img class="testimonial-avatar" src="images/testimonials/frankitas.png" width="72" height="72"
+                                 loading="lazy" decoding="async" alt="Frankitas Turner from Frankitas">
+                        </picture>
+                    </figcaption>
+                </figure>
             </div>
         </div>
+    </section>
 
-        <!--    Contact Us    -->
-        <div class="section py-3 py-lg-5 px-2 px-lg-4" id="contact">
-            <div class="container-narrow">
-                <div class="text-center mb-5">
-                    <h2 class="marker marker-center">Contact Us</h2>
-                </div>
+    <!-- Contact -->
+    <section class="section" id="contact" aria-labelledby="contact-title">
+        <div class="container">
+            <div class="section-head">
+                <p class="section-label">Contact</p>
+                <h2 id="contact-title">Tell us what you need.</h2>
+                <p class="section-intro">
+                    Four short questions, then we reply with a clear next step. Prefer to talk it through?
+                    <a class="wa-inline-link" target="_blank" rel="noopener"
+                       href="https://api.whatsapp.com/send/?phone=%2B60168694900&amp;text=Hi%2C%20I%20would%20like%20to%20inquire%20about%20your%20web%20design%20services.&amp;type=phone_number&amp;app_absent=0">
+                        <svg class="wa-icon-green" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="currentColor" aria-hidden="true" focusable="false"><path d="M16 .5C7.439.5.5 7.439.5 16c0 2.777.726 5.45 2.105 7.8L.5 31.5l7.93-2.076A15.434 15.434 0 0016 31.5C24.561 31.5 31.5 24.561 31.5 16S24.561.5 16 .5zm0 28.2a13.113 13.113 0 01-6.682-1.826l-.48-.286-4.706 1.233 1.255-4.58-.313-.498A13.073 13.073 0 012.84 16C2.84 9.268 8.268 3.84 16 3.84S29.16 9.268 29.16 16 23.732 28.7 16 28.7zm7.17-9.788c-.394-.197-2.328-1.148-2.69-1.279-.362-.131-.625-.197-.888.197-.263.394-1.018 1.279-1.248 1.542-.23.263-.46.296-.854.099-.394-.197-1.662-.613-3.166-1.952-1.17-1.044-1.96-2.333-2.19-2.727-.23-.394-.025-.607.172-.804.177-.176.394-.46.591-.69.197-.23.263-.394.394-.657.131-.263.066-.493-.033-.69-.099-.197-.888-2.141-1.217-2.93-.32-.77-.646-.665-.888-.677l-.757-.013c-.263 0-.69.099-1.051.493-.362.394-1.38 1.348-1.38 3.29 0 1.942 1.413 3.818 1.61 4.081.197.263 2.781 4.247 6.738 5.956.942.407 1.678.65 2.25.832.945.3 1.806.258 2.487.156.759-.113 2.328-.952 2.657-1.872.329-.92.329-1.71.23-1.872-.098-.164-.362-.263-.756-.46z"/></svg>
+                        <span>Message Oliver on WhatsApp</span>
+                    </a>
+                </p>
+            </div>
 
-                <div class="row">
-                    <div class="col-md-6" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="bg-light my-2 p-3 pt-2">
-                            <!--    Formspree Init Form    -->
-                            <form action="https://formspree.io/f/xdobblql" method="POST">
-                                <div class="form-group my-2">
-                                    <label for="name" class="form-label fw-bolder">Name</label>
-                                    <input class="form-control" type="text" id="name" name="name" required>
+            <div class="inquiry-layout">
+                <form class="inquiry-form" action="https://formspree.io/f/xdobblql" method="POST">
+                    <input type="hidden" name="_subject" value="New project inquiry — the-shiz.co">
+                    <ol class="inquiry-flow">
+                        <li>
+                            <span class="inquiry-node" aria-hidden="true">1</span>
+                            <div class="inquiry-step">
+                                <p class="inquiry-who">The Shiz asks</p>
+                                <h3>What are you looking for?</h3>
+                                <p class="inquiry-hint">Pick everything that fits. You can choose more than one.</p>
+                                <div class="inquiry-chips" role="group" aria-label="What you need">
+                                    <label class="inquiry-chip"><input type="checkbox" name="need" value="Website"><span>Website</span></label>
+                                    <label class="inquiry-chip"><input type="checkbox" name="need" value="Web application"><span>Web application</span></label>
+                                    <label class="inquiry-chip"><input type="checkbox" name="need" value="E-commerce"><span>E-commerce</span></label>
+                                    <label class="inquiry-chip"><input type="checkbox" name="need" value="AI automation"><span>AI automation</span></label>
+                                    <label class="inquiry-chip"><input type="checkbox" name="need" value="Applied AI"><span>Applied AI</span></label>
+                                    <label class="inquiry-chip"><input type="checkbox" name="need" value="Product and design"><span>Product &amp; design</span></label>
+                                    <label class="inquiry-chip"><input type="checkbox" name="need" value="Cloud and engineering"><span>Cloud &amp; engineering</span></label>
+                                    <label class="inquiry-chip"><input type="checkbox" name="need" value="Not sure yet"><span>Not sure yet</span></label>
                                 </div>
-                                <div class="form-group my-2">
-                                    <label for="email" class="form-label fw-bolder">Email</label>
-                                    <input class="form-control" type="email" id="email" name="_replyto" required>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="inquiry-node" aria-hidden="true">2</span>
+                            <div class="inquiry-step">
+                                <p class="inquiry-who">The Shiz asks</p>
+                                <h3>What budget feels comfortable?</h3>
+                                <p class="inquiry-hint">A range is enough. This only helps us scope the first conversation.</p>
+                                <div class="inquiry-chips" role="radiogroup" aria-label="Budget range in Malaysian ringgit">
+                                    <label class="inquiry-chip"><input type="radio" name="budget" value="Below RM 5,000"><span>Below RM 5,000</span></label>
+                                    <label class="inquiry-chip"><input type="radio" name="budget" value="RM 5,000 to 15,000"><span>RM 5,000 – 15,000</span></label>
+                                    <label class="inquiry-chip"><input type="radio" name="budget" value="RM 15,000 to 40,000"><span>RM 15,000 – 40,000</span></label>
+                                    <label class="inquiry-chip"><input type="radio" name="budget" value="Above RM 40,000"><span>Above RM 40,000</span></label>
+                                    <label class="inquiry-chip"><input type="radio" name="budget" value="Not sure yet"><span>Not sure yet</span></label>
                                 </div>
-                                <div class="form-group my-2">
-                                    <label for="message" class="form-label fw-bolder">Message</label>
-                                    <textarea class="form-control" style="resize: none;" id="message" name="message"
-                                              rows="4" required></textarea>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="inquiry-node" aria-hidden="true">3</span>
+                            <div class="inquiry-step">
+                                <p class="inquiry-who">The Shiz asks</p>
+                                <h3>How should we reply?</h3>
+                                <div class="inquiry-fields">
+                                    <div class="field">
+                                        <label for="name">Name</label>
+                                        <input type="text" id="name" name="name" autocomplete="name" required>
+                                    </div>
+                                    <div class="field">
+                                        <label for="email">Email</label>
+                                        <input type="email" id="email" name="_replyto" autocomplete="email" required>
+                                    </div>
+                                    <div class="field">
+                                        <label for="phone">Phone <span class="field-optional">optional</span></label>
+                                        <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel">
+                                    </div>
                                 </div>
-                                <button class="btn btn-primary mt-2" type="submit">Send</button>
-                            </form>
-                        </div>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="inquiry-node" aria-hidden="true">4</span>
+                            <div class="inquiry-step">
+                                <p class="inquiry-who">You reply</p>
+                                <h3>Tell us a little more.</h3>
+                                <div class="field">
+                                    <label for="message" class="visually-hidden">Message</label>
+                                    <textarea id="message" name="message" rows="5" required placeholder="What should the project do, and when do you want to start?"></textarea>
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+                    <p class="inquiry-error" id="inquiry-error" role="alert" hidden></p>
+                    <div class="inquiry-submit">
+                        <button class="button" type="submit">Send inquiry</button>
                     </div>
+                </form>
 
-                    <div class="col-md-6" data-aos="fade-left" data-aos-delay="300">
-                        <div class="mt-3 px-2">
-                            <div class="h5">Let’s talk how we can help you!</div>
-                            <p>
-                                Have an idea or project in mind? Tell us a little bit about the idea and we can make it
-                                a reality.
-                            </p>
-                        </div>
-                        <div class="mt-3 px-2">
-                            <a href="https://api.whatsapp.com/send/?phone=%2B60168694900&text=Hi%2C%20I%20would%20like%20to%20inquire%20about%20your%20web%20design%20%26%20development%20services.&type=phone_number&app_absent=0"
-                               target="_blank"
-                               style="display: inline-flex; align-items: center; gap: 0.6em; text-decoration: none; color: #fff; font-size: 0.95em; padding: 0.75em 1.75em; border-radius: 2em; font-weight: bold; background: #25d366; box-shadow: 0 3px 12px rgba(37,211,102,0.4); transition: background 0.2s;">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="20" height="20"
-                                     fill="#fff">
+                <aside class="inquiry-aside" aria-label="Direct contact">
+                    <p class="inquiry-who">Or reach Oliver directly</p>
+                    <ul class="contact-details">
+                        <li>
+                            <span class="detail-label">Contact</span>
+                            <span>Oliver Sim, software engineer</span>
+                        </li>
+                        <li>
+                            <span class="detail-label">Phone</span>
+                            <a href="tel:+60168694900">+60 16 869 4900</a>
+                        </li>
+                        <li>
+                            <span class="detail-label">WhatsApp</span>
+                            <a class="wa-inline-link" target="_blank" rel="noopener"
+                               href="https://api.whatsapp.com/send/?phone=%2B60168694900&amp;text=Hi%2C%20I%20would%20like%20to%20inquire%20about%20your%20web%20design%20services.&amp;type=phone_number&amp;app_absent=0">
+                                <svg class="wa-icon-green" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="currentColor" aria-hidden="true" focusable="false">
                                     <path d="M16 .5C7.439.5.5 7.439.5 16c0 2.777.726 5.45 2.105 7.8L.5 31.5l7.93-2.076A15.434 15.434 0 0016 31.5C24.561 31.5 31.5 24.561 31.5 16S24.561.5 16 .5zm0 28.2a13.113 13.113 0 01-6.682-1.826l-.48-.286-4.706 1.233 1.255-4.58-.313-.498A13.073 13.073 0 012.84 16C2.84 9.268 8.268 3.84 16 3.84S29.16 9.268 29.16 16 23.732 28.7 16 28.7zm7.17-9.788c-.394-.197-2.328-1.148-2.69-1.279-.362-.131-.625-.197-.888.197-.263.394-1.018 1.279-1.248 1.542-.23.263-.46.296-.854.099-.394-.197-1.662-.613-3.166-1.952-1.17-1.044-1.96-2.333-2.19-2.727-.23-.394-.025-.607.172-.804.177-.176.394-.46.591-.69.197-.23.263-.394.394-.657.131-.263.066-.493-.033-.69-.099-.197-.888-2.141-1.217-2.93-.32-.77-.646-.665-.888-.677l-.757-.013c-.263 0-.69.099-1.051.493-.362.394-1.38 1.348-1.38 3.29 0 1.942 1.413 3.818 1.61 4.081.197.263 2.781 4.247 6.738 5.956.942.407 1.678.65 2.25.832.945.3 1.806.258 2.487.156.759-.113 2.328-.952 2.657-1.872.329-.92.329-1.71.23-1.872-.098-.164-.362-.263-.756-.46z"/>
                                 </svg>
-                                Chat on WhatsApp
+                                <span>Chat on WhatsApp</span>
                             </a>
-                        </div>
-                    </div>
+                        </li>
+                        <li>
+                            <span class="detail-label">Email</span>
+                            <a href="mailto:hello@the-shiz.co">hello@the-shiz.co</a>
+                        </li>
+                        <li>
+                            <span class="detail-label">Based in</span>
+                            <span>Kuala Lumpur, Malaysia</span>
+                        </li>
+                    </ul>
+                </aside>
+            </div>
+        </div>
+    </section>
 
-                </div>
+</main>
+
+<footer class="site-footer" itemscope itemtype="https://schema.org/WPFooter">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a class="brand" href="#top">
+                    <svg class="brand-mark" viewBox="0 0 38 24" aria-hidden="true" focusable="false"><rect x="0" y="5" width="20" height="4.5"/><rect x="0" y="14.5" width="20" height="4.5"/><path d="M24.5 2.5 34 12l-9.5 9.5" fill="none" stroke="currentColor" stroke-width="4.75"/></svg><span class="brand-name">The Shiz</span>
+                </a>
+                <p>Fast, well-built websites for Malaysian businesses. From design to deployment, we handle it
+                    all.</p>
+            </div>
+
+            <nav aria-label="Footer sitemap">
+                <h2 class="footer-heading mono">Sitemap</h2>
+                <ul>
+                    <li><a href="#top">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#clients">Clients</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div>
+                <h2 class="footer-heading mono">Services</h2>
+                <ul>
+                    <li><a href="#services">Web Design &amp; Development</a></li>
+                    <li><a href="#services">AI Automation</a></li>
+                    <li><a href="#services">Product &amp; Design</a></li>
+                    <li><a href="#services">Engineering &amp; Cloud</a></li>
+                    <li><a href="#services">Applied AI</a></li>
+                </ul>
+            </div>
+
+            <div itemscope itemtype="https://schema.org/LocalBusiness">
+                <h2 class="footer-heading mono">Get in touch</h2>
+                <ul>
+                    <li><span itemprop="address">Kuala Lumpur, Malaysia</span></li>
+                    <li><a href="mailto:hello@the-shiz.co" itemprop="email">hello@the-shiz.co</a></li>
+                    <li><a href="tel:+60168694900" itemprop="telephone">+60 16 869 4900</a></li>
+                    <li><a class="wa-inline-link" target="_blank" rel="noopener" href="https://api.whatsapp.com/send/?phone=%2B60168694900&amp;text=Hi%2C%20I%20would%20like%20to%20inquire%20about%20your%20web%20design%20services.&amp;type=phone_number&amp;app_absent=0"><svg class="wa-icon-green" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="15" height="15" fill="currentColor" aria-hidden="true" focusable="false"><path d="M16 .5C7.439.5.5 7.439.5 16c0 2.777.726 5.45 2.105 7.8L.5 31.5l7.93-2.076A15.434 15.434 0 0016 31.5C24.561 31.5 31.5 24.561 31.5 16S24.561.5 16 .5zm0 28.2a13.113 13.113 0 01-6.682-1.826l-.48-.286-4.706 1.233 1.255-4.58-.313-.498A13.073 13.073 0 012.84 16C2.84 9.268 8.268 3.84 16 3.84S29.16 9.268 29.16 16 23.732 28.7 16 28.7zm7.17-9.788c-.394-.197-2.328-1.148-2.69-1.279-.362-.131-.625-.197-.888.197-.263.394-1.018 1.279-1.248 1.542-.23.263-.46.296-.854.099-.394-.197-1.662-.613-3.166-1.952-1.17-1.044-1.96-2.333-2.19-2.727-.23-.394-.025-.607.172-.804.177-.176.394-.46.591-.69.197-.23.263-.394.394-.657.131-.263.066-.493-.033-.69-.099-.197-.888-2.141-1.217-2.93-.32-.77-.646-.665-.888-.677l-.757-.013c-.263 0-.69.099-1.051.493-.362.394-1.38 1.348-1.38 3.29 0 1.942 1.413 3.818 1.61 4.081.197.263 2.781 4.247 6.738 5.956.942.407 1.678.65 2.25.832.945.3 1.806.258 2.487.156.759-.113 2.328-.952 2.657-1.872.329-.92.329-1.71.23-1.872-.098-.164-.362-.263-.756-.46z"/></svg><span>WhatsApp</span></a></li>
+                </ul>
+                <meta itemprop="name" content="The Shiz">
+                <meta itemprop="url" content="https://the-shiz.co">
             </div>
         </div>
 
-        <!--   Footer   -->
-        <footer class="px-2 bg-light" id="footer" itemscope itemtype="https://schema.org/WPFooter">
-            <div class="container">
+        <div class="footer-bottom">
+            <small>© <span id="copyright-year">2026</span> The Shiz. All rights reserved.</small>
+            <div class="penguin-pitch iso-stage" aria-hidden="true">
+                <span class="penguin-turf"></span>
+                <div class="penguin-roam">
+                    <div class="penguin-flip">
+                        <svg class="penguin-svg" viewBox="0 0 84 50" width="76" height="45" focusable="false">
+                            <!-- Soft shadows -->
+                            <ellipse cx="27" cy="46.2" rx="12.5" ry="2.8" fill="#e6e5e0"/>
+                            <ellipse class="pg-ball-shadow" cx="58" cy="46.2" rx="7.2" ry="2.2" fill="#e6e5e0"/>
 
-                <!-- Top footer grid -->
-                <div class="row pt-5 pb-4 g-4 border-bottom">
+                            <!-- Waddling / dribbling cute penguin -->
+                            <g class="pg-waddle">
+                                <!-- Back webbed foot -->
+                                <ellipse class="pg-foot-back" cx="22.5" cy="44.2" rx="4.8" ry="2.2" fill="#d98a3c"/>
+                                <!-- Little tail -->
+                                <path d="M15.5 36 L11.5 39 L17 40.5 Z" fill="#26251f"/>
+                                <!-- Plump tuxedo body + head -->
+                                <path d="M15 29 C15 13.5 19.8 5.5 27.5 5.5 C35.2 5.5 40 13.5 40 29 C40 39.2 35.2 43.8 27.5 43.8 C19.8 43.8 15 39.2 15 29 Z" fill="#26251f"/>
+                                <!-- Cute crown tuft -->
+                                <path d="M25.5 6.2 Q24.5 2.2 27.5 4.2 Q30 1.6 30.2 6.2" fill="#26251f" stroke="#26251f" stroke-width="1" stroke-linejoin="round"/>
+                                <!-- White chubby belly & face mask -->
+                                <path d="M19.5 30.5 C19.5 21.2 22.4 17 27.5 17 C32.6 17 35.5 21.2 35.5 30.5 C35.5 38 32.3 41.8 27.5 41.8 C22.7 41.8 19.5 38 19.5 30.5 Z" fill="#ffffff"/>
+                                <circle cx="25.2" cy="14.2" r="4.1" fill="#ffffff"/>
+                                <circle cx="31.6" cy="14.2" r="4.1" fill="#ffffff"/>
+                                <!-- Expressive eyes + catchlights -->
+                                <circle cx="26.2" cy="14" r="1.9" fill="#26251f"/>
+                                <circle cx="26.8" cy="13.3" r="0.65" fill="#ffffff"/>
+                                <circle cx="32.4" cy="14" r="1.9" fill="#26251f"/>
+                                <circle cx="33" cy="13.3" r="0.65" fill="#ffffff"/>
+                                <!-- Rosy cheeks -->
+                                <ellipse cx="22.4" cy="16.8" rx="2" ry="1.15" fill="#e29f87" opacity="0.88"/>
+                                <ellipse cx="34.6" cy="16.8" rx="2" ry="1.15" fill="#e29f87" opacity="0.88"/>
+                                <!-- Smiling amber beak -->
+                                <path d="M28.2 14.8 L34.8 16.6 L28.2 18.6 Z" fill="#d98a3c" stroke="#26251f" stroke-width="0.6" stroke-linejoin="round"/>
+                                <!-- Warm stone scarf -->
+                                <path d="M18.2 21.2 Q27.5 24.2 36.8 21.2" fill="none" stroke="#cdcdc9" stroke-width="3.2" stroke-linecap="round"/>
+                                <path d="M23.5 22.5 L21.8 28.2" fill="none" stroke="#cdcdc9" stroke-width="2.8" stroke-linecap="round"/>
+                                <!-- Flapping wing -->
+                                <path class="pg-wing" d="M19.8 22.8 C13.8 25.8 13.5 33.8 17.8 35.8 C20.2 36.8 21.6 31 21 24.8 Z" fill="#26251f"/>
+                                <!-- Front kicking webbed foot -->
+                                <ellipse class="pg-foot-front" cx="34" cy="43.8" rx="5.2" ry="2.3" fill="#d98a3c"/>
+                            </g>
 
-                    <!-- Brand -->
-                    <div class="col-lg-4 col-md-12">
-                        <img src="images/the-shiz-cropped-removebg-preview.png" alt="The Shiz — Web Design Malaysia"
-                             width="180" class="mb-3">
-                        <p class="text-muted" style="font-size:0.9rem; max-width:300px;">
-                            We build fast, beautiful websites for Malaysian businesses. From design to deployment — we
-                            handle it all.
-                        </p>
-                        <div class="d-flex gap-2 mt-3">
-                            <a href="https://api.whatsapp.com/send/?phone=%2B60168694900&text=Hi%2C%20I%20would%20like%20to%20inquire%20about%20your%20web%20design%20%26%20development%20services.&type=phone_number&app_absent=0"
-                               target="_blank" rel="noopener"
-                               class="btn btn-sm d-inline-flex align-items-center gap-1" style="background:#25d366; border-color:#25d366; color:#fff;"
-                               aria-label="Contact The Shiz on WhatsApp">
-                                <i class="fab fa-whatsapp"></i> WhatsApp
-                            </a>
-                            <a href="mailto:hello@the-shiz.co"
-                               class="btn btn-sm btn-outline-secondary d-inline-flex align-items-center gap-1"
-                               aria-label="Email The Shiz">
-                                <i class="fas fa-envelope"></i> Email
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Sitemap: Quick Links -->
-                    <div class="col-lg-2 col-sm-4">
-                        <h6 class="fw-bold text-dark mb-3 text-uppercase"
-                            style="font-size:0.78rem; letter-spacing:0.08em;">Quick Links</h6>
-                        <nav aria-label="Footer sitemap">
-                            <ul class="list-unstyled mb-0" style="font-size:0.88rem;">
-                                <li class="mb-2"><a href="#top"
-                                                    class="text-muted text-decoration-none footer-link">Home</a></li>
-                                <li class="mb-2"><a href="#about" class="text-muted text-decoration-none footer-link">About
-                                    Us</a></li>
-                                <li class="mb-2"><a href="#services"
-                                                    class="text-muted text-decoration-none footer-link">Services</a>
-                                </li>
-                                <li class="mb-2"><a href="#portfolio"
-                                                    class="text-muted text-decoration-none footer-link">Our Clients</a>
-                                </li>
-                                <li class="mb-2"><a href="#testimonials"
-                                                    class="text-muted text-decoration-none footer-link">Testimonials</a>
-                                </li>
-                                <li class="mb-2"><a href="#contact" class="text-muted text-decoration-none footer-link">Contact</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-
-                    <!-- Sitemap: Services -->
-                    <div class="col-lg-3 col-sm-4">
-                        <h6 class="fw-bold text-dark mb-3 text-uppercase"
-                            style="font-size:0.78rem; letter-spacing:0.08em;">Our Services</h6>
-                        <ul class="list-unstyled mb-0" style="font-size:0.88rem;">
-                            <li class="mb-2"><a href="#services" class="text-muted text-decoration-none footer-link">Web
-                                Design</a></li>
-                            <li class="mb-2"><a href="#services" class="text-muted text-decoration-none footer-link">Web
-                                Application</a></li>
-                            <li class="mb-2"><a href="#services" class="text-muted text-decoration-none footer-link">E-Commerce</a>
-                            </li>
-                            <li class="mb-2"><a href="#services" class="text-muted text-decoration-none footer-link">SEO
-                                Optimization</a></li>
-                            <li class="mb-2"><a href="#services" class="text-muted text-decoration-none footer-link">Website
-                                Maintenance</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- Contact Info -->
-                    <div class="col-lg-3 col-sm-4" itemscope itemtype="https://schema.org/LocalBusiness">
-                        <h6 class="fw-bold text-dark mb-3 text-uppercase"
-                            style="font-size:0.78rem; letter-spacing:0.08em;">Get In Touch</h6>
-                        <ul class="list-unstyled mb-0" style="font-size:0.88rem;">
-                            <li class="mb-2 text-muted d-flex align-items-start gap-2">
-                                <i class="fas fa-map-marker-alt mt-1" style="min-width:14px;"></i>
-                                <span itemprop="address">Kuala Lumpur, Malaysia</span>
-                            </li>
-                            <li class="mb-2 d-flex align-items-center gap-2">
-                                <i class="fas fa-envelope text-muted" style="min-width:14px;"></i>
-                                <a href="mailto:hello@the-shiz.co" class="text-muted text-decoration-none footer-link"
-                                   itemprop="email">hello@the-shiz.co</a>
-                            </li>
-                            <li class="mb-2 d-flex align-items-center gap-2">
-                                <i class="fab fa-whatsapp text-muted" style="min-width:14px;"></i>
-                                <a href="https://api.whatsapp.com/send/?phone=%2B60168694900&text=Hi%2C%20I%20would%20like%20to%20inquire%20about%20your%20web%20design%20%26%20development%20services.&type=phone_number&app_absent=0"
-                                   target="_blank" rel="noopener" class="text-muted text-decoration-none footer-link"
-                                   itemprop="telephone">+60 16-869 4900</a>
-                            </li>
-                        </ul>
-                        <meta itemprop="name" content="The Shiz">
-                        <meta itemprop="url" content="https://the-shiz.co">
-                    </div>
-
-                </div>
-
-                <!-- Bottom bar -->
-                <div class="row py-3 align-items-center">
-                    <div class="col-md-6 text-center text-md-start">
-                        <small class="text-muted">
-                            Copyright &copy; <span id="copyright-year"></span> <strong>The Shiz</strong>. All rights
-                            reserved.
-                            <script>document.getElementById(
-                              'copyright-year').textContent = new Date().getFullYear();</script>
-                        </small>
-                    </div>
-                    <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
-                        <small class="text-muted">
-                            Web Design &amp; Development in Malaysia &mdash;
-                            <a href="#contact" class="text-muted footer-link">Get a Free Quote</a>
-                        </small>
+                            <!-- Bouncing & spinning pentagon football -->
+                            <g class="pg-ball-bounce" transform="translate(58 37.5)">
+                                <g class="pg-ball-spin">
+                                    <circle cx="0" cy="0" r="7.8" fill="#ffffff" stroke="#26251f" stroke-width="1.35"/>
+                                    <polygon points="0,-3.4 3.2,-1 2,2.8 -2,2.8 -3.2,-1" fill="#26251f"/>
+                                    <path d="M0-3.4V-7.8M3.2-1L7.4-2.4M2 2.8L4.6 6.3M-2 2.8L-4.6 6.3M-3.2-1L-7.4-2.4" stroke="#26251f" stroke-width="1.05" stroke-linecap="round"/>
+                                    <circle cx="0" cy="-7.2" r="1.3" fill="#26251f"/>
+                                    <circle cx="6.8" cy="-2.2" r="1.2" fill="#26251f"/>
+                                    <circle cx="-6.8" cy="-2.2" r="1.2" fill="#26251f"/>
+                                </g>
+                            </g>
+                        </svg>
                     </div>
                 </div>
-
             </div>
-        </footer>
-
-        <style>
-            .footer-link:hover {
-                color: #0d6efd !important;
-            }
-        </style>
-
-        <!-- SEO: Structured Data -->
-        <script type="application/ld+json">
-            {
-                "@context": "https://schema.org",
-                "@type": "ProfessionalService",
-                "name": "The Shiz",
-                "url": "https://the-shiz.co",
-                "logo": "https://the-shiz.co/images/the-shiz-cropped-removebg-preview.png",
-                "description": "The Shiz is a Malaysian web design and development agency offering custom websites, web applications, e-commerce, and SEO services.",
-                "address": {
-                    "@type": "PostalAddress",
-                    "addressLocality": "Kuala Lumpur",
-                    "addressCountry": "MY"
-                },
-                "contactPoint": {
-                    "@type": "ContactPoint",
-                    "telephone": "+60168694900",
-                    "contactType": "customer service",
-                    "areaServed": "MY",
-                    "availableLanguage": [
-                        "English",
-                        "Malay"
-                    ]
-                },
-                "sameAs": [],
-                "serviceType": [
-                    "Web Design",
-                    "Web Development",
-                    "E-Commerce",
-                    "SEO",
-                    "Website Maintenance"
-                ]
-            }
-        </script>
-
+        </div>
     </div>
-</div>
 
-<div id="scrolltop">
-    <a class="btn btn-secondary" href="#top">
-        <span class="icon"><i class="fas fa-angle-up fa-x"></i></span>
-    </a>
-</div>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            "name": "The Shiz",
+            "url": "https://the-shiz.co",
+            "logo": "https://the-shiz.co/images/logo.png",
+            "image": "https://the-shiz.co/images/og-image.png",
+            "description": "The Shiz is a Malaysian web and AI engineering studio offering web design and development, applied AI, product and design, and engineering and cloud services.",
+            "email": "hello@the-shiz.co",
+            "telephone": "+60168694900",
+            "founder": {
+                "@type": "Person",
+                "name": "Oliver Sim",
+                "jobTitle": "Software Engineer"
+            },
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Kuala Lumpur",
+                "addressCountry": "MY"
+            },
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+60168694900",
+                "contactType": "customer service",
+                "areaServed": "MY",
+                "availableLanguage": [
+                    "English",
+                    "Malay"
+                ]
+            },
+            "sameAs": [],
+            "serviceType": [
+                "Web Design",
+                "Web Development",
+                "E-Commerce",
+                "SEO",
+                "Applied AI",
+                "AI Automation",
+                "AI Chatbots",
+                "UX/UI Design",
+                "Cloud Hosting & DevOps",
+                "Website Maintenance"
+            ]
+        }
+    </script>
+</footer>
 
-<!-- WhatsApp Floating Button -->
-<a href="https://api.whatsapp.com/send/?phone=%2B60168694900&text=Hi%2C%20I%20would%20like%20to%20inquire%20about%20your%20web%20design%20%26%20development%20services.&type=phone_number&app_absent=0"
-   target="_blank"
-   id="whatsapp-float"
-   aria-label="Chat on WhatsApp"
-   title="Chat with us on WhatsApp">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="#fff">
+<a class="scrolltop" id="scrolltop" href="#top" aria-label="Scroll back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none"
+         stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+         aria-hidden="true" focusable="false">
+        <path d="M18 15l-6-6-6 6"/>
+    </svg>
+</a>
+
+<a class="whatsapp-float" id="whatsapp-float" target="_blank" rel="noopener"
+   href="https://api.whatsapp.com/send/?phone=%2B60168694900&amp;text=Hi%2C%20I%20would%20like%20to%20inquire%20about%20your%20web%20design%20services.&amp;type=phone_number&amp;app_absent=0"
+   aria-label="Chat with The Shiz on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="24" height="24" fill="currentColor"
+         aria-hidden="true" focusable="false">
         <path d="M16 .5C7.439.5.5 7.439.5 16c0 2.777.726 5.45 2.105 7.8L.5 31.5l7.93-2.076A15.434 15.434 0 0016 31.5C24.561 31.5 31.5 24.561 31.5 16S24.561.5 16 .5zm0 28.2a13.113 13.113 0 01-6.682-1.826l-.48-.286-4.706 1.233 1.255-4.58-.313-.498A13.073 13.073 0 012.84 16C2.84 9.268 8.268 3.84 16 3.84S29.16 9.268 29.16 16 23.732 28.7 16 28.7zm7.17-9.788c-.394-.197-2.328-1.148-2.69-1.279-.362-.131-.625-.197-.888.197-.263.394-1.018 1.279-1.248 1.542-.23.263-.46.296-.854.099-.394-.197-1.662-.613-3.166-1.952-1.17-1.044-1.96-2.333-2.19-2.727-.23-.394-.025-.607.172-.804.177-.176.394-.46.591-.69.197-.23.263-.394.394-.657.131-.263.066-.493-.033-.69-.099-.197-.888-2.141-1.217-2.93-.32-.77-.646-.665-.888-.677l-.757-.013c-.263 0-.69.099-1.051.493-.362.394-1.38 1.348-1.38 3.29 0 1.942 1.413 3.818 1.61 4.081.197.263 2.781 4.247 6.738 5.956.942.407 1.678.65 2.25.832.945.3 1.806.258 2.487.156.759-.113 2.328-.952 2.657-1.872.329-.92.329-1.71.23-1.872-.098-.164-.362-.263-.756-.46z"/>
     </svg>
 </a>
-<style>
-    #whatsapp-float {
-        position: fixed;
-        bottom: 28px;
-        right: 24px;
-        z-index: 9999;
-        background: #25d366;
-        border-radius: 50%;
-        width: 58px;
-        height: 58px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 4px 16px rgba(37, 211, 102, 0.45), 0 2px 6px rgba(0, 0, 0, 0.18);
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-        text-decoration: none;
-    }
 
-    #whatsapp-float:hover {
-        transform: scale(1.1);
-        box-shadow: 0 6px 24px rgba(37, 211, 102, 0.6), 0 3px 10px rgba(0, 0, 0, 0.2);
-    }
-
-    #whatsapp-float svg {
-        display: block;
-    }
-</style>
-
-<script src="./scripts/imagesloaded.pkgd.min.js?ver=1.2.0"></script>
-<script src="./scripts/masonry.pkgd.min.js?ver=1.2.0"></script>
-<script src="./scripts/BigPicture.min.js?ver=1.2.0"></script>
-<script src="./scripts/purecounter.min.js?ver=1.2.0"></script>
-<script src="./scripts/bootstrap.bundle.min.js?ver=1.2.0"></script>
-<script src="./scripts/aos.min.js?ver=1.2.0"></script>
-<script src="./scripts/main.js?ver=1.2.0"></script>
-<script>
-  // Close mobile navbar first, then scroll to section after animation
-  document.querySelectorAll('#navbarSupportedContent .nav-link, #navbarSupportedContent .btn').forEach(function (link) {
-    link.addEventListener('click', function (e) {
-      var navbarCollapse = document.getElementById('navbarSupportedContent');
-      if (!navbarCollapse.classList.contains('show')) return;
-      var href = this.getAttribute('href');
-      if (href && href.startsWith('#') && href.length > 1) {
-        e.preventDefault();
-        var bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
-        if (bsCollapse) bsCollapse.hide();
-        navbarCollapse.addEventListener('hidden.bs.collapse', function handler () {
-          navbarCollapse.removeEventListener('hidden.bs.collapse', handler);
-          var target = document.querySelector(href);
-          if (target) target.scrollIntoView({behavior: 'smooth', block: 'start'});
-        });
-      } else {
-        var bsCollapse2 = bootstrap.Collapse.getInstance(navbarCollapse);
-        if (bsCollapse2) bsCollapse2.hide();
-      }
-    });
-  });
-</script>
+<script src="./scripts/main.js?ver=3.2.0" defer></script>
 </body>
 </html>

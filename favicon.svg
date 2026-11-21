@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <style>
+    .m { fill: #26251f; stroke: #26251f; }
+    @media (prefers-color-scheme: dark) { .m { fill: #f7f7f4; stroke: #f7f7f4; } }
+  </style>
+  <g class="m" transform="translate(2.5 10.5) scale(1.12)">
+    <rect x="0" y="5" width="20" height="4.5" stroke="none"/>
+    <rect x="0" y="14.5" width="20" height="4.5" stroke="none"/>
+    <path d="M24.5 2.5 34 12l-9.5 9.5" fill="none" stroke-width="4.75"/>
+  </g>
+</svg>
