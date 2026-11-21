@@ -359,47 +359,157 @@ a {
 
 .site-header.is-open .menu-play {
   display: block;
-  margin-top: 1.75rem;
-  padding: 1rem 1.1rem 1.1rem;
+  margin-top: 1.5rem;
+  padding: 0.45rem;
+  border: 1px solid var(--border);
   border-radius: 18px;
-  background: #161613;
-  color: #f4f4ef;
+  background: #f4f6f0;
 }
 
-.menu-sky {
+.menu-match {
   position: relative;
-  height: 3.25rem;
-  margin-bottom: 0.65rem;
+  height: 8.25rem;
   overflow: hidden;
+  border-radius: 14px;
+  background:
+    linear-gradient(#f7f7f4, #f7f7f4) top / 100% calc(100% - 16px) no-repeat,
+    #d7e3cc;
 }
 
-.menu-sky span {
+.menu-match::before {
+  content: "";
   position: absolute;
-  width: 2px;
-  height: 2px;
+  left: 50%;
+  top: 16%;
+  bottom: 16px;
+  border-left: 1px dashed rgb(38 37 31 / 0.22);
+}
+
+.menu-match::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 28px;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid rgb(38 37 31 / 0.18);
   border-radius: 50%;
-  background: #fff;
-  box-shadow: 0 0 3px rgb(255 255 255 / 0.8);
-  animation: menuTwinkle 2.8s ease-in-out infinite;
+  transform: translateX(-50%);
 }
 
-.menu-sky span:nth-child(1) { top: 18%; left: 12%; animation-delay: 0s; }
-.menu-sky span:nth-child(2) { top: 42%; left: 28%; width: 2px; height: 2px; animation-delay: 0.4s; }
-.menu-sky span:nth-child(3) { top: 16%; left: 46%; width: 4px; height: 4px; animation-delay: 0.9s; }
-.menu-sky span:nth-child(4) { top: 58%; left: 62%; animation-delay: 0.2s; }
-.menu-sky span:nth-child(5) { top: 24%; left: 78%; width: 2px; height: 2px; animation-delay: 1.3s; }
-.menu-sky span:nth-child(6) { top: 68%; left: 88%; animation-delay: 0.7s; }
-
-@keyframes menuTwinkle {
-  0%, 100% { opacity: 0.35; }
-  50% { opacity: 1; }
+.match-ground {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 16px;
+  background: #d7e3cc;
+  border-top: 1px dashed rgb(38 37 31 / 0.22);
 }
 
-.menu-play p {
-  max-width: 18rem;
-  font-size: var(--text-sm);
-  line-height: 1.5;
-  color: rgb(244 244 239 / 0.82);
+.match-goal {
+  position: absolute;
+  bottom: 14px;
+  z-index: 1;
+  border: 2px solid #26251f;
+  border-radius: 2px;
+  background:
+    repeating-linear-gradient(90deg, transparent 0 3px, rgb(38 37 31 / 0.28) 3px 4px),
+    repeating-linear-gradient(0deg, transparent 0 3px, rgb(38 37 31 / 0.28) 3px 4px);
+}
+
+.match-goal-a {
+  left: 0;
+  border-right: 0;
+  border-radius: 3px 0 0 0;
+}
+
+.match-goal-b {
+  right: 0;
+  border-left: 0;
+  border-radius: 0 3px 0 0;
+}
+
+.match-goal.is-scored {
+  background-color: rgb(37 211 102 / 0.45);
+  animation: goalPop 0.45s ease;
+}
+
+@keyframes goalPop {
+  0% { transform: scale(1); }
+  35% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+.match-penguin {
+  --face: 1;
+  position: absolute;
+  bottom: 10px;
+  z-index: 2;
+  width: 64px;
+}
+
+.match-penguin .penguin-svg {
+  width: 100%;
+  height: auto;
+}
+
+.match-penguin.is-right {
+  --face: -1;
+}
+
+.match-penguin.is-plain .pg-scarf {
+  display: none;
+}
+
+.match-face {
+  transform: scaleX(var(--face));
+  transform-origin: 50% 80%;
+}
+
+.match-penguin.is-hop .match-face {
+  animation: matchHop 0.36s ease;
+}
+
+@keyframes matchHop {
+  0%, 100% { transform: translateY(0) scaleX(var(--face)); }
+  45% { transform: translateY(-12px) scaleX(var(--face)); }
+}
+
+.match-penguin.is-kicking .pg-foot-front {
+  animation: penguinKickFront 0.26s ease-in-out 2;
+}
+
+.match-ball {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  width: 16px;
+  height: 16px;
+  pointer-events: none;
+}
+
+.match-call {
+  position: absolute;
+  z-index: 4;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  pointer-events: none;
+  opacity: 0;
+}
+
+.match-call.is-on {
+  animation: matchCall 0.8s ease forwards;
+}
+
+@keyframes matchCall {
+  0% { opacity: 0; transform: translateY(6px); }
+  18% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-14px); }
 }
 
 @media (min-width: 48rem) {
@@ -2258,7 +2368,9 @@ a.client-card:hover .client-link {
     transform: none;
   }
 
-  .menu-sky span {
+  .match-penguin.is-hop .match-face,
+  .match-goal.is-scored,
+  .match-call.is-on {
     animation: none;
   }
 

@@ -41,7 +41,7 @@ Palette matched to cursor.com/home, defined once in `:root` in `css/main.css`:
 - Dividers are 1px `--border`, including the rule below the hero title.
 
 ## Sections (in order; section labels are unnumbered)
-1. **Header** — sticky, logo + nav + "WhatsApp" (green icon) + "Free quote"; hamburger menu below 48rem
+1. **Header** — sticky, logo + nav + "WhatsApp" (green icon) + "Free quote"; hamburger menu below 48rem. The open menu plays a tiny football match under WhatsApp: two penguins, two goals, a new random kickoff each time it opens.
 2. **Hero** — full-viewport cosmic canvas (`#hero-cosmos`): star field, flares and a 3D cluster. Sticky cream header sits above it. Centered copy ("Your success is our mission.") with a short lead, a green WhatsApp button ("Message me!") and a ghost "How we help" link. The canvas pauses off-screen, in a hidden tab, and draws one static frame under `prefers-reduced-motion`.
 3. **About** — 2-column layout: "We build websites for Malaysian brands" + 4-item checklist on the left, and a `--panel` showcase card on the right with an animated 3D isometric ascending staircase + summit flag
 4. **Services** — 5 columns on desktop (`≥72rem`), 3 on tablet (`≥56rem`), 2 on small tablet (`≥40rem`), 1 on mobile, each with a hand-built inline SVG line illustration, serif heading and bullet list: Web Design & Development, AI Automation, Product & Design, Engineering & Cloud, Applied AI

@@ -6,11 +6,165 @@
   var nav = document.getElementById('site-nav');
   var scrollTopBtn = document.getElementById('scrolltop');
 
+  var menuMatch = document.getElementById('menu-match');
+  var matchRun = null;
+
+  function rand(min, max) {
+    return min + Math.random() * (max - min);
+  }
+
+  function stopMenuMatch() {
+    if (!matchRun) return;
+    matchRun.running = false;
+    matchRun.timers.forEach(clearTimeout);
+    if (matchRun.raf) cancelAnimationFrame(matchRun.raf);
+    matchRun = null;
+  }
+
+  function startMenuMatch() {
+    stopMenuMatch();
+    if (!menuMatch) return;
+    var goals = menuMatch.querySelectorAll('.match-goal');
+    var penguins = menuMatch.querySelectorAll('.match-penguin');
+    var ball = menuMatch.querySelector('.match-ball');
+    var call = menuMatch.querySelector('.match-call');
+    var width = menuMatch.clientWidth;
+    if (!width || !ball) return;
+
+    goals.forEach(function (goal, i) {
+      goal.style.height = rand(36, 60) + 'px';
+      goal.style.width = rand(16, 26) + 'px';
+      goal.classList.remove('is-scored');
+      if (i === 0) goal.style.left = rand(0, 12) + 'px';
+      else goal.style.right = rand(0, 12) + 'px';
+    });
+    var freeStart = goals[0].offsetWidth + 2;
+    var freeEnd = width - goals[1].offsetWidth - 2;
+    var free = Math.max(40, freeEnd - freeStart);
+    var size0 = rand(52, Math.min(78, free * 0.42));
+    var size1 = rand(52, Math.min(78, free * 0.42));
+    var gap = rand(12, Math.max(14, free - size0 - size1));
+    var slack = Math.max(0, free - size0 - size1 - gap);
+    var leftPos = freeStart + rand(0, slack);
+    penguins.forEach(function (penguin, i) {
+      penguin.style.width = (i === 0 ? size0 : size1) + 'px';
+      penguin.classList.toggle('is-plain', Math.random() < 0.5);
+      penguin.classList.remove('is-kicking', 'is-hop');
+      penguin.style.left = (i === 0 ? leftPos : leftPos + size0 + gap) + 'px';
+    });
+
+    var state = { running: true, timers: [], raf: 0, holder: Math.random() < 0.5 ? 0 : 1 };
+    matchRun = state;
+
+    function later(fn, ms) {
+      var id = setTimeout(function () {
+        if (state.running) fn();
+      }, ms);
+      state.timers.push(id);
+    }
+
+    function pointOf(el) {
+      var pitch = menuMatch.getBoundingClientRect();
+      var box = el.getBoundingClientRect();
+      return {
+        left: box.left - pitch.left,
+        top: box.top - pitch.top,
+        width: box.width,
+        height: box.height
+      };
+    }
+
+    function foot(index) {
+      var box = pointOf(penguins[index]);
+      return {
+        x: box.left + box.width * (index === 0 ? 0.72 : 0.28),
+        y: box.top + box.height * 0.78
+      };
+    }
+
+    function mouth(index) {
+      var box = pointOf(goals[index]);
+      return {
+        x: box.left + (index === 0 ? box.width - 3 : 3),
+        y: box.top + box.height * rand(0.35, 0.72)
+      };
+    }
+
+    function parkBall(at) {
+      ball.style.transform = 'translate(' + (at.x - 8) + 'px,' + (at.y - 8) + 'px) rotate(' + rand(0, 40) + 'deg)';
+    }
+
+    function fly(from, to, ms, done) {
+      var apex = {
+        x: (from.x + to.x) / 2 + rand(-16, 16),
+        y: Math.max(6, Math.min(from.y, to.y) - rand(22, 58))
+      };
+      var started = performance.now();
+      var spin = rand(-280, 280);
+      function frame(now) {
+        if (!state.running) return;
+        var t = Math.min(1, (now - started) / ms);
+        var e = t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+        var x = (1 - e) * (1 - e) * from.x + 2 * (1 - e) * e * apex.x + e * e * to.x;
+        var y = (1 - e) * (1 - e) * from.y + 2 * (1 - e) * e * apex.y + e * e * to.y;
+        ball.style.transform = 'translate(' + (x - 8) + 'px,' + (y - 8) + 'px) rotate(' + (e * spin) + 'deg)';
+        if (t < 1) state.raf = requestAnimationFrame(frame);
+        else done();
+      }
+      state.raf = requestAnimationFrame(frame);
+    }
+
+    function rally() {
+      if (!state.running) return;
+      var shooter = state.holder;
+      var other = 1 - shooter;
+      var roll = Math.random();
+      var from = foot(shooter);
+      var kind = roll < 0.38 ? 'pass' : roll < 0.72 ? 'goal' : roll < 0.88 ? 'save' : 'bar';
+      var to = kind === 'pass' || kind === 'save' ? foot(other) : mouth(other);
+      if (kind === 'bar') to = { x: mouth(other).x, y: pointOf(goals[other]).top + 2 };
+      penguins[shooter].classList.add('is-kicking');
+      later(function () { penguins[shooter].classList.remove('is-kicking'); }, 320);
+      parkBall(from);
+      fly(from, to, rand(460, 920), function () {
+        if (kind === 'goal') {
+          goals[other].classList.add('is-scored');
+          call.textContent = 'Goal';
+          call.style.left = (to.x - 16) + 'px';
+          call.style.top = (to.y - 22) + 'px';
+          call.classList.remove('is-on');
+          void call.offsetWidth;
+          call.classList.add('is-on');
+          later(function () { goals[other].classList.remove('is-scored'); }, 480);
+          state.holder = other;
+        } else if (kind === 'save') {
+          penguins[other].classList.add('is-hop');
+          later(function () { penguins[other].classList.remove('is-hop'); }, 360);
+          state.holder = other;
+        } else if (kind === 'bar') {
+          state.holder = shooter;
+        } else {
+          state.holder = other;
+        }
+        later(rally, rand(260, 680));
+      });
+    }
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      parkBall(foot(state.holder));
+      return;
+    }
+    parkBall(foot(state.holder));
+    later(rally, rand(180, 520));
+  }
+
   function setMenu(open) {
     if (!header || !toggle) return;
     header.classList.toggle('is-open', open);
     toggle.setAttribute('aria-expanded', String(open));
     document.body.style.overflow = open ? 'hidden' : '';
+    if (open) startMenuMatch();
+    else stopMenuMatch();
   }
 
   if (toggle && nav) {
